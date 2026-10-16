@@ -1,0 +1,13 @@
+/* Trefoil Mathematical Emblems — isolated to About cards */
+#trefoil-philosophy .tt-symbol-emblem{display:block;width:76px;height:76px;margin:0 0 15px;color:#eebc7d;filter:drop-shadow(0 0 5px rgba(245,183,104,.30))}
+#trefoil-philosophy .tt-symbol-emblem svg{display:block;width:100%;height:100%;overflow:visible}
+#trefoil-philosophy .tt-symbol-emblem .tt-glint{transform-box:fill-box;transform-origin:center;animation:tt-symbol-twinkle 3.1s ease-in-out infinite}
+#trefoil-philosophy .tt-symbol-emblem--teaching .tt-glint{animation-delay:.9s}
+#trefoil-philosophy .tt-symbol-emblem--discovery .tt-glint{animation-delay:1.5s}
+#trefoil-philosophy .tt-symbol-emblem--research .tt-nodes{animation:tt-symbol-pulse 3.4s ease-in-out infinite}
+#trefoil-philosophy .tt-symbol-emblem--teaching .tt-book{animation:tt-symbol-pulse 4s ease-in-out infinite}
+#trefoil-philosophy .tt-symbol-emblem--discovery .tt-orbits{animation:tt-symbol-pulse 4.8s ease-in-out infinite}
+@keyframes tt-symbol-twinkle{0%,100%{opacity:.22;transform:scale(.65)}50%{opacity:1;transform:scale(1.25);filter:drop-shadow(0 0 5px #fff0bf)}}
+@keyframes tt-symbol-pulse{0%,100%{opacity:.75;filter:drop-shadow(0 0 0px transparent)}50%{opacity:1;filter:drop-shadow(0 0 4px #ffdc91)}}
+@media(max-width:600px){#trefoil-philosophy .tt-symbol-emblem{width:62px;height:62px}}
+@media(prefers-reduced-motion:reduce){#trefoil-philosophy .tt-symbol-emblem *{animation:none!important}}

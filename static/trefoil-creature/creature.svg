@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 460" role="img" aria-label="Cheerful turquoise and blue trefoil-knot creature with a golden ball" id="tt-creature-art">
+<defs>
+ <linearGradient id="tcRibbon" x1=".15" y1=".12" x2=".85" y2="1" objectBoundingBox="true"><stop stop-color="#b8fff1"/><stop offset=".19" stop-color="#52d9df"/><stop offset=".52" stop-color="#139ac5"/><stop offset=".82" stop-color="#0870ad"/><stop offset="1" stop-color="#064b82"/></linearGradient>
+ <linearGradient id="tcFront" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b9fff2"/><stop offset=".34" stop-color="#50d4df"/><stop offset=".73" stop-color="#118bb8"/><stop offset="1" stop-color="#075381"/></linearGradient>
+ <radialGradient id="tcFace" cx=".36" cy=".27" r=".8"><stop stop-color="#c3fff1"/><stop offset=".48" stop-color="#6de4e5"/><stop offset="1" stop-color="#28accf"/></radialGradient>
+ <linearGradient id="tcGold" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fff5c1"/><stop offset=".35" stop-color="#ffe080"/><stop offset=".63" stop-color="#e8ae35"/><stop offset="1" stop-color="#a76a16"/></linearGradient>
+ <radialGradient id="tcOrb" cx=".32" cy=".24" r=".72"><stop stop-color="#fff7d7"/><stop offset=".23" stop-color="#ffe382"/><stop offset=".65" stop-color="#f0b83c"/><stop offset="1" stop-color="#a76513"/></radialGradient>
+ <filter id="tcSoftShadow" x="-40%" y="-40%" width="180%" height="180%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<g id="tc-ground" opacity=".4"><ellipse cx="227" cy="425" rx="121" ry="13" fill="#091d2b" opacity=".17" filter="url(#tcSoftShadow)"/></g>
+<g id="tc-body">
+ <g id="tc-legs"><path d="M178 335 Q153 371 129 392" fill="none" stroke="#076fa0" stroke-width="32" stroke-linecap="round"/><path d="M177 338 Q156 373 131 390" fill="none" stroke="url(#tcRibbon)" stroke-width="25" stroke-linecap="round"/><ellipse cx="126" cy="398" rx="27" ry="16" transform="rotate(-21 126 398)" fill="url(#tcFront)"/><path d="M283 339 Q302 368 325 394" fill="none" stroke="#076fa0" stroke-width="32" stroke-linecap="round"/><path d="M282 340 Q306 374 325 392" fill="none" stroke="url(#tcRibbon)" stroke-width="25" stroke-linecap="round"/><ellipse cx="325" cy="397" rx="28" ry="17" transform="rotate(23 325 397)" fill="url(#tcFront)"/></g>
+ <!-- Broad shaded arcs give the three-lobed torus knot visible depth, not a flat pretzel silhouette -->
+ <g id="tc-knot">
+   <path d="M174 241 C115 199 119 132 156 95 C202 48 274 76 284 134 C296 203 180 238 145 295 C115 350 172 392 236 366 C303 340 322 257 370 247 C424 235 432 317 368 353 C301 392 223 323 182 270" fill="none" stroke="#074976" stroke-width="91" stroke-linejoin="round" stroke-linecap="round"/>
+   <path d="M174 241 C115 199 119 132 156 95 C202 48 274 76 284 134 C296 203 180 238 145 295 C115 350 172 392 236 366 C303 340 322 257 370 247 C424 235 432 317 368 353 C301 392 223 323 182 270" fill="none" stroke="url(#tcRibbon)" stroke-width="81" stroke-linejoin="round" stroke-linecap="round"/>
+   <path d="M149 158 C148 118 188 89 226 95 M151 315 C145 342 173 366 210 355 M367 269 C400 272 402 308 382 328" fill="none" stroke="#ffe1a0" stroke-width="4" stroke-linecap="round" opacity=".88"/>
+   <path d="M166 261 C114 249 87 227 93 191 C100 153 158 145 206 177 C263 219 290 307 341 324" fill="none" stroke="#064a75" stroke-width="93" stroke-linecap="round"/>
+   <path d="M166 261 C114 249 87 227 93 191 C100 153 158 145 206 177 C263 219 290 307 341 324" fill="none" stroke="url(#tcFront)" stroke-width="82" stroke-linecap="round"/>
+   <path d="M95 193 C94 171 117 161 144 169 M216 195 C252 222 279 276 301 297" fill="none" stroke="#f9d284" stroke-width="4" stroke-linecap="round" opacity=".95"/>
+ </g>
+ <g id="tc-arm-left"><path d="M128 276 Q92 309 59 291" fill="none" stroke="#0876a4" stroke-width="26" stroke-linecap="round"/><path d="M128 272 Q93 304 59 288" fill="none" stroke="url(#tcFace)" stroke-width="20" stroke-linecap="round"/><ellipse cx="56" cy="286" rx="20" ry="13" fill="url(#tcFace)" transform="rotate(-20 56 286)"/></g>
+ <g id="tc-arm-right"><path d="M345 266 Q393 249 413 206" fill="none" stroke="#0773a4" stroke-width="26" stroke-linecap="round"/><path d="M344 261 Q389 245 411 202" fill="none" stroke="url(#tcFace)" stroke-width="20" stroke-linecap="round"/><ellipse cx="417" cy="197" rx="18" ry="14" fill="url(#tcFace)" transform="rotate(-25 417 197)"/></g>
+ <g id="tc-face" transform="translate(1 0)">
+   <path d="M181 225 Q185 181 231 175 Q289 171 317 211 Q337 241 316 276 Q285 312 230 303 Q176 296 181 225Z" fill="url(#tcFace)"/>
+   <path d="M204 215 Q214 200 231 210 M270 206 Q282 192 299 204" fill="none" stroke="#0c597e" stroke-width="5" stroke-linecap="round"/>
+   <g id="tc-eyes"><g id="tc-eye-left"><ellipse cx="227" cy="239" rx="17" ry="24" fill="#ffffff"/><ellipse cx="231" cy="242" rx="10" ry="17" fill="#153b60"/><ellipse cx="235" cy="237" rx="4.5" ry="5.6" fill="#fff"/></g><g id="tc-eye-right"><ellipse cx="287" cy="231" rx="17" ry="24" fill="#fff"/><ellipse cx="291" cy="233" rx="10" ry="17" fill="#123e67"/><ellipse cx="295" cy="228" rx="4.5" ry="5.6" fill="#fff"/></g></g>
+   <ellipse cx="198" cy="265" rx="13" ry="7" fill="#f7aeb4" opacity=".75"/><ellipse cx="316" cy="256" rx="13" ry="7" fill="#f7aeb4" opacity=".75"/>
+   <path id="tc-mouth" d="M245 267 Q257 280 277 264 Q272 291 258 290 Q247 286 245 267Z" fill="#773b4b" stroke="#164c6b" stroke-width="2"/><path d="M255 286 Q265 280 272 285" stroke="#ed8a94" stroke-width="5" fill="none" stroke-linecap="round"/>
+ </g>
+</g>
+<g id="tc-ball" transform="translate(381 113)"><circle r="33" fill="url(#tcOrb)" stroke="#c99230" stroke-width="1.7"/><ellipse cx="-11" cy="-14" rx="12" ry="6" fill="#fff9d0" opacity=".9" transform="rotate(-31 -11 -14)"/><path d="M-16 20 Q9 34 21 11" fill="none" stroke="#fff0b0" stroke-width="3" opacity=".5"/></g>
+<g id="tc-magic" opacity="0" fill="url(#tcGold)"><path d="M377 45l5 16 16 5-16 5-5 16-5-16-16-5 16-5z"/><path d="M91 112l4 11 11 4-11 4-4 11-4-11-11-4 11-4z"/><circle cx="433" cy="158" r="6"/><circle cx="71" cy="217" r="5"/></g>
+</svg>

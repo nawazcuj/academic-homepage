@@ -1,0 +1,28 @@
+/* Isolated to the journal cards only. */
+.tt-art-choice{display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:-14px 0 25px;font:600 12px/1.5 'DM Sans',sans-serif;color:var(--muted)}
+.tt-art-choice>span{margin-right:9px;letter-spacing:.07em;text-transform:uppercase;font-size:10px}
+.tt-art-choice-button{border:1px solid var(--line);border-radius:6px;padding:8px 12px;background:var(--paper);color:var(--ink);font:inherit;cursor:pointer}
+.tt-art-choice-button.is-active{border-color:var(--accent);color:var(--ink);box-shadow:inset 0 0 0 1px var(--accent)}
+.tt-art-choice-button:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.tt-journal-art img.tt-journal-subject-art{object-fit:contain}
+
+
+/* THE TREFOIL: confined, centered mathematical artwork */
+.tt-journal-grid .tt-journal-art {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.tt-journal-grid .tt-journal-art img.tt-journal-subject-art {
+    display: block !important;
+    position: static !important;
+    width: 190px !important;
+    max-width: calc(100% - 28px) !important;
+    height: 170px !important;
+    max-height: 170px !important;
+    min-width: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    margin: auto !important;
+    transform: none !important;
+}

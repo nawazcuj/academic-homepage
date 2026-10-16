@@ -1,0 +1,29 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>TheTrefoil Playful Mascot</title><link rel="stylesheet" href="trefoil-mascot.css"></head><body>
+<main id="mascot-stage" aria-label="Interactive Trefoil creature. Tap the mascot to see a surprise" tabindex="0" role="button">
+<svg id="trefoil-scene" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 390" aria-hidden="true">
+<defs>
+ <linearGradient id="bodyGrad" x1="0" y1="0" x2=".95" y2="1"><stop offset="0" stop-color="#a6f4e0"/><stop offset=".31" stop-color="#42cedd"/><stop offset=".7" stop-color="#1786bb"/><stop offset="1" stop-color="#124b8b"/></linearGradient>
+ <linearGradient id="goldGrad" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#fff7c4"/><stop offset=".37" stop-color="#f9d36b"/><stop offset=".72" stop-color="#e6a62c"/><stop offset="1" stop-color="#9a5c1e"/></linearGradient>
+ <linearGradient id="orbGrad" x1="0" y1="0" x2=".8" y2="1"><stop stop-color="#fffce5"/><stop offset=".22" stop-color="#ffe58d"/><stop offset=".65" stop-color="#f5bd43"/><stop offset="1" stop-color="#a96b19"/></linearGradient>
+ <filter id="softGlow" x="-60%" y="-60%" width="220%" height="220%"><feGaussianBlur stdDeviation="6"/></filter>
+</defs>
+<ellipse id="groundShadow" cx="213" cy="350" rx="99" ry="10" fill="#083c51" opacity=".14"/>
+<g id="character">
+ <g id="feet"><path d="M152 292Q143 322 123 327" stroke="#106893" stroke-width="28" stroke-linecap="round" fill="none"/><path d="M253 292Q266 326 291 321" stroke="#1886b0" stroke-width="28" stroke-linecap="round" fill="none"/><ellipse cx="122" cy="326" rx="20" ry="11" transform="rotate(-15 122 326)" fill="#3ec5d5"/><ellipse cx="295" cy="324" rx="20" ry="11" transform="rotate(12 295 324)" fill="#239fca"/></g>
+ <g id="knot">
+  <path d="M152 104 C106 29 236 12 261 98 C283 162 158 220 106 164 C59 110 116 94 164 136 C215 184 320 115 340 193 C363 273 273 321 201 286 C118 246 79 258 104 306 C136 363 232 319 273 250 C318 171 211 122 166 208 C131 275 215 331 280 281" fill="none" stroke="#09577e" stroke-width="61" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M152 104 C106 29 236 12 261 98 C283 162 158 220 106 164 C59 110 116 94 164 136 C215 184 320 115 340 193 C363 273 273 321 201 286 C118 246 79 258 104 306 C136 363 232 319 273 250 C318 171 211 122 166 208 C131 275 215 331 280 281" fill="none" stroke="url(#bodyGrad)" stroke-width="53" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M153 104C111 35 224 27 252 98 M109 157C71 115 121 103 159 140 M324 181C351 221 317 277 280 278 M108 304C135 348 213 320 255 263" fill="none" stroke="#f6d479" stroke-width="3.2" stroke-linecap="round" opacity=".92"/>
+ </g>
+ <g id="armLeft"><path d="M132 223Q89 235 69 203" fill="none" stroke="#21a3c4" stroke-width="20" stroke-linecap="round"/><circle cx="66" cy="201" r="14" fill="#65d7d6"/></g>
+ <g id="armRight"><path d="M284 209Q329 194 334 160" fill="none" stroke="#249cbd" stroke-width="21" stroke-linecap="round"/><circle cx="334" cy="159" r="14" fill="#6de0da"/></g>
+ <g id="face"><ellipse cx="210" cy="195" rx="66" ry="55" fill="#6bdcda"/><path d="M171 159q14 -16 28 -4M223 152q13 -11 27 -1" stroke="#155875" stroke-width="4" stroke-linecap="round" fill="none"/><g id="eyes"><ellipse cx="188" cy="184" rx="15" ry="21" fill="#fff"/><ellipse cx="234" cy="183" rx="15" ry="21" fill="#fff"/><ellipse cx="191" cy="186" rx="8" ry="13" fill="#154766"/><ellipse cx="236" cy="185" rx="8" ry="13" fill="#154766"/><circle cx="194" cy="181" r="3.5" fill="#fff"/><circle cx="239" cy="180" r="3.5" fill="#fff"/></g><g id="sleepEyes" opacity="0"><path d="M174 184q13 11 27 0M222 182q12 12 25 0" stroke="#165778" stroke-width="4" fill="none" stroke-linecap="round"/></g><ellipse cx="168" cy="211" rx="11" ry="6" fill="#ffa6a1" opacity=".7"/><ellipse cx="255" cy="207" rx="11" ry="6" fill="#ffa6a1" opacity=".7"/><path id="mouth" d="M196 218Q213 235 229 214Q213 250 196 218Z" fill="#913f48" stroke="#176380" stroke-width="2.5"/><path id="surpriseMouth" d="M210 219a8 12 0 1 0 .1 0" fill="#74384a" opacity="0"/></g>
+ </g>
+<g id="orb"><circle cx="350" cy="98" r="29" fill="#f8c54e" opacity=".28" filter="url(#softGlow)"/><circle cx="350" cy="98" r="24" fill="url(#orbGrad)" stroke="#cc932d" stroke-width="1"/><ellipse cx="340" cy="90" rx="9" ry="5" fill="#fff9de" opacity=".84" transform="rotate(-28 340 90)"/></g>
+<g id="surprises" opacity="0"><path d="M107 62L113 78L130 84L113 90L107 107L101 90L84 84L101 78Z" fill="url(#goldGrad)"/><path d="M332 41L336 51L347 55L336 59L332 71L328 59L317 55L328 51Z" fill="url(#goldGrad)"/><circle cx="86" cy="146" r="5" fill="#eab04c"/><circle cx="362" cy="225" r="6" fill="#eab04c"/></g>
+<g id="prop" opacity="0" font-family="Georgia,serif" text-anchor="middle" fill="#e6ad39"><text x="349" y="106" font-size="66" font-weight="bold">π</text></g>
+<g id="zzz" opacity="0" fill="#e6b456" font-family="Georgia,serif" font-weight="bold"><text x="290" y="104" font-size="28">z</text><text x="315" y="78" font-size="36">Z</text><text x="348" y="49" font-size="45">Z</text></g>
+<g id="confetti" opacity="0"><path d="M65 100l10 -8M98 48l-6 -9M310 48l9 8M361 150l10 4M80 277l-8 9M345 293l8 -11" stroke="#eabd60" stroke-width="6" stroke-linecap="round"/><circle cx="110" cy="56" r="5" fill="#f1c85d"/><circle cx="337" cy="72" r="5" fill="#67c9d9"/><circle cx="61" cy="207" r="4" fill="#f1c85d"/></g>
+</svg>
+<div id="status" aria-live="polite" class="sr-only"></div>
+</main><script src="trefoil-mascot.js"></script></body></html>

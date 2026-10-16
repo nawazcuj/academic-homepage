@@ -1,0 +1,8 @@
+/* Footer save V4. CSS only touches public footer and the existing gradient control. */
+html[data-tt-footer-saved]:not([data-tt-footer-saved="original"]) body .tt-footer-gradient-v4 {
+  background-image: var(--tt-footer-gradient-v4) !important;
+  background: var(--tt-footer-gradient-v4) !important;
+  background-color: var(--tt-footer-fallback-v4) !important;
+}
+html[data-tt-footer-saved]:is([data-tt-footer-saved="champagne"],[data-tt-footer-saved="sage"]) body .tt-footer-gradient-v4,
+html[data-tt-footer-saved]:is([data-tt-footer-saved="champagne"],[data-tt-footer-saved="sage"]) body .tt-footer-gradient-v4 :is(a,p,span,strong,h2,h3,h4,small) {color:#22363a!important;}

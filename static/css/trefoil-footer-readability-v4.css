@@ -1,0 +1,24 @@
+/* Footer-only typography patch: gold colon and readable KaTeX. */
+html body footer.tt-editorial-footer .tt-live-clock-value > span.tt-live-colon,
+html body footer.tt-editorial-footer[data-tt-footer-light="true"] .tt-live-clock-value > span.tt-live-colon {
+  color:#dba577 !important;
+  -webkit-text-fill-color:#dba577 !important;
+  opacity:1;
+  text-shadow:0 0 5px rgba(219,165,119,.18);
+}
+html body footer.tt-editorial-footer .tt-live-math-value {
+  font-size:clamp(19px,1.55vw,25px) !important;
+  line-height:1.65 !important;
+  overflow-x:auto !important;
+  overflow-y:hidden !important;
+  white-space:normal !important;
+  max-width:100%;
+}
+html body footer.tt-editorial-footer .tt-live-math-value .katex {
+  font-size:1em !important;
+  line-height:1.6 !important;
+  white-space:nowrap;
+}
+@media(max-width:700px){
+  html body footer.tt-editorial-footer .tt-live-math-value {font-size:20px !important;}
+}

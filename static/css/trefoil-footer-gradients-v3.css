@@ -1,0 +1,18 @@
+/* TT FOOTER GRADIENT V3 — applies ONLY to footer and settings picker. */
+.tts-studio #tts-panel-appearance .tt-footer-gradient-panel {
+  display:block!important;position:relative!important;width:100%!important;max-width:100%!important;
+  box-sizing:border-box!important;margin:22px 0 0!important;padding:22px!important;
+  background:transparent!important;border:1px solid var(--line,rgba(160,180,185,.3))!important;
+  border-radius:13px!important;box-shadow:none!important;
+}
+.tts-studio #tts-panel-appearance .tt-footer-gradient-panel select{width:100%!important;max-width:100%!important;}
+.tts-studio #tt-footer-gradient-preview {
+  display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;
+  min-height:210px!important;height:210px!important;width:100%!important;
+  border-radius:13px!important;overflow:hidden!important;box-sizing:border-box!important;
+  border:1px solid rgba(255,255,255,.16)!important;
+  transition:background .16s linear!important;
+}
+.tts-studio #tt-footer-gradient-preview .tt-fg-preview-caption{font:500 12px system-ui,sans-serif;letter-spacing:.12em;margin-top:9px;opacity:.85}
+
+body .tt-footer-light-gradient,body .tt-footer-light-gradient a,body .tt-footer-light-gradient p,body .tt-footer-light-gradient span,body .tt-footer-light-gradient strong,body .tt-footer-light-gradient h2,body .tt-footer-light-gradient h3{color:#243936!important;}

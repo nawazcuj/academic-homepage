@@ -1,0 +1,3 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-label="Mathematical Logic mathematical illustration"><style>.math{font-family:Georgia,serif;font-size:18px;fill:#937955;stroke:none}</style><g fill="none" stroke="#937955" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><path d="M36 30H184V119H36Z" />
+<text x="110" y="72" class="math" text-anchor="middle">∀x ∃y</text>
+<text x="110" y="101" class="math" font-size="15" text-anchor="middle">P(x) ⇒ Q(y)</text></g></svg>

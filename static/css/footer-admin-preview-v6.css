@@ -1,0 +1,15 @@
+/* Footer gradient selector, confined to the existing Appearance panel. */
+.tts-studio #tts-panel-appearance .tt-footer-gradient-panel {
+ display:block;width:100%;max-width:100%;box-sizing:border-box;
+ margin:22px 0 0;padding:22px;border:1px solid var(--line,rgba(150,170,180,.3));
+ border-radius:13px;background:transparent;
+}
+.tts-studio #tts-panel-appearance .tt-footer-gradient-panel select {width:100%;max-width:460px;}
+.tts-studio #tt-footer-gradient-preview {
+ display:flex;align-items:center;justify-content:center;flex-direction:column;
+ min-height:195px;height:195px;width:100%;box-sizing:border-box;
+ border-radius:13px;overflow:hidden;transition:background .16s linear;
+ background:linear-gradient(180deg,#253943 0%,#0b1b25 100%);
+}
+.tts-studio #tt-footer-gradient-preview .tt-preview-title {font:600 clamp(23px,3vw,38px) Georgia,serif;}
+.tts-studio #tt-footer-gradient-preview .tt-preview-subtitle {font:500 12px system-ui,sans-serif;letter-spacing:.13em;margin-top:8px;opacity:.85;text-align:center;}

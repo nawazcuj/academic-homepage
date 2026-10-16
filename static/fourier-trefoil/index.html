@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TheTrefoil — Fourier Epicycles</title>
+<link rel="stylesheet" href="fourier-trefoil.css">
+</head>
+<body>
+<main class="ft-shell">
+  <header class="ft-heading">
+    <span class="ft-kicker">THE TREFOIL <span aria-hidden="true">—</span> MATHEMATICS IN MOTION</span>
+    <h1>Fourier circles <em>draw a knot.</em></h1>
+    <p>Each circle rotates at a harmonic frequency. Their combined motion traces a projection of the trefoil knot.</p>
+  </header>
+  <section class="ft-stage" aria-label="Animated Fourier epicycle construction of a trefoil knot">
+    <canvas id="fourier-trefoil-canvas" aria-label="Circles rotating to trace the trefoil knot" role="img"></canvas>
+    <span class="ft-stage-label" aria-hidden="true">FOURIER RECONSTRUCTION <span class="ft-led"></span> LIVE</span>
+    <span class="ft-equation">z(t) = Σ cₙ e<sup>int</sup></span>
+  </section>
+  <div class="ft-controls" aria-label="Animation controls">
+    <button id="ft-play" type="button" aria-pressed="true">Pause</button>
+    <button id="ft-reset" type="button">Restart</button>
+    <label>Speed <input id="ft-speed" type="range" min="0.25" max="3" step="0.25" value="1"><output id="ft-speed-value">1×</output></label>
+    <label>Circles <input id="ft-terms" type="range" min="1" max="11" step="1" value="11"><output id="ft-terms-value">11</output></label>
+    <label class="ft-check"><input id="ft-guides" type="checkbox" checked> Construction circles</label>
+    <label class="ft-check"><input id="ft-path" type="checkbox" checked> Complete knot</label>
+  </div>
+  <footer class="ft-footnote">A torus trefoil sampled in three dimensions and projected into the plane; its Fourier coefficients drive the rotating circles. The animation is a projection, not a 3D rendering.</footer>
+</main>
+<script src="fourier-trefoil.js" defer></script>
+</body>
+</html>

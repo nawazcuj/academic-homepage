@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 220 150" role="img" aria-label="Combinatorics mathematical illustration"><style>.math{font-family:Georgia,serif;font-size:18px;fill:#937955;stroke:none}</style><g fill="none" stroke="#937955" stroke-width="1.35" stroke-linecap="round" stroke-linejoin="round"><circle cx="40.00" cy="34.00" r="3.00" fill="#937955"/>
+<circle cx="40.00" cy="103.00" r="3.00" fill="#937955"/>
+<line x1="40.00" y1="34.00" x2="40.00" y2="103.00" opacity=".5"/>
+<line x1="40.00" y1="34.00" x2="124.00" y2="103.00" opacity=".5"/>
+<circle cx="68.00" cy="34.00" r="3.00" fill="#937955"/>
+<circle cx="68.00" cy="103.00" r="3.00" fill="#937955"/>
+<line x1="68.00" y1="34.00" x2="96.00" y2="103.00" opacity=".5"/>
+<line x1="68.00" y1="34.00" x2="180.00" y2="103.00" opacity=".5"/>
+<circle cx="96.00" cy="34.00" r="3.00" fill="#937955"/>
+<circle cx="96.00" cy="103.00" r="3.00" fill="#937955"/>
+<line x1="96.00" y1="34.00" x2="68.00" y2="103.00" opacity=".5"/>
+<line x1="96.00" y1="34.00" x2="152.00" y2="103.00" opacity=".5"/>
+<circle cx="124.00" cy="34.00" r="3.00" fill="#937955"/>
+<circle cx="124.00" cy="103.00" r="3.00" fill="#937955"/>
+<line x1="124.00" y1="34.00" x2="40.00" y2="103.00" opacity=".5"/>
+<line x1="124.00" y1="34.00" x2="124.00" y2="103.00" opacity=".5"/>
+<circle cx="152.00" cy="34.00" r="3.00" fill="#937955"/>
+<circle cx="152.00" cy="103.00" r="3.00" fill="#937955"/>
+<line x1="152.00" y1="34.00" x2="96.00" y2="103.00" opacity=".5"/>
+<line x1="152.00" y1="34.00" x2="180.00" y2="103.00" opacity=".5"/>
+<circle cx="180.00" cy="34.00" r="3.00" fill="#937955"/>
+<circle cx="180.00" cy="103.00" r="3.00" fill="#937955"/>
+<line x1="180.00" y1="34.00" x2="68.00" y2="103.00" opacity=".5"/>
+<line x1="180.00" y1="34.00" x2="152.00" y2="103.00" opacity=".5"/></g></svg>

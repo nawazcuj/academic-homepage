@@ -1,0 +1,7 @@
+
+/* Display original SVG colours without CSS recolouring */
+.about-profile-links img.academic-social-icon {
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+}

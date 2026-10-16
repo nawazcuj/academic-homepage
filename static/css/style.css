@@ -1,0 +1,5495 @@
+:root {
+    --bg: #fbfaf7;
+    --paper: #fff;
+    --ink: #142c35;
+    --muted: #61747b;
+    --accent: #bd8154;
+    --deep: #163b46;
+    --tint: #f2f2ec;
+    --line: #dedfd7;
+    --shadow: 0 12px 30px rgba(19, 41, 47, .045)
+}
+
+[data-theme=dark] {
+    --bg: #111d22;
+    --paper: #1b2b31;
+    --ink: #eef2ee;
+    --muted: #a4b6ba;
+    --accent: #dba577;
+    --deep: #102127;
+    --tint: #17272d;
+    --line: #364950;
+    --shadow: 0 15px 35px rgba(0, 0, 0, .12)
+}
+
+* {
+    box-sizing: border-box
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font: 16px/1.75 'DM Sans', sans-serif
+}
+
+a {
+    color: inherit;
+    text-decoration: none
+}
+
+a:hover {
+    color: var(--accent)
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit
+}
+
+button {
+    cursor: pointer
+}
+
+button:focus-visible,
+a:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid var(--accent);
+    outline-offset: 3px
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Libre Baskerville', Georgia, serif;
+    line-height: 1.3;
+    letter-spacing: -.035em
+}
+
+h1 {
+    font-size: clamp(2.6rem, 5.2vw, 5.2rem)
+}
+
+h2 {
+    font-size: clamp(1.8rem, 3vw, 2.85rem)
+}
+
+h3 {
+    font-size: 1.2rem
+}
+
+p {
+    margin: 0 0 1.3em
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 30px
+}
+
+.skip-link {
+    position: absolute;
+    left: -999px;
+    top: 0;
+    z-index: 1000;
+    background: var(--paper);
+    padding: 10px
+}
+
+.skip-link:focus {
+    left: 10px
+}
+
+.site-header {
+    border-bottom: 1px solid var(--line);
+    background: var(--bg);
+    position: sticky;
+    top: 0;
+    z-index: 50
+}
+
+.nav-wrap {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    min-height: 82px
+}
+
+.brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+    font-family: Georgia, serif;
+    font-size: 18px;
+    line-height: 1.3;
+    font-weight: 700;
+    white-space: nowrap
+}
+
+.brand small {
+    display: block;
+    font: 600 9px/1.8 'DM Sans', sans-serif;
+    letter-spacing: .17em;
+    color: var(--muted)
+}
+
+.brand-symbol {
+    width: 40px;
+    height: 40px;
+    display: grid;
+    place-items: center;
+    background: var(--deep);
+    color: #fff;
+    font: 25px Georgia;
+    border-radius: 4px
+}
+
+.site-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-left: auto;
+    flex-wrap: wrap
+}
+
+.site-nav a {
+    font-size: 11px;
+    font-weight: 700;
+    white-space: nowrap
+}
+
+.nav-actions {
+    display: flex;
+    gap: 6px
+}
+
+.icon-button {
+    border: 0;
+    background: none;
+    color: var(--ink);
+    font-size: 24px;
+    padding: 7px;
+    line-height: 1
+}
+
+.menu-toggle {
+    display: none
+}
+
+.hero {
+    overflow: hidden;
+    position: relative
+}
+
+.math-grid {
+    background-image: radial-gradient(var(--line) .65px, transparent .65px);
+    background-size: 22px 22px
+}
+
+.hero-inner {
+    min-height: 600px;
+    display: grid;
+    grid-template-columns: 1.05fr .95fr;
+    align-items: center;
+    gap: 8%;
+    padding-top: 75px;
+    padding-bottom: 85px
+}
+
+.eyebrow,
+.section-kicker {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .19em;
+    color: var(--accent)
+}
+
+.status-dot {
+    display: inline-block;
+    width: 7px;
+    height: 7px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 8px
+}
+
+.hero h1 {
+    margin: 26px 0 22px
+}
+
+.hero h1 em,
+.about-grid h2 em {
+    color: var(--accent);
+    font-weight: 400
+}
+
+.hero-lead {
+    max-width: 475px;
+    color: var(--muted);
+    font-size: 18px
+}
+
+.hero-name {
+    font: 700 15px 'DM Sans', sans-serif;
+    letter-spacing: 0;
+    margin: 28px 0
+}
+
+.hero-name span {
+    font-weight: 400;
+    color: var(--muted)
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    margin: 26px 0
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 18px;
+    border: 1px solid var(--deep);
+    padding: 12px 20px;
+    font-size: 12px;
+    letter-spacing: .02em;
+    font-weight: 700;
+    transition: transform .2s, background .2s;
+    border-radius: 3px
+}
+
+.btn:hover {
+    transform: translateY(-2px)
+}
+
+.btn-primary {
+    background: var(--deep);
+    color: white
+}
+
+.btn-primary:hover {
+    color: white;
+    background: #245363
+}
+
+.btn-outline {
+    background: transparent;
+    color: var(--ink)
+}
+
+.btn-light {
+    background: #fff;
+    color: #173b46;
+    border-color: #fff
+}
+
+.hero-links {
+    display: flex;
+    gap: 25px;
+    font-size: 12px;
+    font-weight: 700
+}
+
+.hero-visual {
+    position: relative;
+    min-height: 390px
+}
+
+.math-art {
+    height: 390px;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(140deg, #244d55, #0f313c);
+    color: #e6dfc7;
+    padding: 30px 34px;
+    box-shadow: 25px 25px 0 rgba(189, 129, 84, .14)
+}
+
+.math-art:after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 80% 10%, rgba(255, 255, 255, .1), transparent 40%);
+    pointer-events: none
+}
+
+.art-top,
+.art-bottom {
+    font-size: 10px;
+    letter-spacing: .23em
+}
+
+.art-bottom {
+    position: absolute;
+    bottom: 28px
+}
+
+.math-formula {
+    text-align: center;
+    font: 42px Georgia, serif;
+    margin: 60px 0 0;
+    letter-spacing: 0
+}
+
+.math-formula sup {
+    font-size: 20px
+}
+
+.math-art svg {
+    height: 160px;
+    width: 100%;
+    margin-top: 7px
+}
+
+.photo-note {
+    position: absolute;
+    right: -15px;
+    bottom: -30px;
+    max-width: 220px;
+    padding: 14px 18px;
+    background: var(--paper);
+    font-size: 11px;
+    color: var(--muted);
+    box-shadow: var(--shadow)
+}
+
+.profile-photo {
+    position: absolute;
+    right: -14px;
+    bottom: -35px;
+    width: 156px;
+    height: 183px;
+    object-fit: cover;
+    border: 7px solid var(--paper);
+    box-shadow: var(--shadow)
+}
+
+.section {
+    padding: 85px 0
+}
+
+.section.compact {
+    padding-top: 30px;
+    min-height: 390px
+}
+
+.section-tinted {
+    background: var(--tint)
+}
+
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10%
+}
+
+.about-grid h2 {
+    margin: 25px 0
+}
+
+.big-copy {
+    font-size: 18px;
+    line-height: 1.95
+}
+
+.subtle {
+    color: var(--muted);
+    font-size: 13px
+}
+
+.text-link {
+    font-size: 13px;
+    font-weight: 700;
+    border-bottom: 1px solid var(--accent);
+    padding-bottom: 5px
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 25px;
+    align-items: end;
+    margin-bottom: 34px
+}
+
+.section-heading h2 {
+    margin: 18px 0 0
+}
+
+.accent-dot {
+    color: var(--accent)
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px
+}
+
+.interest-panel {
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 36px 38px
+}
+
+.interest-panel p {
+    max-width: 430px;
+    color: var(--muted)
+}
+
+.panel-icon {
+    color: var(--accent);
+    font: 48px Georgia, serif
+}
+
+.cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px
+}
+
+.entry-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--paper);
+    border: 1px solid var(--line);
+    padding: 28px;
+    min-height: 240px;
+    box-shadow: var(--shadow);
+    transition: transform .2s
+}
+
+.entry-card:hover {
+    transform: translateY(-4px)
+}
+
+.entry-card h3 {
+    margin: 17px 0 10px
+}
+
+.entry-card p {
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.8
+}
+
+.card-meta,
+.card-foot {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 8px;
+    font-size: 11px;
+    color: var(--muted)
+}
+
+.pill {
+    display: inline-block;
+    border: 1px solid var(--line);
+    background: var(--tint);
+    padding: 2px 9px;
+    border-radius: 20px;
+    color: var(--ink)
+}
+
+.card-foot {
+    margin-top: auto;
+    padding-top: 20px;
+    border-top: 1px solid var(--line)
+}
+
+.card-foot a {
+    font-weight: 700;
+    color: var(--accent)
+}
+
+.resource-strip {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    border: 1px solid var(--line);
+    background: var(--paper)
+}
+
+.resource-strip>a {
+    display: flex;
+    flex-direction: column;
+    padding: 26px;
+    min-height: 130px;
+    border-right: 1px solid var(--line)
+}
+
+.resource-strip>a:last-child {
+    border-right: 0
+}
+
+.resource-strip span {
+    color: var(--accent);
+    margin-bottom: 10px
+}
+
+.resource-strip strong {
+    font-size: 14px
+}
+
+.resource-strip small {
+    color: var(--muted)
+}
+
+.callout {
+    background: var(--deep);
+    color: #fff;
+    padding: 60px 0
+}
+
+.callout-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px
+}
+
+.callout h2 {
+    font-size: 28px
+}
+
+.callout p {
+    color: #c6d3d4
+}
+
+.footer {
+    padding: 65px 0 25px;
+    background: var(--tint)
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 60px
+}
+
+.footer-grid>div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px
+}
+
+.footer-grid p {
+    font-size: 13px;
+    color: var(--muted);
+    margin-top: 12px
+}
+
+.footer-grid a:not(.brand) {
+    font-size: 13px
+}
+
+.footer-grid strong {
+    font-size: 14px
+}
+
+.footer-bottom {
+    border-top: 1px solid var(--line);
+    padding-top: 22px;
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.page-hero {
+    padding-top: 80px;
+    padding-bottom: 45px;
+    border-bottom: 1px solid var(--line)
+}
+
+.page-hero h1 {
+    margin: 14px 0
+}
+
+.page-hero p {
+    font-size: 17px;
+    color: var(--muted);
+    max-width: 730px
+}
+
+.filter-bar {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin: 0 0 35px;
+    flex-wrap: wrap
+}
+
+.filter-bar label:first-child {
+    flex: 1;
+    min-width: 210px
+}
+
+.filter-bar input,
+.filter-bar select {
+    width: 100%
+}
+
+input,
+textarea,
+select {
+    padding: 11px 13px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 3px
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(245px, 1fr);
+    gap: 90px
+}
+
+.detail-body {
+    font-size: 16px;
+    white-space: normal;
+    min-width: 0
+}
+
+.detail-body>p {
+    white-space: pre-line;
+    line-height: 1.95
+}
+
+.detail-body h2 {
+    font-size: 24px;
+    margin-top: 42px
+}
+
+.detail-sidebar {
+    align-self: start;
+    background: var(--tint);
+    padding: 30px;
+    border: 1px solid var(--line)
+}
+
+.detail-sidebar h3 {
+    margin-top: 0
+}
+
+.detail-sidebar dt {
+    font-size: 11px;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: var(--muted)
+}
+
+.detail-sidebar dd {
+    margin: 0 0 18px
+}
+
+.video-frame {
+    aspect-ratio: 16/9;
+    margin: 35px 0
+}
+
+.video-frame iframe {
+    border: 0;
+    width: 100%;
+    height: 100%
+}
+
+.download-list {
+    display: grid;
+    gap: 12px;
+    margin: 22px 0
+}
+
+.download-list>a,
+.attachment-row {
+    padding: 14px;
+    border: 1px solid var(--line);
+    background: var(--paper)
+}
+
+.profile-links {
+    display: flex;
+    gap: 13px;
+    flex-wrap: wrap
+}
+
+.profile-links a,
+.admin-add a {
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    font-size: 13px
+}
+
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.25fr;
+    gap: 10%
+}
+
+.contact-form {
+    display: grid;
+    gap: 19px;
+    max-width: 780px
+}
+
+.contact-form label {
+    display: grid;
+    gap: 5px;
+    font-size: 13px;
+    font-weight: 700
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    font-weight: 400
+}
+
+.form-note {
+    font-size: 12px;
+    color: var(--muted)
+}
+
+.contact-form button {
+    justify-self: start
+}
+
+.notices {
+    padding-top: 15px
+}
+
+.notice {
+    padding: 12px 15px;
+    background: var(--tint);
+    border-left: 3px solid var(--accent);
+    font-size: 13px
+}
+
+.empty-state {
+    padding: 50px;
+    border: 1px dashed var(--line);
+    grid-column: 1/-1;
+    color: var(--muted)
+}
+
+.narrow {
+    max-width: 780px
+}
+
+.admin-add {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin: 20px 0 50px
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    margin: 20px 0 55px;
+    font-size: 13px
+}
+
+th,
+td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top
+}
+
+th {
+    background: var(--tint)
+}
+
+.table-scroll {
+    overflow-x: auto
+}
+
+.inline-form,
+.attachment-row form {
+    display: inline
+}
+
+.link-button {
+    background: none;
+    border: 0;
+    padding: 0;
+    color: var(--accent);
+    text-decoration: underline;
+    font-size: 13px
+}
+
+.message-cell {
+    max-width: 520px;
+    white-space: pre-wrap;
+    overflow-wrap: anywhere
+}
+
+.attachment-row {
+    display: flex;
+    justify-content: space-between
+}
+
+.honeypot {
+    position: absolute;
+    left: -9999px
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0
+}
+
+@media(max-width:1120px) {
+    .site-nav {
+        gap: 9px
+    }
+
+    .site-nav a {
+        font-size: 10px
+    }
+
+    .nav-wrap {
+        gap: 11px
+    }
+
+    .brand {
+        font-size: 15px
+    }
+}
+
+@media(max-width:900px) {
+    .menu-toggle {
+        display: block;
+        margin-left: auto
+    }
+
+    .site-nav {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: var(--paper);
+        padding: 24px;
+        box-shadow: var(--shadow);
+        border-bottom: 1px solid var(--line);
+        max-height: 75vh;
+        overflow: auto
+    }
+
+    .site-nav.open {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px
+    }
+
+    .site-nav a {
+        font-size: 14px
+    }
+
+    .hero-inner {
+        gap: 35px
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr))
+    }
+
+    .resource-strip {
+        grid-template-columns: repeat(2, 1fr)
+    }
+
+    .resource-strip>a:nth-child(2) {
+        border-right: 0
+    }
+
+    .detail-grid {
+        gap: 30px
+    }
+}
+
+@media(max-width:650px) {
+    .container {
+        padding-left: 20px;
+        padding-right: 20px
+    }
+
+    .nav-wrap {
+        min-height: 68px
+    }
+
+    .hero-inner,
+    .about-grid,
+    .interest-grid,
+    .detail-grid,
+    .contact-grid,
+    .footer-grid {
+        grid-template-columns: 1fr
+    }
+
+    .hero-inner {
+        padding-top: 60px
+    }
+
+    .hero-visual {
+        min-height: 340px
+    }
+
+    .math-art {
+        height: 330px
+    }
+
+    .math-formula {
+        margin-top: 40px
+    }
+
+    .section {
+        padding: 60px 0
+    }
+
+    .cards {
+        grid-template-columns: 1fr
+    }
+
+    .resource-strip {
+        grid-template-columns: 1fr
+    }
+
+    .resource-strip>a {
+        border-right: 0;
+        border-bottom: 1px solid var(--line)
+    }
+
+    .section-heading {
+        align-items: start;
+        flex-direction: column
+    }
+
+    .callout-inner {
+        align-items: start;
+        flex-direction: column
+    }
+
+    .page-hero {
+        padding-top: 50px
+    }
+
+    .footer-grid {
+        gap: 20px
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+        gap: 10px
+    }
+}
+
+@media(prefers-reduced-motion:reduce) {
+
+    *,
+    *:before,
+    *:after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+        animation: none !important
+    }
+}
+
+/* TheTrefoil hero animation */
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 0;
+    background: transparent;
+}
+
+.trefoil-animation {
+    width: 100%;
+    max-width: 460px;
+    margin: 0 auto;
+    overflow: hidden;
+    border-radius: 18px;
+    background: #031126;
+}
+
+.trefoil-gif {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+}
+
+/* TheTrefoil Header Logo */
+
+.brand-mark {
+    width: 54px;
+    height: 54px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.brand-logo {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    border-radius: 50%;
+
+    /* Biography text alignment */
+
+    .big-copy {
+        text-align: justify;
+        text-justify: inter-word;
+        line-height: 1.8;
+        hyphens: auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .big-copy {
+        text-align: left;
+    }
+}
+
+/* TheTrefoil GIF and tagline alignment */
+
+.hero .hero-visual {
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 12px;
+    width: 100%;
+    min-width: 0;
+}
+
+.hero .trefoil-animation {
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.hero .trefoil-gif {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+}
+
+.hero .trefoil-tagline {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    margin: 0 auto !important;
+    padding: 0;
+    text-align: center !important;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    font-style: italic;
+    color: #aebdc3;
+}
+
+/* TheTrefoil — GIF size and tagline typography */
+
+.hero .trefoil-animation {
+    width: 100%;
+    max-width: 340px;
+    /* Reduced from 440px */
+    margin: 0 auto;
+}
+
+.hero .trefoil-gif {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 18px;
+}
+
+.hero .trefoil-tagline {
+    width: 100%;
+    max-width: 480px;
+    margin: 18px auto 0 !important;
+    text-align: center !important;
+    font-size: 1.35rem;
+    /* Larger tagline */
+    font-weight: 400;
+    line-height: 1.6;
+    font-style: italic;
+    color: #c5d1d5;
+}
+
+/* Mobile responsiveness */
+
+@media (max-width: 768px) {
+    .hero .trefoil-animation {
+        max-width: 280px;
+    }
+
+    .hero .trefoil-tagline {
+        font-size: 1.1rem;
+        max-width: 340px;
+    }
+}
+
+/* TheTrefoil — Navigation Menu Typography */
+
+.site-header nav a,
+.site-header .nav-links a {
+    font-size: 1rem;
+    font-weight: 550;
+    letter-spacing: 0.01em;
+}
+
+/* Navigation spacing */
+
+.site-header .nav-links {
+    gap: 1rem;
+}
+
+/* TheTrefoil — Larger Header Logo and Title */
+
+/* Circular logo */
+.site-header .brand-mark {
+    width: 76px;
+    height: 76px;
+    min-width: 76px;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Logo image */
+.site-header .brand-logo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Website name */
+.site-header .brand strong {
+    font-size: 2rem;
+    font-weight: 700;
+    line-height: 1.15;
+}
+
+/* Subtitle: MATHEMATICS & BEYOND */
+.site-header .brand small {
+    font-size: 0.85rem;
+    letter-spacing: 0.12em;
+}
+
+/* Space between logo and website name */
+.site-header .brand {
+    gap: 16px;
+}
+
+/* TheTrefoil — Single-line Navigation */
+
+@media (min-width: 1100px) {
+
+    .site-header .container {
+        max-width: 98%;
+        width: 98%;
+    }
+
+    .site-header .brand {
+        flex-shrink: 0;
+        gap: 12px;
+    }
+
+    .site-header .brand-mark {
+        width: 66px;
+        height: 66px;
+        min-width: 66px;
+    }
+
+    .site-header .brand strong {
+        font-size: 1.8rem;
+        white-space: nowrap;
+    }
+
+    .site-header nav {
+        display: flex;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 0.8rem;
+    }
+
+    .site-header nav a {
+        white-space: nowrap;
+        font-size: 1rem;
+    }
+}
+
+/* ==============================================
+   THETREFOIL — REFINED ACADEMIC HOMEPAGE
+   ============================================== */
+
+.tt-home {
+    --tt-space: clamp(4rem, 7vw, 6.5rem);
+}
+
+/* HERO */
+
+.tt-home .tt-hero {
+    padding: clamp(4rem, 7vw, 7rem) 0;
+}
+
+.tt-home .tt-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: center;
+}
+
+.tt-home .tt-hero-content {
+    min-width: 0;
+}
+
+.tt-home .tt-hero-content h1 {
+    font-size: clamp(2.8rem, 4.5vw, 5rem);
+    line-height: 1.12;
+    letter-spacing: -0.035em;
+    margin: 1.5rem 0 0.6rem;
+}
+
+.tt-home .tt-quote-author {
+    margin: 0 0 2.5rem;
+    font-size: 1rem;
+    letter-spacing: 0.06em;
+    opacity: 0.7;
+}
+
+.tt-home .tt-introduction {
+    margin-bottom: 2rem;
+}
+
+.tt-home .tt-introduction h2 {
+    font-size: clamp(1.35rem, 2vw, 1.8rem);
+    line-height: 1.35;
+    margin: 0 0 0.4rem;
+}
+
+.tt-home .tt-introduction p {
+    margin: 0.25rem 0;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.tt-home .tt-affiliation {
+    opacity: 0.7;
+    font-size: 0.9rem !important;
+}
+
+/* HERO BUTTONS */
+
+.tt-home .tt-hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.85rem;
+    margin-bottom: 1.5rem;
+}
+
+.tt-home .tt-hero-actions .btn {
+    width: auto;
+    min-height: 48px;
+    padding: 0.8rem 1.25rem;
+    font-size: 0.95rem;
+    white-space: nowrap;
+}
+
+.tt-home .tt-quick-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem 1.8rem;
+}
+
+.tt-home .tt-quick-links a {
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: inherit;
+}
+
+.tt-home .tt-quick-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 5px;
+}
+
+/* TREFOIL ANIMATION */
+
+.tt-home .tt-hero-art {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-width: 0;
+    gap: 1.25rem;
+}
+
+.tt-home .tt-gif-frame {
+    width: min(100%, 340px);
+    margin-inline: auto;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.tt-home .tt-gif-frame img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.tt-home .tt-tagline {
+    max-width: 440px;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+    font-family: Georgia, "Times New Roman", serif;
+    font-style: italic;
+    font-size: clamp(1.2rem, 1.65vw, 1.55rem);
+    line-height: 1.55;
+    color: var(--muted, #b5c3c9);
+    text-wrap: balance;
+}
+
+/* GENERAL SECTION SPACING */
+
+.tt-home .section {
+    padding-top: var(--tt-space);
+    padding-bottom: var(--tt-space);
+}
+
+.tt-home .tt-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.tt-home .tt-section-heading h2,
+.tt-home .tt-section-intro h2 {
+    font-size: clamp(2rem, 3vw, 3.2rem);
+    line-height: 1.2;
+    margin: 0.65rem 0 0;
+}
+
+.tt-home .tt-section-heading>a {
+    flex-shrink: 0;
+}
+
+/* ABOUT ME */
+
+.tt-home .tt-about-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.4fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+}
+
+.tt-home .tt-accent-line {
+    width: 64px;
+    height: 2px;
+    background: currentColor;
+    opacity: 0.4;
+    margin-top: 1.5rem;
+}
+
+.tt-home .tt-bio {
+    font-size: clamp(1.05rem, 1.25vw, 1.2rem);
+    line-height: 1.9;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    margin: 0 0 1.75rem;
+}
+
+.tt-home .tt-about-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    font-size: 0.9rem;
+}
+
+.tt-home .tt-about-footer span {
+    opacity: 0.75;
+}
+
+/* INTEREST CARDS */
+
+.tt-home .tt-interest-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.tt-home .tt-interest-card {
+    display: flex;
+    flex-direction: column;
+    padding: clamp(1.5rem, 3vw, 2.5rem);
+    border: 1px solid rgba(150, 170, 180, 0.2);
+    border-radius: 16px;
+    min-width: 0;
+}
+
+.tt-home .tt-card-symbol {
+    font-size: 2.2rem;
+    line-height: 1;
+    margin-bottom: 1.5rem;
+    opacity: 0.7;
+}
+
+.tt-home .tt-interest-card h3 {
+    font-size: 1.45rem;
+    margin: 0 0 1rem;
+}
+
+.tt-home .tt-interest-card p {
+    flex-grow: 1;
+    margin: 0 0 1.75rem;
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    opacity: 0.85;
+}
+
+/* COURSE, LECTURE AND PUBLICATION CARDS */
+
+.tt-home .tt-cards {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.tt-home .tt-cards>* {
+    min-width: 0;
+}
+
+.tt-home .tt-empty {
+    padding: 1.5rem 0;
+    opacity: 0.7;
+}
+
+/* RESOURCE CARDS */
+
+.tt-home .tt-resource-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.tt-home .tt-resource-card {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    min-height: 145px;
+    padding: 1.5rem;
+    border: 1px solid rgba(150, 170, 180, 0.2);
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tt-home .tt-resource-card:hover {
+    transform: translateY(-3px);
+    border-color: currentColor;
+}
+
+.tt-home .tt-resource-arrow {
+    align-self: end;
+    opacity: 0.65;
+}
+
+.tt-home .tt-resource-card h3 {
+    font-size: 1.1rem;
+    margin: 0;
+}
+
+.tt-home .tt-resource-category {
+    font-size: 0.85rem;
+    opacity: 0.7;
+}
+
+/* CONTACT */
+
+.tt-home .tt-contact-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2rem;
+}
+
+.tt-home .tt-contact-inner h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin: 0.7rem 0 1rem;
+}
+
+.tt-home .tt-contact-inner p {
+    max-width: 550px;
+    line-height: 1.75;
+}
+
+.tt-home .tt-contact-inner .btn {
+    flex-shrink: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+
+    .tt-home .tt-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+        gap: 2rem;
+    }
+
+    .tt-home .tt-cards,
+    .tt-home .tt-resource-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 760px) {
+
+    .tt-home .tt-hero-grid,
+    .tt-home .tt-about-grid,
+    .tt-home .tt-interest-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tt-home .tt-hero {
+        padding: 3.5rem 0;
+    }
+
+    .tt-home .tt-hero-art {
+        margin-top: 1rem;
+    }
+
+    .tt-home .tt-gif-frame {
+        width: min(100%, 290px);
+    }
+
+    .tt-home .tt-tagline {
+        max-width: 360px;
+        font-size: 1.2rem;
+    }
+
+    .tt-home .tt-section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .tt-home .tt-cards,
+    .tt-home .tt-resource-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tt-home .tt-bio {
+        text-align: left;
+    }
+
+    .tt-home .tt-contact-inner {
+        flex-direction: column;
+        align-items: start;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tt-home .tt-resource-card {
+        transition: none;
+    }
+
+    .tt-home .tt-resource-card:hover {
+        transform: none;
+    }
+}
+
+.tt-home .tt-introduction .academic-degree {
+    font-size: 0.65em;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #b5c3c9;
+}
+
+/* TheTrefoil: Four uniform hero buttons */
+
+.tt-home .tt-four-buttons {
+    display: grid !important;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 12px;
+    width: 100%;
+    margin-top: 24px;
+}
+
+.tt-home .tt-four-buttons .btn {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100% !important;
+    min-width: 0;
+    min-height: 60px;
+    padding: 12px 10px;
+    font-size: 0.95rem;
+    font-weight: 600;
+    line-height: 1.3;
+    text-align: center;
+    white-space: nowrap;
+    border-radius: 8px;
+}
+
+/* Allow the row to use the full hero width on desktop */
+@media (min-width: 1100px) {
+    .tt-home .tt-hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.85fr);
+    }
+
+    .tt-home .tt-four-buttons {
+        width: max-content;
+        max-width: none;
+        grid-template-columns: repeat(4, max-content);
+    }
+
+    .tt-home .tt-four-buttons .btn {
+        width: auto !important;
+        min-width: 155px;
+        padding: 14px 18px;
+    }
+}
+
+/* Tablet and mobile */
+@media (max-width: 1099px) {
+    .tt-home .tt-four-buttons {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tt-home .tt-four-buttons .btn {
+        white-space: normal;
+    }
+}
+
+@media (max-width: 480px) {
+    .tt-home .tt-four-buttons {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* TheTrefoil — Improved Hero Spacing */
+
+@media (min-width: 1100px) {
+
+    /* Balance left content and right GIF */
+    .tt-home .tt-hero-grid {
+        display: grid;
+        grid-template-columns: minmax(0, 1.25fr) minmax(0, 0.75fr);
+        column-gap: 5rem;
+        align-items: center;
+    }
+
+    /* More vertical breathing room on the left */
+    .tt-home .tt-hero-content {
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+    }
+
+    /* Space between academic details and buttons */
+    .tt-home .tt-four-buttons {
+        margin-top: 2.5rem;
+        gap: 12px;
+    }
+
+    /* Keep four buttons together */
+    .tt-home .tt-four-buttons .btn {
+        min-width: 0;
+        min-height: 58px;
+        padding: 12px 15px;
+        font-size: 0.9rem;
+    }
+
+    /* Vertically center the trefoil */
+    .tt-home .tt-hero-art {
+        align-self: center;
+        justify-self: center;
+        gap: 1.5rem;
+    }
+
+    /* Maintain a compact GIF */
+    .tt-home .tt-gif-frame {
+        width: 330px;
+        max-width: 100%;
+    }
+
+    .tt-home .tt-tagline {
+        max-width: 380px;
+        margin: 0 auto;
+        font-size: 1.35rem;
+        line-height: 1.5;
+        text-align: center;
+    }
+}
+
+/* =========================================
+   THETREFOIL — ABOUT ME PAGE
+   ========================================= */
+
+/* Page heading */
+
+.about-page-hero {
+    padding-bottom: 2rem;
+}
+
+/* Biography and image alignment */
+
+.about-profile-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1.5fr) minmax(280px, 0.75fr);
+    align-items: start;
+    gap: clamp(3rem, 6vw, 6rem);
+}
+
+/* Biography */
+
+.about-profile-content {
+    min-width: 0;
+}
+
+.about-profile-content h2 {
+    font-size: clamp(2rem, 3vw, 3rem);
+    line-height: 1.25;
+    margin: 0 0 1rem;
+}
+
+.about-degree {
+    font-size: 0.55em;
+    font-weight: 400;
+    white-space: nowrap;
+    color: #aebdc3;
+}
+
+.about-designation {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.4rem;
+}
+
+.about-institution {
+    font-size: 1rem;
+    line-height: 1.7;
+    opacity: 0.75;
+}
+
+.about-divider {
+    width: 65px;
+    height: 2px;
+    background: #dba36e;
+    margin: 2rem 0;
+}
+
+.about-profile-content h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1.2rem;
+}
+
+.about-biography {
+    font-size: 1.08rem;
+    line-height: 1.95;
+    text-align: justify;
+    text-justify: inter-word;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    margin-bottom: 2rem;
+}
+
+.about-cv-button {
+    display: inline-flex;
+    width: auto;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.95rem;
+}
+
+/* Photograph */
+
+.about-photo-column {
+    width: 100%;
+    max-width: 340px;
+    justify-self: center;
+}
+
+.about-photo-frame {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 16px;
+    overflow: hidden;
+    border: 1px solid rgba(219, 163, 110, 0.35);
+    background: #11232b;
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.18);
+}
+
+.about-profile-photo {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+/* Placeholder when no photo is set */
+
+.about-photo-placeholder {
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    border-radius: 16px;
+    border: 1px dashed rgba(150, 170, 180, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aebdc3;
+    background: rgba(150, 170, 180, 0.05);
+}
+
+/* Caption */
+
+.about-photo-caption {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.about-photo-caption strong {
+    font-size: 1.05rem;
+}
+
+.about-photo-caption span {
+    font-size: 0.88rem;
+    opacity: 0.7;
+}
+
+/* Research and teaching */
+
+.about-section-heading {
+    font-size: clamp(2rem, 3vw, 3rem);
+    margin: 0.7rem 0 2.5rem;
+}
+
+.about-interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 1.5rem;
+}
+
+.about-interest-card {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    border: 1px solid rgba(150, 170, 180, 0.2);
+    border-radius: 14px;
+}
+
+.about-interest-icon {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.about-interest-card h3 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+}
+
+.about-interest-card p {
+    flex-grow: 1;
+    line-height: 1.8;
+    text-align: justify;
+    hyphens: auto;
+    overflow-wrap: break-word;
+    margin-bottom: 1.5rem;
+}
+
+/* Academic affiliation and profiles */
+
+.about-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 4rem;
+}
+
+.about-details-grid h2 {
+    font-size: 1.7rem;
+    margin: 0.7rem 0 1.5rem;
+}
+
+.about-affiliation p {
+    line-height: 1.8;
+    margin-bottom: 0.4rem;
+}
+
+.about-profile-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+
+    .about-profile-layout {
+        grid-template-columns: minmax(0, 1fr) 260px;
+        gap: 2rem;
+    }
+
+    .about-photo-column {
+        max-width: 260px;
+    }
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+
+    .about-profile-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .about-photo-column {
+        max-width: 300px;
+        grid-row: 1;
+    }
+
+    .about-biography,
+    .about-interest-card p {
+        text-align: left;
+    }
+
+    .about-interests-grid,
+    .about-details-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .about-profile-content h2 {
+        font-size: 1.9rem;
+    }
+}
+
+/* DOI / arXiv Publication Importer */
+
+.publication-import-panel {
+    padding: 2rem;
+    margin-bottom: 2.5rem;
+    border: 1px solid rgba(180, 195, 205, 0.25);
+    border-radius: 16px;
+    background: rgba(140, 165, 175, 0.06);
+}
+
+.publication-import-panel h2 {
+    font-size: 1.65rem;
+    margin: 0.7rem 0 1rem;
+}
+
+.publication-import-panel p {
+    line-height: 1.7;
+}
+
+.publication-import-form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    margin-top: 1.5rem;
+}
+
+.publication-import-form label {
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+.publication-import-form input,
+.publication-import-form select {
+    width: 100%;
+    min-height: 48px;
+    padding: 0.8rem 1rem;
+    border-radius: 8px;
+    border: 1px solid rgba(180, 195, 205, 0.3);
+    background: #142a33;
+    color: #ffffff;
+    font: inherit;
+}
+
+.publication-import-form .btn {
+    align-self: flex-start;
+    width: auto;
+    min-height: 46px;
+    padding: 0.8rem 1.4rem;
+    margin-top: 0.6rem;
+}
+
+.publication-import-form .btn:disabled {
+    opacity: 0.65;
+    cursor: wait;
+}
+
+.publication-import-status {
+    min-height: 1.5rem;
+    margin: 0.25rem 0 0;
+    font-size: 0.95rem;
+    color: #b8d7dc;
+}
+
+@media (max-width: 600px) {
+    .publication-import-panel {
+        padding: 1.25rem;
+    }
+
+    .publication-import-form .btn {
+        width: 100%;
+    }
+}
+
+/* ==========================================
+   THETREFOIL — PUBLICATIONS BIBLIOGRAPHY
+   ========================================== */
+
+.publications-page .pub-page-hero {
+    padding-bottom: 2.5rem;
+}
+
+.publications-page .pub-section {
+    padding-top: 4rem;
+    padding-bottom: 5rem;
+}
+
+.publications-page .pub-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.publications-page .pub-section-heading h2 {
+    margin: 0.75rem 0 0;
+    font-size: clamp(1.9rem, 3vw, 2.8rem);
+    line-height: 1.2;
+}
+
+.publications-page .pub-count {
+    font-size: 0.9rem;
+    opacity: 0.65;
+    white-space: nowrap;
+}
+
+.publications-page .pub-list {
+    max-width: 1050px;
+}
+
+.publications-page .pub-entry {
+    display: grid;
+    grid-template-columns: 50px minmax(0, 1fr);
+    gap: 1.5rem;
+    padding: 2rem 0;
+    border-bottom: 1px solid rgba(150, 170, 180, 0.22);
+}
+
+.publications-page .pub-entry:first-child {
+    border-top: 1px solid rgba(150, 170, 180, 0.22);
+}
+
+.publications-page .pub-number {
+    color: #dba36e;
+    font-size: 1rem;
+    font-weight: 600;
+    padding-top: 0.35rem;
+}
+
+.publications-page .pub-content {
+    min-width: 0;
+}
+
+.publications-page .pub-title {
+    margin: 0 0 0.7rem;
+    font-size: clamp(1.25rem, 1.7vw, 1.55rem);
+    line-height: 1.4;
+    letter-spacing: -0.015em;
+}
+
+.publications-page .pub-title a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.publications-page .pub-title a:hover {
+    color: #dba36e;
+}
+
+.publications-page .pub-authors {
+    margin: 0 0 0.55rem;
+    font-size: 1rem;
+    line-height: 1.65;
+}
+
+.publications-page .pub-citation {
+    margin: 0 0 0.85rem;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    opacity: 0.75;
+}
+
+.publications-page .pub-links {
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.publications-page .pub-links a {
+    color: #dba36e;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.publications-page .pub-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+.publications-page .pub-empty {
+    padding: 1.5rem 0;
+    opacity: 0.7;
+}
+
+/* Mobile */
+
+@media (max-width: 700px) {
+    .publications-page .pub-section {
+        padding-top: 3rem;
+        padding-bottom: 3.5rem;
+    }
+
+    .publications-page .pub-entry {
+        grid-template-columns: 32px minmax(0, 1fr);
+        gap: 0.8rem;
+        padding: 1.5rem 0;
+    }
+
+    .publications-page .pub-section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 0.6rem;
+    }
+
+    .publications-page .pub-title {
+        font-size: 1.2rem;
+    }
+
+    .publications-page .pub-authors {
+        font-size: 0.95rem;
+    }
+}
+
+/* ==========================================
+   THETREFOIL — HOMEPAGE PUBLICATION LISTS
+   ========================================== */
+
+.tt-home .tt-home-publications {
+    padding-top: 4.5rem;
+    padding-bottom: 5rem;
+}
+
+.tt-home .tt-home-pub-group {
+    margin-top: 2.5rem;
+}
+
+.tt-home .tt-home-pub-group+.tt-home-pub-group {
+    margin-top: 3.5rem;
+}
+
+.tt-home .tt-home-pub-group>h3 {
+    font-size: 1.55rem;
+    margin-bottom: 1.5rem;
+}
+
+.tt-home .tt-home-pub-list {
+    max-width: 1050px;
+}
+
+.tt-home .tt-home-pub-entry {
+    display: grid;
+    grid-template-columns: 42px minmax(0, 1fr);
+    gap: 1.2rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px solid rgba(150, 170, 180, 0.22);
+}
+
+.tt-home .tt-home-pub-entry:first-child {
+    border-top: 1px solid rgba(150, 170, 180, 0.22);
+}
+
+.tt-home .tt-home-pub-number {
+    color: #dba36e;
+    font-weight: 600;
+    padding-top: 0.2rem;
+}
+
+.tt-home .tt-home-pub-info {
+    min-width: 0;
+}
+
+.tt-home .tt-home-pub-info h4 {
+    font-size: 1.15rem;
+    line-height: 1.5;
+    margin: 0 0 0.5rem;
+}
+
+.tt-home .tt-home-pub-info h4 a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.tt-home .tt-home-pub-info h4 a:hover {
+    color: #dba36e;
+}
+
+.tt-home .tt-home-pub-meta {
+    font-size: 0.9rem;
+    opacity: 0.7;
+    margin: 0 0 0.6rem;
+}
+
+.tt-home .tt-home-pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.tt-home .tt-home-pub-links a {
+    color: #dba36e;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.tt-home .tt-home-pub-links a:hover {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+}
+
+@media (max-width: 700px) {
+    .tt-home .tt-home-pub-entry {
+        grid-template-columns: 30px minmax(0, 1fr);
+        gap: 0.8rem;
+    }
+
+    .tt-home .tt-home-pub-info h4 {
+        font-size: 1.05rem;
+    }
+}
+
+/* YOUTUBE PLAYLIST TILES */
+
+.tt-playlist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.tt-playlist-card {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    border: 1px solid rgba(150, 170, 180, .25);
+    border-radius: 12px;
+    background: rgba(120, 150, 165, .07);
+    transition: transform .2s ease, border-color .2s ease;
+}
+
+.tt-playlist-card:hover {
+    transform: translateY(-4px);
+    border-color: #dba36e;
+}
+
+.tt-playlist-art {
+    min-height: 165px;
+    background: linear-gradient(135deg, #10272f, #244451);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.tt-playlist-symbol {
+    display: grid;
+    place-items: center;
+    width: 66px;
+    height: 46px;
+    border-radius: 13px;
+    background: #e62117;
+    color: white;
+    font-size: 23px;
+}
+
+.tt-playlist-label {
+    position: absolute;
+    left: 16px;
+    bottom: 14px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: .13em;
+    color: white;
+}
+
+.tt-playlist-content {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.tt-playlist-content h3 {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    margin: 0 0 .8rem;
+}
+
+.tt-playlist-content p {
+    font-size: .95rem;
+    line-height: 1.65;
+    opacity: .8;
+    margin: 0 0 1.5rem;
+}
+
+.tt-playlist-link {
+    margin-top: auto;
+    color: #dba36e;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.tt-playlist-link:hover {
+    text-decoration: underline;
+}
+
+.tt-playlist-unavailable {
+    margin-top: auto;
+    opacity: .6;
+    font-size: .9rem;
+}
+
+@media (max-width: 900px) {
+    .tt-playlist-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .tt-playlist-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Video category sections */
+
+.tt-video-section {
+    margin-top: 3rem;
+}
+
+.tt-video-section+.tt-video-section {
+    margin-top: 4rem;
+}
+
+.tt-video-section .tt-section-heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.tt-video-section h2 {
+    font-size: clamp(1.5rem, 2.5vw, 2rem);
+    margin: 0;
+}
+
+.tt-video-count {
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+/* ==========================================
+   VIDEO CATEGORY BANNERS
+   ========================================== */
+
+.tt-playlist-card {
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 1.25rem;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.02);
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.tt-playlist-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(232, 182, 126, 0.55);
+}
+
+.tt-playlist-art {
+    position: relative;
+    min-height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.tt-banner-symbol {
+    font-size: 4rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.92);
+    letter-spacing: 0.03em;
+    z-index: 1;
+}
+
+.tt-playlist-label {
+    position: absolute;
+    left: 1.25rem;
+    bottom: 1rem;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: rgba(255, 255, 255, 0.9);
+    z-index: 1;
+}
+
+.tt-playlist-art::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.04));
+}
+
+.tt-playlist-content {
+    padding: 1.5rem;
+}
+
+.tt-playlist-content h3 {
+    margin: 0 0 0.75rem 0;
+}
+
+.tt-playlist-link {
+    display: inline-block;
+    margin-top: 0.75rem;
+    font-weight: 700;
+    color: #e8b67e;
+    text-decoration: none;
+}
+
+/* Different category banners */
+
+.tt-banner-lecture-series {
+    background: linear-gradient(135deg, #1d3557, #457b9d);
+}
+
+.tt-banner-standalone {
+    background: linear-gradient(135deg, #264653, #2a9d8f);
+}
+
+.tt-banner-problem-solving {
+    background: linear-gradient(135deg, #5a189a, #7b2cbf);
+}
+
+.tt-banner-theorems {
+    background: linear-gradient(135deg, #6b2d5c, #b56576);
+}
+
+.tt-banner-tutorials {
+    background: linear-gradient(135deg, #1b4332, #40916c);
+}
+
+.tt-banner-seminars {
+    background: linear-gradient(135deg, #7f5539, #b08968);
+}
+
+.tt-banner-general {
+    background: linear-gradient(135deg, #243b53, #486581);
+}
+
+/* Individual mathematical symbols on video banners */
+
+.tt-banner-symbol {
+    position: relative;
+    z-index: 1;
+    display: block;
+    max-width: 90%;
+    padding: 0.5rem;
+    color: rgba(255, 255, 255, 0.95);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(2rem, 3vw, 3.4rem);
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+/* Mathematical expressions on video banners */
+
+.tt-playlist-art .tt-banner-symbol {
+    font-size: clamp(1.5rem, 2.4vw, 2.4rem);
+    line-height: 1.5;
+    max-width: 88%;
+    text-align: center;
+}
+
+.tt-playlist-art .tt-banner-symbol .katex {
+    font-size: 1em;
+}
+
+.tt-playlist-art .tt-banner-symbol .katex-display {
+    margin: 0;
+    max-width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.portrait-editor {
+    margin: 1.25rem 0 1.75rem;
+    padding: 1.25rem;
+    border: 1px solid rgba(140, 160, 170, .3);
+    border-radius: 16px;
+}
+
+.portrait-stage {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+}
+
+#portrait-preview {
+    display: block;
+    width: 100%;
+    max-width: 360px;
+    height: auto;
+    aspect-ratio: 4 / 5;
+    background: #f3f0e9;
+    cursor: grab;
+    touch-action: none;
+    border-radius: 18px;
+    border: 1px solid rgba(140, 160, 170, .3);
+}
+
+#portrait-preview:active {
+    cursor: grabbing;
+}
+
+.portrait-controls {
+    max-width: 460px;
+    margin: 0 auto;
+}
+
+.portrait-controls label {
+    display: flex;
+    justify-content: space-between;
+}
+
+.portrait-controls input[type=range] {
+    display: block;
+    width: 100%;
+    margin: .65rem 0 1.2rem;
+}
+
+.portrait-current-preview {
+    width: 220px;
+    max-width: 100%;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+    border-radius: 18px;
+    display: block;
+    margin-bottom: 1rem;
+}
+
+/* Academic profile brand icons */
+.about-profile-links .academic-social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.about-profile-links .academic-social-icon {
+    font-size: 23px;
+    line-height: 1;
+}
+
+.about-profile-links .orcid-icon {
+    color: #a6ce39;
+}
+
+.about-profile-links .researchgate-icon {
+    color: #00ccbb;
+}
+
+.about-profile-links .youtube-icon {
+    color: #ff0033;
+}
+
+/* Academic Profiles: local brand logos */
+.about-profile-links a.academic-social-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 11px;
+}
+
+.about-profile-links img.academic-social-icon {
+    display: inline-block;
+    width: 23px;
+    height: 23px;
+    flex: 0 0 23px;
+    object-fit: contain;
+}
+
+.about-profile-links img.orcid-icon {
+    filter: invert(77%) sepia(30%) saturate(912%) hue-rotate(30deg);
+}
+
+.about-profile-links img.researchgate-icon {
+    filter: invert(64%) sepia(94%) saturate(610%) hue-rotate(119deg);
+}
+
+.about-profile-links img.youtube-icon {
+    filter: invert(27%) sepia(100%) saturate(4400%) hue-rotate(346deg);
+}
+
+/* Research Resources: brand favicon alignment */
+.tt-resource-heading {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    min-width: 0;
+}
+
+.tt-resource-heading h3 {
+    min-width: 0;
+    margin: 0;
+}
+
+.tt-resource-logo {
+    display: block;
+    width: 38px;
+    height: 38px;
+    flex: 0 0 38px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+/* Research Resources: dedicated four-column grid */
+.tt-resource-listing-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+}
+
+.tt-resource-listing-card {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 13px;
+    min-width: 0;
+    min-height: 190px;
+    padding: 25px 22px;
+    border: 1px solid var(--line);
+    background: var(--paper);
+    border-radius: 12px;
+    color: var(--ink);
+    text-decoration: none;
+    transition: transform .2s, border-color .2s;
+}
+
+.tt-resource-listing-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent);
+}
+
+.tt-resource-listing-logo {
+    display: block;
+    width: 44px;
+    height: 44px;
+    object-fit: contain;
+    border-radius: 7px;
+}
+
+.tt-resource-listing-card h3 {
+    font-size: 17px;
+    line-height: 1.35;
+    margin: 0;
+    overflow-wrap: anywhere;
+}
+
+.tt-resource-listing-category {
+    margin-top: auto;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.tt-resource-listing-arrow {
+    position: absolute;
+    top: 18px;
+    right: 19px;
+    color: var(--accent);
+}
+
+@media (max-width: 980px) {
+    .tt-resource-listing-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 560px) {
+    .tt-resource-listing-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Resource wordmark displayed proportionally */
+.tt-resource-listing-grid .tt-resource-listing-logo--wide {
+    width: 105px;
+    max-width: 100%;
+    height: 44px;
+    object-fit: contain;
+    object-position: left center;
+}
+
+/* Resource detail external-link logos */
+.tt-external-resource-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tt-external-resource-logo {
+    width: 24px;
+    height: 24px;
+    flex: 0 0 24px;
+    object-fit: contain;
+}
+
+/* THE TREFOIL: JOURNAL PUBLICATION CARDS */
+
+.publications-page .pub-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.publications-page .pub-entry,
+.publications-page .pub-entry:first-child {
+    display: grid;
+    grid-template-columns: 44px minmax(0, 1fr);
+    gap: 15px;
+    align-items: start;
+    padding: 28px 25px;
+    margin: 0;
+    min-width: 0;
+    height: 100%;
+    box-sizing: border-box;
+    background: var(--paper, #fff);
+    border: 1px solid var(--line, #e2ded6);
+    border-radius: 13px;
+    box-shadow: 0 5px 20px rgba(15, 35, 42, .045);
+    transition: transform .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+}
+
+.publications-page .pub-entry:hover {
+    transform: translateY(-3px);
+    border-color: var(--accent, #ae8761);
+    box-shadow: 0 14px 32px rgba(15, 35, 42, .09);
+}
+
+.publications-page .pub-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin: 0;
+    padding: 0;
+    border: 1px solid rgba(159, 119, 79, .35);
+    border-radius: 9px;
+    background: #f4f0e9;
+    color: #916c46;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: .04em;
+}
+
+.publications-page .pub-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-width: 0;
+    height: 100%;
+}
+
+.publications-page .pub-title {
+    margin: 0 0 13px;
+    font-size: clamp(1.08rem, 1.35vw, 1.3rem);
+    line-height: 1.45;
+    letter-spacing: -.015em;
+    overflow-wrap: anywhere;
+}
+
+.publications-page .pub-title a {
+    color: var(--ink, #1b3037);
+    text-decoration: none;
+}
+
+.publications-page .pub-title a:hover {
+    color: var(--accent, #ae8761);
+}
+
+.publications-page .pub-authors {
+    margin: 0 0 13px;
+    font-size: 13px;
+    line-height: 1.75;
+    color: var(--muted, #65777d);
+}
+
+.publications-page .pub-citation {
+    margin: 0 0 20px;
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted, #65777d);
+}
+
+.publications-page .pub-citation em {
+    color: var(--ink, #1b3037);
+    font-weight: 600;
+}
+
+.publications-page .pub-links {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px 20px;
+    width: 100%;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: 1px solid var(--line, #e2ded6);
+}
+
+.publications-page .pub-links a {
+    font-size: 12px;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--accent, #ae8761);
+}
+
+.publications-page .pub-links a:hover {
+    text-decoration: underline;
+}
+
+.publications-page .pub-empty {
+    grid-column: 1 / -1;
+}
+
+@media (max-width: 980px) {
+    .publications-page .pub-list {
+        grid-template-columns: minmax(0, 1fr);
+    }
+}
+
+@media (max-width: 560px) {
+
+    .publications-page .pub-entry,
+    .publications-page .pub-entry:first-child {
+        grid-template-columns: 36px minmax(0, 1fr);
+        padding: 21px 17px;
+        gap: 12px;
+    }
+
+    .publications-page .pub-number {
+        width: 36px;
+        height: 36px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .publications-page .pub-entry {
+        transition: none;
+    }
+}
+
+/* Justified abstracts on publication detail pages */
+
+.tt-publication-abstract-text p {
+    text-align: justify !important;
+    text-justify: inter-word;
+    line-height: 1.85;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+/* THE TREFOIL: FINAL JUSTIFIED ABSTRACT */
+.tt-publication-abstract-text p {
+    text-align: justify !important;
+    text-justify: inter-word;
+    line-height: 1.85;
+    hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+/* Publication detail: justified scholarly text */
+.detail-body p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.85;
+    hyphens: auto;
+}
+
+.publication-detail-body p {
+    text-align: justify;
+    text-justify: inter-word;
+    line-height: 1.85;
+    hyphens: auto;
+}
+/* TheTrefoil: four-column academic profiles */
+.about-profile-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.about-profile-links a.academic-social-link {
+    min-width: 0;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .about-profile-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 520px) {
+    .about-profile-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* TheTrefoil academic profile card alignment v2 */
+.about-profile-links {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1rem;
+}
+
+.about-profile-links a.academic-social-link {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 10px;
+    width: 100%;
+    min-width: 0;
+    min-height: 78px;
+    padding: 16px 14px;
+    box-sizing: border-box;
+}
+
+.about-profile-links img.academic-social-icon {
+    width: 25px;
+    height: 25px;
+    flex: 0 0 25px;
+}
+
+.about-profile-links a.academic-social-link > span:nth-last-child(2) {
+    white-space: nowrap;
+    font-size: clamp(0.86rem, 1.1vw, 1.05rem);
+}
+
+.about-profile-links a.academic-social-link > span:last-child {
+    margin-left: auto;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 1050px) {
+    .about-profile-links {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .about-profile-links {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+
+/* === Academic Profiles: force 2 x 2 grid === */
+.about-profile-links{
+    display:grid !important;
+    grid-template-columns:repeat(2, minmax(260px, 1fr)) !important;
+    gap:1rem !important;
+    max-width:980px;
+}
+
+.about-profile-links a.academic-social-link{
+    display:flex !important;
+    align-items:center !important;
+    gap:14px !important;
+    width:100% !important;
+    min-height:88px;
+    padding:18px 22px;
+    box-sizing:border-box;
+    justify-content:flex-start !important;
+}
+
+.about-profile-links a.academic-social-link > span:nth-of-type(1){
+    flex:1;
+    white-space:normal;
+}
+
+.about-profile-links a.academic-social-link > span:last-child{
+    margin-left:auto;
+}
+
+.about-profile-links img.academic-social-icon{
+    width:30px !important;
+    height:30px !important;
+    flex:0 0 30px !important;
+    object-fit:contain;
+}
+
+/* mobile fallback */
+@media (max-width: 700px){
+    .about-profile-links{
+        grid-template-columns:1fr !important;
+    }
+}
+
+
+/* TheTrefoil compact rounded academic profiles */
+.about-profile-links {
+    display: grid !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: 14px !important;
+    max-width: 610px !important;
+    width: 100%;
+    margin-right: auto;
+}
+
+.about-profile-links a.academic-social-link {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 12px !important;
+    width: 100% !important;
+    min-width: 0;
+    min-height: 66px !important;
+    padding: 12px 15px !important;
+    border-radius: 16px !important;
+    box-sizing: border-box;
+}
+
+.about-profile-links img.academic-social-icon {
+    width: 27px !important;
+    height: 27px !important;
+    flex: 0 0 27px !important;
+    object-fit: contain;
+}
+
+.about-profile-links a.academic-social-link > span:nth-of-type(1) {
+    flex: 1;
+    min-width: 0;
+    font-size: 0.98rem !important;
+    white-space: nowrap !important;
+}
+
+.about-profile-links a.academic-social-link > span:last-child {
+    margin-left: auto !important;
+    flex: 0 0 auto;
+}
+
+@media (max-width: 650px) {
+    .about-profile-links {
+        grid-template-columns: 1fr !important;
+        max-width: 340px !important;
+    }
+}
+
+/* About Me introductory statement */
+.about-page-hero .about-hero-intro {
+    font-size: clamp(1rem, 1.5vw, 1.2rem);
+    font-weight: 400;
+    line-height: 1.7;
+    letter-spacing: 0.01em;
+    color: #aab9bd;
+    max-width: 760px;
+    margin-top: 1.5rem;
+}
+
+
+/* TheTrefoil refined CV button */
+.about-profile-content a.about-cv-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 13px;
+    width: fit-content;
+    max-width: 100%;
+    min-height: 68px;
+    padding: 11px 14px;
+    border: 1px solid #405359;
+    border-radius: 16px;
+    background: #1b2d32;
+    color: #f0f2f0;
+    text-decoration: none;
+    box-sizing: border-box;
+    transition: background .2s ease, border-color .2s ease,
+                transform .2s ease, box-shadow .2s ease;
+}
+
+.about-cv-button .about-cv-icon {
+    display: grid;
+    place-items: center;
+    width: 42px;
+    height: 42px;
+    flex: 0 0 42px;
+    border-radius: 11px;
+    background: #304047;
+    color: #d9a579;
+}
+
+.about-cv-button .about-cv-icon svg {
+    width: 23px;
+    height: 23px;
+}
+
+.about-cv-button .about-cv-label {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    text-align: left;
+}
+
+.about-cv-button .about-cv-label strong {
+    color: #f0f2f0;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.25;
+}
+
+.about-cv-button .about-cv-label small {
+    color: #a9b9bc;
+    font-size: .78rem;
+    line-height: 1.3;
+}
+
+.about-cv-button .about-cv-arrow {
+    display: grid;
+    place-items: center;
+    width: 32px;
+    height: 32px;
+    margin-left: 12px;
+    flex: 0 0 32px;
+    border-radius: 50%;
+    background: #304047;
+    color: #d9a579;
+    font-size: 1.15rem;
+}
+
+.about-profile-content a.about-cv-button:hover {
+    background: #243a40;
+    border-color: #d9a579;
+    box-shadow: 0 8px 24px rgba(0,0,0,.14);
+    transform: translateY(-2px);
+}
+
+.about-profile-content a.about-cv-button:focus-visible {
+    outline: 2px solid #d9a579;
+    outline-offset: 4px;
+}
+
+/* Preserve paragraph breaks in the About Me biography */
+.about-biography {
+    white-space: pre-line;
+    line-height: 1.85;
+}
+
+/* Compact and consistent biography paragraph spacing */
+.about-biography {
+    white-space: normal !important;
+}
+
+.about-biography p {
+    margin: 0 0 0.65rem;
+    line-height: 1.75;
+}
+
+.about-biography p:last-child {
+    margin-bottom: 0;
+}
+
+
+/* TheTrefoil refined research and teaching cards */
+.about-interests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+.about-interests-grid .about-interest-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    min-height: 0;
+    height: auto;
+    padding: 28px 30px;
+    border-radius: 20px;
+    box-sizing: border-box;
+    transition: border-color .2s ease, transform .2s ease,
+                box-shadow .2s ease;
+}
+
+.about-interests-grid .about-interest-icon {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    height: 42px;
+    margin: 0 0 20px;
+    color: #d9a579;
+    font-size: inherit;
+}
+
+.about-interests-grid .about-interest-icon svg {
+    display: block;
+    width: 42px;
+    height: 42px;
+}
+
+.about-interests-grid .about-interest-card h3 {
+    margin: 0 0 10px;
+}
+
+.about-interests-grid .about-interest-card p {
+    margin: 0 0 22px;
+    line-height: 1.65;
+    flex-grow: 1;
+}
+
+.about-interests-grid .about-interest-card .text-link {
+    display: inline-flex;
+    align-items: center;
+    margin-top: auto;
+    transition: color .2s ease, transform .2s ease;
+}
+
+.about-interests-grid .about-interest-card:hover {
+    border-color: #8c735a;
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(0,0,0,.10);
+}
+
+.about-interests-grid .about-interest-card .text-link:hover {
+    transform: translateX(3px);
+}
+
+@media (max-width: 700px) {
+    .about-interests-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .about-interests-grid .about-interest-card {
+        padding: 24px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .about-interests-grid .about-interest-card,
+    .about-interests-grid .about-interest-card .text-link {
+        transition: none;
+    }
+}
+
+
+/* TheTrefoil refined research project titles */
+
+/* Only project listing cards */
+body:has(.tt-project-title-style) .tt-project-title-style {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(1.25rem, 1.6vw, 1.55rem);
+    font-weight: 600;
+    line-height: 1.3;
+    letter-spacing: -0.025em;
+    color: #f0f1ed;
+    margin: 14px 0 16px;
+    text-wrap: balance;
+}
+
+.tt-project-title-style::after {
+    content: "";
+    display: block;
+    width: 36px;
+    height: 2px;
+    margin-top: 13px;
+    background: #d9a579;
+    border-radius: 3px;
+}
+
+@media (max-width: 700px) {
+    .tt-project-title-style {
+        font-size: 1.3rem;
+    }
+}
+
+
+/* TheTrefoil Modern Glass Navigation */
+
+/* Desktop navigation */
+@media (min-width: 1101px) {
+    .site-header .nav-wrap {
+        gap: 14px;
+    }
+
+    .site-header .site-nav {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: nowrap;
+        gap: 5px;
+        min-width: 0;
+    }
+
+    .site-header .site-nav > a {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        white-space: nowrap;
+        padding: 9px 11px;
+        border: 1px solid rgba(190, 209, 211, 0.15);
+        border-radius: 999px;
+        background: rgba(150, 183, 190, 0.055);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        font-size: 0.85rem;
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: 0;
+        text-decoration: none;
+        transition: background .2s ease, border-color .2s ease,
+                    color .2s ease, transform .2s ease;
+    }
+
+    .site-header .site-nav > a:hover {
+        background: rgba(217, 165, 121, 0.12);
+        border-color: rgba(217, 165, 121, 0.55);
+        color: #d9a579;
+        transform: translateY(-1px);
+    }
+
+    .site-header .site-nav > a:focus-visible {
+        outline: 2px solid #d9a579;
+        outline-offset: 3px;
+    }
+}
+
+/* Maintain mobile navigation functionality */
+@media (max-width: 1100px) {
+    .site-header .site-nav > a {
+        border-radius: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header .site-nav > a {
+        transition: none;
+    }
+}
+
+
+/* TheTrefoil Admin Navigation Theme Selector */
+.tt-nav-style-setting {
+    display: grid;
+    gap: 9px;
+    margin: 20px 0;
+}
+.tt-nav-style-setting label {
+    font-weight: 600;
+}
+.tt-nav-style-setting select {
+    width: 100%;
+    min-height: 46px;
+    padding: 10px 14px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--bg);
+    color: var(--ink);
+}
+.tt-nav-style-help {
+    margin: 0;
+    font-size: .85rem;
+    color: var(--muted);
+}
+
+/* Desktop themes */
+@media (min-width: 1101px) {
+    .site-header .site-nav.nav-style-glass > a {
+        border-radius: 999px;
+        padding: 9px 11px;
+        border: 1px solid rgba(170, 190, 195, .22);
+        background: rgba(140, 170, 180, .08);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        font-size: .85rem;
+        font-weight: 500;
+    }
+    .site-header .site-nav.nav-style-glass > a:hover {
+        background: rgba(217, 165, 121, .14);
+        border-color: #d9a579;
+        color: #d9a579;
+    }
+
+    .site-header .site-nav.nav-style-editorial > a {
+        border: 0;
+        border-bottom: 2px solid transparent;
+        border-radius: 0;
+        padding: 10px 5px 8px;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        font-size: .88rem;
+        font-weight: 500;
+    }
+    .site-header .site-nav.nav-style-editorial > a:hover {
+        border-bottom-color: #d9a579;
+        background: transparent;
+        color: #d9a579;
+    }
+
+    .site-header .site-nav.nav-style-rounded > a {
+        border: 1px solid rgba(170, 190, 195, .18);
+        border-radius: 11px;
+        padding: 9px 11px;
+        background: rgba(140, 170, 180, .09);
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        font-size: .85rem;
+        font-weight: 500;
+    }
+    .site-header .site-nav.nav-style-rounded > a:hover {
+        background: rgba(217, 165, 121, .17);
+        border-color: #d9a579;
+        color: #d9a579;
+    }
+
+    .site-header .site-nav.nav-style-minimal > a {
+        border: 0;
+        border-radius: 0;
+        padding: 9px 5px;
+        background: transparent;
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+        font-size: .84rem;
+        font-weight: 400;
+        letter-spacing: .025em;
+    }
+    .site-header .site-nav.nav-style-minimal > a:hover {
+        background: transparent;
+        color: #d9a579;
+    }
+}
+
+/* Preserve the existing responsive mobile-menu layout. */
+@media (max-width: 1100px) {
+    .site-header .site-nav.nav-style-glass > a,
+    .site-header .site-nav.nav-style-editorial > a,
+    .site-header .site-nav.nav-style-rounded > a,
+    .site-header .site-nav.nav-style-minimal > a {
+        backdrop-filter: none;
+        -webkit-backdrop-filter: none;
+    }
+}
+
+.site-header .site-nav > a:focus-visible {
+    outline: 2px solid #d9a579;
+    outline-offset: 3px;
+}
+
+
+/* TheTrefoil Bronze Glass Search Button */
+.site-header .nav-actions .tt-header-search {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    padding: 0;
+    flex: 0 0 43px;
+    border: 1px solid rgba(217,165,121,.45);
+    border-radius: 13px;
+    background: rgba(217,165,121,.09);
+    color: #d9a579;
+    text-decoration: none;
+    transition: background .2s ease, border-color .2s ease,
+                transform .2s ease, box-shadow .2s ease;
+}
+
+.site-header .nav-actions .tt-header-search svg {
+    display: block;
+    width: 23px;
+    height: 23px;
+}
+
+.site-header .nav-actions .tt-header-search:hover {
+    color: #edc49d;
+    border-color: #d9a579;
+    background: rgba(217,165,121,.18);
+    box-shadow: 0 4px 16px rgba(0,0,0,.12);
+    transform: translateY(-1px);
+}
+
+.site-header .nav-actions .tt-header-search:focus-visible {
+    outline: 2px solid #d9a579;
+    outline-offset: 3px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .site-header .nav-actions .tt-header-search {
+        transition: none;
+    }
+}
+
+/* TheTrefoil — Compact arrows inside buttons */
+.btn svg,
+.ttv-button svg,
+.ttv-hero-action svg,
+.ttc-submit svg,
+.tb-button svg {
+    width: 12px !important;
+    height: 12px !important;
+    flex-shrink: 0;
+}
+
+.ttv-hero-action > span:last-child,
+.ttv-button > span:last-child,
+.tb-button > span:last-child {
+    font-size: 12px !important;
+    line-height: 1 !important;
+    font-weight: 400;
+}
+
+/* TheTrefoil — Small upward-right arrows */
+.tt-small-arrow {
+    display: inline-block;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    line-height: 1;
+    vertical-align: baseline;
+    margin-left: 3px;
+}
+
+
+/* THETREFOIL SITEWIDE UNIFORM ARROWS V2 */
+a .tt-uniform-arrow,
+button .tt-uniform-arrow,
+a .tt-small-arrow,
+button .tt-small-arrow,
+a .ttv-small-arrow,
+button .ttv-small-arrow {
+    display: inline-block !important;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    vertical-align: middle;
+    transform: none !important;
+}
+
+/* Uniform arrow size for YouTube playlist cards */
+.tt-playlist-link .tt-uniform-arrow {
+    display: inline-block !important;
+    font-size: 11px !important;
+    font-weight: 400 !important;
+    line-height: 1 !important;
+    letter-spacing: 0 !important;
+    vertical-align: middle;
+}
+
+
+/* THETREFOIL EDITORIAL FOOTER V1 */
+.tt-editorial-footer {
+  background: #172a30;
+  color: #f2f0ea;
+  padding: 60px 0 24px;
+}
+
+.tt-editorial-footer .tt-footer-main {
+  display: grid;
+  grid-template-columns: minmax(0, 1.5fr) minmax(0, 1fr);
+  gap: 64px;
+  align-items: start;
+  padding-bottom: 42px;
+}
+
+.tt-editorial-footer .tt-footer-identity p {
+  max-width: 340px;
+  margin: 12px 0 0;
+  color: #aebfc1;
+  font-size: 14px;
+  line-height: 1.75;
+}
+
+.tt-editorial-footer .footer-wordmark-link {
+  display: inline-block;
+}
+
+.tt-editorial-footer .footer-wordmark {
+  display: block;
+  max-width: 235px;
+  width: 100%;
+  height: auto;
+}
+
+.tt-editorial-footer .tt-footer-navigation {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.tt-editorial-footer .tt-footer-column {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.tt-editorial-footer .tt-footer-column strong {
+  margin-bottom: 8px;
+  color: #d9a579;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.tt-editorial-footer .tt-footer-column a {
+  color: #e4eae7;
+  font-size: 13px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: color .2s ease;
+}
+
+.tt-editorial-footer .tt-footer-column a:hover,
+.tt-editorial-footer .tt-footer-column a:focus-visible {
+  color: #d9a579;
+}
+
+.tt-editorial-footer .tt-small-arrow {
+  font-size: 11px !important;
+}
+
+.tt-editorial-footer .tt-footer-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  padding-top: 22px;
+  border-top: 1px solid #41565b;
+  color: #a8b8ba;
+  font-size: 12px;
+}
+
+@media (max-width: 760px) {
+  .tt-editorial-footer {
+    padding-top: 40px;
+  }
+  .tt-editorial-footer .tt-footer-main {
+    grid-template-columns: 1fr;
+    gap: 32px;
+    padding-bottom: 32px;
+  }
+  .tt-editorial-footer .tt-footer-navigation {
+    gap: 24px;
+  }
+  .tt-editorial-footer .tt-footer-bottom {
+    flex-wrap: wrap;
+    gap: 8px 20px;
+  }
+}
+
+
+/* THETREFOIL EDITORIAL FOOTER ANIMATIONS */
+
+/* 1. Initial reveal state, only when JavaScript is active */
+.tt-footer-motion-ready .tt-footer-identity,
+.tt-footer-motion-ready .tt-footer-column,
+.tt-footer-motion-ready .tt-footer-bottom {
+    opacity: 0;
+    transform: translateY(18px);
+}
+
+/* 2. Reveal when footer enters viewport */
+.tt-footer-motion-ready.tt-footer-visible .tt-footer-identity,
+.tt-footer-motion-ready.tt-footer-visible .tt-footer-column,
+.tt-footer-motion-ready.tt-footer-visible .tt-footer-bottom {
+    opacity: 1;
+    transform: translateY(0);
+    transition:
+        opacity .75s ease,
+        transform .75s cubic-bezier(.2,.8,.2,1);
+}
+
+.tt-footer-motion-ready.tt-footer-visible .tt-footer-column:nth-child(1) {
+    transition-delay: .12s;
+}
+
+.tt-footer-motion-ready.tt-footer-visible .tt-footer-column:nth-child(2) {
+    transition-delay: .23s;
+}
+
+.tt-footer-motion-ready.tt-footer-visible .tt-footer-bottom {
+    transition-delay: .32s;
+}
+
+/* 3. Elegant bronze underline */
+.tt-editorial-footer .tt-footer-column a {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+}
+
+.tt-editorial-footer .tt-footer-column a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 100%;
+    bottom: 0;
+    height: 1px;
+    background: #d9a579;
+    transition: right .3s ease;
+}
+
+.tt-editorial-footer .tt-footer-column a:hover::after,
+.tt-editorial-footer .tt-footer-column a:focus-visible::after {
+    right: 0;
+}
+
+/* 4. Subtle logo animation */
+.tt-editorial-footer .footer-wordmark {
+    transition:
+        filter .4s ease,
+        transform .4s ease;
+}
+
+.tt-editorial-footer .footer-wordmark-link:hover .footer-wordmark {
+    filter: brightness(1.12) drop-shadow(0 0 9px rgba(217,165,121,.22));
+    transform: translateY(-2px);
+}
+
+/* 5. Small arrow movement */
+.tt-editorial-footer .tt-small-arrow {
+    display: inline-block;
+    transition: transform .3s ease;
+}
+
+.tt-editorial-footer a:hover .tt-small-arrow {
+    transform: translate(2px,-2px);
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .tt-footer-motion-ready .tt-footer-identity,
+    .tt-footer-motion-ready .tt-footer-column,
+    .tt-footer-motion-ready .tt-footer-bottom {
+        opacity: 1 !important;
+        transform: none !important;
+        transition: none !important;
+    }
+
+    .tt-editorial-footer *,
+    .tt-editorial-footer *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+
+
+/* THETREFOIL ANIMATED FOOTER KNOT */
+.tt-editorial-footer .tt-footer-knot-panel {
+  margin-top: 24px;
+  width: min(180px, 100%);
+  padding: 14px 16px;
+  border: 1px solid rgba(217, 165, 121, 0.24);
+  border-radius: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.04);
+}
+
+.tt-editorial-footer .tt-footer-knot-svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  overflow: visible;
+  animation: tt-footer-knot-float 6s ease-in-out infinite;
+}
+
+.tt-editorial-footer .tt-footer-knot-trace {
+  stroke: #d9a579;
+}
+
+.tt-editorial-footer .tt-footer-knot-trace-main {
+  stroke-width: 1.9;
+  stroke-dasharray: 280;
+  stroke-dashoffset: 280;
+  animation: tt-footer-knot-draw 5s ease-in-out infinite alternate;
+}
+
+.tt-editorial-footer .tt-footer-knot-trace-soft {
+  stroke-width: 1.35;
+  opacity: 0.34;
+  animation: tt-footer-knot-pulse 5.5s ease-in-out infinite;
+}
+
+@keyframes tt-footer-knot-draw {
+  0%, 12% {
+    stroke-dashoffset: 280;
+  }
+  58%, 100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes tt-footer-knot-float {
+  0%, 100% {
+    transform: translateY(0) scale(1);
+  }
+  50% {
+    transform: translateY(-3px) scale(1.015);
+  }
+}
+
+@keyframes tt-footer-knot-pulse {
+  0%, 100% {
+    opacity: 0.24;
+  }
+  50% {
+    opacity: 0.55;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tt-editorial-footer .tt-footer-knot-svg,
+  .tt-editorial-footer .tt-footer-knot-trace-main,
+  .tt-editorial-footer .tt-footer-knot-trace-soft {
+    animation: none !important;
+  }
+
+  .tt-editorial-footer .tt-footer-knot-trace-main {
+    stroke-dashoffset: 0;
+  }
+}
+
+
+/* THETREFOIL REFINED MATHEMATICAL TREFOIL */
+.tt-editorial-footer .tt-footer-knot-panel {
+    width: 120px !important;
+    margin-top: 22px !important;
+    padding: 0 !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+.tt-editorial-footer .tt-footer-knot-svg {
+    display: block;
+    width: 120px !important;
+    height: 110px !important;
+    overflow: visible;
+    animation: tt-refined-knot-rotate 28s linear infinite !important;
+    transform-origin: center;
+}
+
+.tt-editorial-footer .tt-footer-knot-line {
+    stroke: #d9a579;
+    stroke-width: 1.5;
+    fill: none;
+}
+
+@keyframes tt-refined-knot-rotate {
+    from { transform: rotate(0deg); }
+    to   { transform: rotate(360deg); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tt-editorial-footer .tt-footer-knot-svg {
+        animation: none !important;
+    }
+}
+
+
+/* THETREFOIL FOOTER BRAND VIDEO */
+.tt-editorial-footer .tt-footer-brand-row {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 24px;
+}
+
+.tt-editorial-footer .tt-footer-brand-row .footer-wordmark-link {
+    flex: 0 1 235px;
+    min-width: 0;
+    margin: 0 !important;
+}
+
+.tt-editorial-footer .tt-footer-brand-row .footer-wordmark {
+    max-width: 100%;
+    height: auto;
+}
+
+.tt-editorial-footer .tt-footer-video {
+    flex: 0 0 112px;
+    width: 112px;
+    height: 112px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.tt-editorial-footer .tt-footer-video video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 760px) {
+    .tt-editorial-footer .tt-footer-brand-row {
+        gap: 15px;
+    }
+
+    .tt-editorial-footer .tt-footer-video {
+        flex-basis: 86px;
+        width: 86px;
+        height: 86px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tt-editorial-footer .tt-footer-video {
+        display: none;
+    }
+}
+
+/* Enlarged animated trefoil beside footer branding */
+.tt-editorial-footer .tt-footer-video {
+    flex: 0 0 180px !important;
+    width: 180px !important;
+    height: 180px !important;
+    border-radius: 50%;
+}
+
+.tt-editorial-footer .tt-footer-video video {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+}
+
+@media (max-width: 760px) {
+    .tt-editorial-footer .tt-footer-video {
+        flex: 0 0 130px !important;
+        width: 130px !important;
+        height: 130px !important;
+    }
+}
+
+/* Trefoil footer animation — 200 x 200 px */
+.tt-editorial-footer .tt-footer-video {
+    flex: 0 0 200px !important;
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.tt-editorial-footer .tt-footer-video video {
+    display: block;
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover;
+}
+
+/* THETREFOIL COMPACT EDITORIAL FOOTER */
+.tt-editorial-footer {
+    padding-top: 18px !important;
+    padding-bottom: 12px !important;
+}
+
+.tt-editorial-footer .tt-footer-main {
+    padding-bottom: 12px !important;
+    gap: 28px !important;
+    align-items: center !important;
+}
+
+.tt-editorial-footer .tt-footer-brand-row {
+    gap: 16px !important;
+}
+
+.tt-editorial-footer .tt-footer-identity p {
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    line-height: 1.4 !important;
+}
+
+.tt-editorial-footer .tt-footer-column {
+    gap: 7px !important;
+}
+
+.tt-editorial-footer .tt-footer-column strong {
+    margin-bottom: 3px !important;
+}
+
+.tt-editorial-footer .tt-footer-bottom {
+    padding-top: 12px !important;
+    gap: 10px !important;
+}
+
+/* Keep the animated trefoil at the requested size */
+.tt-editorial-footer .tt-footer-video {
+    flex: 0 0 200px !important;
+    width: 200px !important;
+    height: 200px !important;
+}
+
+.tt-editorial-footer .tt-footer-video video {
+    width: 200px !important;
+    height: 200px !important;
+    object-fit: cover;
+}
+
+@media (max-width: 760px) {
+    .tt-editorial-footer {
+        padding-top: 16px !important;
+    }
+
+    .tt-editorial-footer .tt-footer-main {
+        gap: 15px !important;
+        padding-bottom: 14px !important;
+    }
+}
+
+/* Compact footer: description immediately below the brand */
+.tt-editorial-footer .tt-footer-brand-row {
+    display: flex !important;
+    align-items: center !important;
+    gap: 20px !important;
+}
+
+.tt-editorial-footer .tt-footer-brand-copy {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.tt-editorial-footer .tt-footer-brand-copy .footer-wordmark-link {
+    display: block;
+    margin: 0 0 8px !important;
+}
+
+.tt-editorial-footer .tt-footer-brand-copy p {
+    margin: 0 !important;
+    font-size: 13px !important;
+    line-height: 1.45 !important;
+    color: #aebfc1;
+}
+
+.tt-editorial-footer .tt-footer-video {
+    flex: 0 0 200px !important;
+    width: 200px !important;
+    height: 200px !important;
+}
+
+
+/* THETREFOIL REFINED EDITORIAL FOOTER ALIGNMENT */
+
+.tt-editorial-footer .tt-footer-main {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) auto !important;
+    align-items: center !important;
+    column-gap: 36px !important;
+}
+
+/* Brand and animation remain together */
+.tt-editorial-footer .tt-footer-brand-row {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    gap: 18px !important;
+}
+
+.tt-editorial-footer .tt-footer-brand-copy {
+    flex: 0 1 250px !important;
+    min-width: 0 !important;
+}
+
+.tt-editorial-footer .footer-wordmark-link {
+    display: block !important;
+    width: 250px !important;
+    max-width: 100% !important;
+    margin: 0 0 9px !important;
+}
+
+.tt-editorial-footer .footer-wordmark {
+    display: block !important;
+    width: 100% !important;
+    max-width: 250px !important;
+    height: auto !important;
+}
+
+/* Description aligns with the width of the brand */
+.tt-editorial-footer .tt-footer-brand-copy p {
+    width: 100% !important;
+    margin: 0 !important;
+    font-size: 12px !important;
+    line-height: 1.5 !important;
+    white-space: nowrap;
+}
+
+/* Keep the approved animation at 200 x 200px */
+.tt-editorial-footer .tt-footer-video {
+    flex: 0 0 200px !important;
+    width: 200px !important;
+    height: 200px !important;
+}
+
+/* Navigation columns move toward the right edge */
+.tt-editorial-footer .tt-footer-navigation {
+    display: grid !important;
+    grid-template-columns: repeat(2, 145px) !important;
+    justify-content: end !important;
+    column-gap: 28px !important;
+    margin-left: auto !important;
+}
+
+.tt-editorial-footer .tt-footer-column {
+    align-items: flex-start !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+    .tt-editorial-footer .tt-footer-main {
+        grid-template-columns: 1fr !important;
+        row-gap: 22px !important;
+    }
+
+    .tt-editorial-footer .tt-footer-navigation {
+        margin-left: 0 !important;
+        justify-content: start !important;
+    }
+}
+
+@media (max-width: 540px) {
+    .tt-editorial-footer .tt-footer-brand-copy {
+        flex-basis: 190px !important;
+    }
+
+    .tt-editorial-footer .footer-wordmark-link {
+        width: 190px !important;
+    }
+
+    .tt-editorial-footer .tt-footer-brand-copy p {
+        white-space: normal;
+    }
+
+    .tt-editorial-footer .tt-footer-video {
+        flex: 0 0 130px !important;
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    .tt-editorial-footer .tt-footer-video video {
+        width: 130px !important;
+        height: 130px !important;
+    }
+
+    .tt-editorial-footer .tt-footer-navigation {
+        grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+        width: 100% !important;
+    }
+}
+
+/* Footer tagline aligned to the full width of the logo */
+.tt-editorial-footer .tt-footer-brand-copy {
+    width: 250px !important;
+    flex: 0 0 250px !important;
+}
+
+.tt-editorial-footer .tt-footer-brand-copy .footer-wordmark-link,
+.tt-editorial-footer .tt-footer-brand-copy .footer-wordmark {
+    width: 250px !important;
+    max-width: 250px !important;
+}
+
+.tt-editorial-footer .tt-footer-brand-copy p {
+    width: 250px !important;
+    max-width: none !important;
+    margin: 8px 0 0 !important;
+    font-size: 14px !important;
+    line-height: 1.4 !important;
+    letter-spacing: 0.15px !important;
+    text-align: justify !important;
+    text-align-last: justify !important;
+    white-space: nowrap !important;
+}
+
+@media (max-width: 540px) {
+    .tt-editorial-footer .tt-footer-brand-copy,
+    .tt-editorial-footer .tt-footer-brand-copy .footer-wordmark-link,
+    .tt-editorial-footer .tt-footer-brand-copy .footer-wordmark,
+    .tt-editorial-footer .tt-footer-brand-copy p {
+        width: 190px !important;
+        max-width: 190px !important;
+    }
+
+    .tt-editorial-footer .tt-footer-brand-copy {
+        flex-basis: 190px !important;
+    }
+
+    .tt-editorial-footer .tt-footer-brand-copy p {
+        font-size: 11px !important;
+    }
+}
+
+
+/* THETREFOIL PHILOSOPHY SECTION */
+.tt-philosophy {
+    padding: 70px 0 85px;
+}
+
+.tt-philosophy-panel {
+    padding: clamp(24px, 4vw, 55px);
+    background: #172a30;
+    border: 1px solid #3d5359;
+    border-radius: 24px;
+    color: #f2f0ea;
+}
+
+.tt-philosophy-kicker {
+    display: block;
+    margin-bottom: 15px;
+    color: #d9a579;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.tt-philosophy-heading h2 {
+    font-family: Georgia, serif;
+    font-size: clamp(30px, 3.2vw, 47px);
+    line-height: 1.2;
+    margin: 0 0 19px;
+    color: #f2f0ea;
+}
+
+.tt-philosophy-heading h2 em {
+    color: #d9a579;
+    font-weight: 400;
+}
+
+.tt-philosophy-heading > p {
+    color: #b8c6c8;
+    max-width: 750px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.tt-philosophy-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 39px;
+}
+
+.tt-philosophy-item {
+    padding: 25px 23px;
+    border: 1px solid #3d5359;
+    border-radius: 15px;
+    background: rgba(255,255,255,.025);
+}
+
+.tt-philosophy-number {
+    color: #d9a579;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.tt-philosophy-item h3 {
+    color: #f2f0ea;
+    font-family: Georgia, serif;
+    font-size: 24px;
+    margin: 16px 0 12px;
+}
+
+.tt-philosophy-item p {
+    color: #b8c6c8;
+    font-size: 14px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.tt-philosophy-closing {
+    margin: 35px 0 0;
+    padding-top: 25px;
+    border-top: 1px solid #40555b;
+    font-family: Georgia, serif;
+    font-style: italic;
+    color: #d9a579;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.tt-knot-about-link {
+    color: inherit !important;
+    text-decoration: none !important;
+    transition: color .2s ease;
+}
+
+.tt-knot-about-link:hover,
+.tt-knot-about-link:focus-visible {
+    color: #d9a579 !important;
+}
+
+@media (max-width: 760px) {
+    .tt-philosophy {
+        padding: 40px 0 50px;
+    }
+
+    .tt-philosophy-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+    }
+
+    .tt-philosophy-closing {
+        font-size: 15px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tt-knot-about-link {
+        transition: none;
+    }
+}
+
+
+/* THETREFOIL PAGE CORNER KNOT V2 */
+#main {
+    position: relative;
+}
+
+.tt-page-corner-knot {
+    position: absolute;
+    top: 20px;
+    right: max(24px, calc((100vw - 1180px) / 2));
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.tt-page-corner-knot video {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+@media (max-width: 900px) {
+    .tt-page-corner-knot {
+        width: 125px;
+        height: 125px;
+        right: 20px;
+    }
+}
+
+@media (max-width: 600px) {
+    .tt-page-corner-knot {
+        width: 80px;
+        height: 80px;
+        right: 12px;
+        top: 12px;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tt-page-corner-knot {
+        display: none;
+    }
+}
+
+
+/* THETREFOIL TRANSPARENT CORNER WEBM */
+.tt-page-corner-knot {
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+.tt-page-corner-knot video {
+    display: block !important;
+    width: 100% !important;
+    height: 100% !important;
+    background: transparent !important;
+    border-radius: 0 !important;
+    object-fit: contain !important;
+}
+
+/* Transparent trefoil animation beside footer brand */
+.tt-editorial-footer .tt-footer-video {
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    overflow: visible !important;
+}
+
+.tt-editorial-footer .tt-footer-video video {
+    background: transparent !important;
+    border-radius: 0 !important;
+    object-fit: contain !important;
+}
+
+/* Align the top-right trefoil animation with page headings */
+@media (min-width: 901px) {
+    #main .tt-page-corner-knot {
+        top: 70px !important;
+    }
+}
+
+@media (max-width: 900px) {
+    #main .tt-page-corner-knot {
+        top: 45px !important;
+    }
+}
+
+@media (max-width: 600px) {
+    #main .tt-page-corner-knot {
+        top: 25px !important;
+    }
+}
+
+/* Refined alignment and size of interior-page trefoil */
+@media (min-width: 901px) {
+    #main .tt-page-corner-knot {
+        width: 240px !important;
+        height: 240px !important;
+        top: 35px !important;
+    }
+
+    #main .tt-page-corner-knot video {
+        width: 100% !important;
+        height: 100% !important;
+        object-fit: contain !important;
+    }
+}
+
+/* THETREFOIL UNIFIED INTERIOR PAGE HEADINGS */
+
+/* Standard headings: About, Research, Teaching,
+   Lecture Notes, Publications, Resources, YouTube, etc. */
+.page-hero h1 {
+    font-size: clamp(32px, 4.25vw, 61px) !important;
+    line-height: 1.2 !important;
+    font-weight: 700 !important;
+    letter-spacing: -0.037em !important;
+}
+
+/* Contact page */
+.ttc-page .ttc-hero h1 {
+    font-size: clamp(32px, 4.25vw, 61px) !important;
+    line-height: 1.2 !important;
+    letter-spacing: -0.037em !important;
+}
+
+/* Consistent mobile typography */
+@media (max-width: 650px) {
+    .page-hero h1,
+    .ttc-page .ttc-hero h1 {
+        font-size: clamp(32px, 9vw, 46px) !important;
+    }
+}
+
+/* THETREFOIL ADMIN SELECTABLE COLOUR PALETTES */
+
+html[data-theme="light"][data-palette="deep-sage"] {
+  --bg: #A8B8AA;
+  --paper: #DCE5DA;
+  --ink: #142C35;
+  --muted: #435960;
+  --accent: #87562F;
+  --deep: #163B46;
+  --tint: #DCE5DA;
+  --line: #81938F;
+  --shadow: 0 12px 30px rgba(19,41,47,.09);
+  color-scheme: light;
+}
+
+
+html[data-theme="light"][data-palette="slate-blue"] {
+  --bg: #A5B6C2;
+  --paper: #DEE7EC;
+  --ink: #142C35;
+  --muted: #435960;
+  --accent: #87562F;
+  --deep: #163B46;
+  --tint: #DEE7EC;
+  --line: #81938F;
+  --shadow: 0 12px 30px rgba(19,41,47,.09);
+  color-scheme: light;
+}
+
+
+html[data-theme="light"][data-palette="smoky-teal"] {
+  --bg: #95B2B1;
+  --paper: #D9E9E6;
+  --ink: #142C35;
+  --muted: #435960;
+  --accent: #87562F;
+  --deep: #163B46;
+  --tint: #D9E9E6;
+  --line: #81938F;
+  --shadow: 0 12px 30px rgba(19,41,47,.09);
+  color-scheme: light;
+}
+
+
+html[data-theme="light"][data-palette="warm-taupe"] {
+  --bg: #B9ADA0;
+  --paper: #E7DFD5;
+  --ink: #142C35;
+  --muted: #435960;
+  --accent: #87562F;
+  --deep: #163B46;
+  --tint: #E7DFD5;
+  --line: #81938F;
+  --shadow: 0 12px 30px rgba(19,41,47,.09);
+  color-scheme: light;
+}
+
+
+html[data-theme="light"][data-palette="graphite-mist"] {
+  --bg: #A4A9AE;
+  --paper: #E0E3E5;
+  --ink: #142C35;
+  --muted: #435960;
+  --accent: #87562F;
+  --deep: #163B46;
+  --tint: #E0E3E5;
+  --line: #81938F;
+  --shadow: 0 12px 30px rgba(19,41,47,.09);
+  color-scheme: light;
+}
+
+
+html[data-theme="light"][data-palette="dusty-olive"] {
+  --bg: #B0B49C;
+  --paper: #E2E5D6;
+  --ink: #142C35;
+  --muted: #435960;
+  --accent: #87562F;
+  --deep: #163B46;
+  --tint: #E2E5D6;
+  --line: #81938F;
+  --shadow: 0 12px 30px rgba(19,41,47,.09);
+  color-scheme: light;
+}
+
+
+html[data-theme="light"][data-palette="midnight-navy"] {
+  --bg: #172436;
+  --paper: #24354A;
+  --ink: #F2F0E9;
+  --muted: #B9C8CB;
+  --accent: #D9A579;
+  --deep: #10242D;
+  --tint: #24354A;
+  --line: #526067;
+  --shadow: 0 12px 32px rgba(0,0,0,.18);
+  color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="oxford-blue"] {
+  --bg: #142D3B;
+  --paper: #254151;
+  --ink: #F2F0E9;
+  --muted: #B9C8CB;
+  --accent: #D9A579;
+  --deep: #10242D;
+  --tint: #254151;
+  --line: #526067;
+  --shadow: 0 12px 32px rgba(0,0,0,.18);
+  color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="forest-ink"] {
+  --bg: #192D27;
+  --paper: #2A4138;
+  --ink: #F2F0E9;
+  --muted: #B9C8CB;
+  --accent: #D9A579;
+  --deep: #10242D;
+  --tint: #2A4138;
+  --line: #526067;
+  --shadow: 0 12px 32px rgba(0,0,0,.18);
+  color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="deep-petrol"] {
+  --bg: #18383E;
+  --paper: #294A50;
+  --ink: #F2F0E9;
+  --muted: #B9C8CB;
+  --accent: #D9A579;
+  --deep: #10242D;
+  --tint: #294A50;
+  --line: #526067;
+  --shadow: 0 12px 32px rgba(0,0,0,.18);
+  color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="charcoal-plum"] {
+  --bg: #302B38;
+  --paper: #443B4B;
+  --ink: #F2F0E9;
+  --muted: #B9C8CB;
+  --accent: #D9A579;
+  --deep: #10242D;
+  --tint: #443B4B;
+  --line: #526067;
+  --shadow: 0 12px 32px rgba(0,0,0,.18);
+  color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="espresso-brown"] {
+  --bg: #352C29;
+  --paper: #4A3C35;
+  --ink: #F2F0E9;
+  --muted: #B9C8CB;
+  --accent: #D9A579;
+  --deep: #10242D;
+  --tint: #4A3C35;
+  --line: #526067;
+  --shadow: 0 12px 32px rgba(0,0,0,.18);
+  color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="graphite-blue"] {
+  --bg: #252F3B;
+  --paper: #374453;
+  --ink: #F2F0E9;
+  --muted: #B9C8CB;
+  --accent: #D9A579;
+  --deep: #10242D;
+  --tint: #374453;
+  --line: #526067;
+  --shadow: 0 12px 32px rgba(0,0,0,.18);
+  color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="black-olive"] {
+  --bg: #2B3027;
+  --paper: #3E4637;
+  --ink: #F2F0E9;
+  --muted: #B9C8CB;
+  --accent: #D9A579;
+  --deep: #10242D;
+  --tint: #3E4637;
+  --line: #526067;
+  --shadow: 0 12px 32px rgba(0,0,0,.18);
+  color-scheme: dark;
+}
+
+
+.tt-palette-setting {
+    margin: 26px 0;
+    padding: 20px;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    background: var(--paper);
+}
+
+.tt-palette-setting label {
+    display: block;
+    font-weight: 700;
+    margin-bottom: 7px;
+}
+
+.tt-palette-setting p,
+.tt-palette-setting small {
+    display: block;
+    color: var(--muted);
+    line-height: 1.6;
+}
+
+.tt-palette-setting select {
+    display: block;
+    width: 100%;
+    max-width: 440px;
+    margin: 14px 0;
+    padding: 11px 12px;
+    color: var(--ink);
+    background: var(--bg);
+    border: 1px solid var(--line);
+    border-radius: 7px;
+}
+
+
+/* THETREFOIL HIGH CONTRAST PALETTES V2 */
+
+html[data-theme="light"][data-palette="emerald-night"] {
+    --bg: #122D28;
+    --paper: #21453B;
+    --tint: #21453B;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    --shadow: 0 12px 34px rgba(0,0,0,.2);
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="prussian-blue"] {
+    --bg: #102A43;
+    --paper: #1E4059;
+    --tint: #1E4059;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    --shadow: 0 12px 34px rgba(0,0,0,.2);
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="ocean-abyss"] {
+    --bg: #102E35;
+    --paper: #204650;
+    --tint: #204650;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    --shadow: 0 12px 34px rgba(0,0,0,.2);
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="mahogany-ink"] {
+    --bg: #332323;
+    --paper: #4A3433;
+    --tint: #4A3433;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    --shadow: 0 12px 34px rgba(0,0,0,.2);
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="storm-indigo"] {
+    --bg: #252A46;
+    --paper: #383D5C;
+    --tint: #383D5C;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    --shadow: 0 12px 34px rgba(0,0,0,.2);
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="evergreen"] {
+    --bg: #202D24;
+    --paper: #334536;
+    --tint: #334536;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    --shadow: 0 12px 34px rgba(0,0,0,.2);
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette]:not([data-palette="original"])
+.tt-header-search {
+    color: #F2BD86 !important;
+    background: rgba(15, 27, 33, .52) !important;
+    border: 1px solid rgba(242, 189, 134, .72) !important;
+    box-shadow: 0 0 0 1px rgba(242, 189, 134, .08);
+}
+
+html[data-theme="light"][data-palette]:not([data-palette="original"])
+.tt-header-search svg {
+    color: #F2BD86 !important;
+    stroke: currentColor !important;
+}
+
+html[data-theme="light"][data-palette]:not([data-palette="original"])
+.tt-header-search:hover,
+html[data-theme="light"][data-palette]:not([data-palette="original"])
+.tt-header-search:focus-visible {
+    background: #D9A579 !important;
+    color: #142C35 !important;
+}
+
+html[data-theme="light"][data-palette]:not([data-palette="original"])
+.tt-header-search:hover svg,
+html[data-theme="light"][data-palette]:not([data-palette="original"])
+.tt-header-search:focus-visible svg {
+    color: #142C35 !important;
+}
+
+
+html[data-theme="light"][data-palette="deep-sage"] {
+    --bg: #122D28;
+    --paper: #21453B;
+    --tint: #21453B;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="slate-blue"] {
+    --bg: #102A43;
+    --paper: #1E4059;
+    --tint: #1E4059;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="smoky-teal"] {
+    --bg: #102E35;
+    --paper: #204650;
+    --tint: #204650;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="warm-taupe"] {
+    --bg: #332323;
+    --paper: #4A3433;
+    --tint: #4A3433;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="graphite-mist"] {
+    --bg: #252A46;
+    --paper: #383D5C;
+    --tint: #383D5C;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    color-scheme: dark;
+}
+
+
+html[data-theme="light"][data-palette="dusty-olive"] {
+    --bg: #202D24;
+    --paper: #334536;
+    --tint: #334536;
+    --ink: #F5F2EA;
+    --muted: #C4D2D2;
+    --accent: #E4AD78;
+    --deep: #10232A;
+    --line: #65777A;
+    color-scheme: dark;
+}
+
+/* THETREFOIL SUBTLE GOLDEN HEADING GLITTER */
+
+.section-kicker,
+.ttv-kicker,
+.tb-eyebrow,
+.tb-heading-top > span:first-child,
+.ttc-kicker,
+.tt-philosophy-kicker,
+.tad-kicker,
+.tce-kicker {
+    position: relative;
+    display: inline-block;
+    color: #d9a579;
+    background-image: linear-gradient(
+        105deg,
+        #c58d58 0%,
+        #d9a579 35%,
+        #fff0c9 49%,
+        #d9a579 63%,
+        #c58d58 100%
+    );
+    background-size: 260% 100%;
+    background-position: 100% center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: tt-golden-shimmer 7s ease-in-out infinite;
+}
+
+/* Small decorative sparkle */
+.section-kicker::after,
+.ttv-kicker::after,
+.tb-eyebrow::after,
+.ttc-kicker::after,
+.tt-philosophy-kicker::after,
+.tad-kicker::after,
+.tce-kicker::after {
+    content: "✦";
+    display: inline-block;
+    margin-left: 8px;
+    color: #e6b77c;
+    -webkit-text-fill-color: #e6b77c;
+    font-size: 9px;
+    vertical-align: middle;
+    opacity: 0;
+    animation: tt-golden-sparkle 7s ease-in-out infinite;
+}
+
+@keyframes tt-golden-shimmer {
+    0%, 12% {
+        background-position: 100% center;
+    }
+    35%, 100% {
+        background-position: 0% center;
+    }
+}
+
+@keyframes tt-golden-sparkle {
+    0%, 22%, 45%, 100% {
+        opacity: 0;
+        transform: scale(0.5) rotate(0deg);
+    }
+    30% {
+        opacity: 1;
+        transform: scale(1) rotate(40deg);
+    }
+    36% {
+        opacity: 0.35;
+        transform: scale(0.75) rotate(75deg);
+    }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+    .section-kicker,
+    .ttv-kicker,
+    .tb-eyebrow,
+    .tb-heading-top > span:first-child,
+    .ttc-kicker,
+    .tt-philosophy-kicker,
+    .tad-kicker,
+    .tce-kicker {
+        animation: none !important;
+        background-image: none !important;
+        -webkit-text-fill-color: currentColor !important;
+    }
+
+    .section-kicker::after,
+    .ttv-kicker::after,
+    .tb-eyebrow::after,
+    .ttc-kicker::after,
+    .tt-philosophy-kicker::after,
+    .tad-kicker::after,
+    .tce-kicker::after {
+        animation: none !important;
+        display: none !important;
+    }
+}
+
+/* THETREFOIL GOLDEN HEADINGS — IMPROVED VISIBILITY */
+
+.section-kicker,
+.ttv-kicker,
+.tb-eyebrow,
+.tb-heading-top > span:first-child,
+.ttc-kicker,
+.tt-philosophy-kicker,
+.tad-kicker,
+.tce-kicker {
+    font-size: 14px !important;
+    font-weight: 750 !important;
+    letter-spacing: 2px !important;
+    line-height: 1.7 !important;
+}
+
+/* Enlarge the decorative golden sparkle */
+.section-kicker::after,
+.ttv-kicker::after,
+.tb-eyebrow::after,
+.ttc-kicker::after,
+.tt-philosophy-kicker::after,
+.tad-kicker::after,
+.tce-kicker::after {
+    font-size: 15px !important;
+    margin-left: 10px !important;
+    text-shadow: 0 0 8px rgba(255, 202, 114, .6);
+}
+
+@media (max-width: 600px) {
+    .section-kicker,
+    .ttv-kicker,
+    .tb-eyebrow,
+    .tb-heading-top > span:first-child,
+    .ttc-kicker,
+    .tt-philosophy-kicker,
+    .tad-kicker,
+    .tce-kicker {
+        font-size: 12px !important;
+        letter-spacing: 1.4px !important;
+    }
+}
+
+/* THETREFOIL — GLOBAL LOOPING GOLDEN GLITTER */
+
+@media (prefers-reduced-motion: no-preference) {
+    :is(
+        .section-kicker,
+        .ttv-kicker,
+        .tb-eyebrow,
+        .tb-heading-top > span:first-child,
+        .ttc-kicker,
+        .tt-philosophy-kicker,
+        .tad-kicker,
+        .tce-kicker,
+        .tt-gold-glitter
+    ) {
+        font-size: 14px !important;
+        font-weight: 750 !important;
+        letter-spacing: 1.8px !important;
+        animation: tt-global-gold-shimmer 4s linear infinite !important;
+    }
+
+    :is(
+        .section-kicker,
+        .ttv-kicker,
+        .tb-eyebrow,
+        .ttc-kicker,
+        .tt-philosophy-kicker,
+        .tad-kicker,
+        .tce-kicker,
+        .tt-gold-glitter
+    )::after {
+        animation: tt-global-gold-sparkle 4s ease-in-out infinite !important;
+    }
+}
+
+@keyframes tt-global-gold-shimmer {
+    0%   { background-position: 100% center; }
+    50%  { background-position: 0% center; }
+    100% { background-position: 100% center; }
+}
+
+@keyframes tt-global-gold-sparkle {
+    0%, 100% {
+        opacity: 0;
+        transform: scale(.5) rotate(0deg);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1.2) rotate(45deg);
+    }
+    65% {
+        opacity: .65;
+        transform: scale(.9) rotate(85deg);
+    }
+}
+
+@media (max-width: 600px) {
+    :is(
+        .section-kicker,
+        .ttv-kicker,
+        .tb-eyebrow,
+        .ttc-kicker,
+        .tt-philosophy-kicker,
+        .tad-kicker,
+        .tce-kicker,
+        .tt-gold-glitter
+    ) {
+        font-size: 12px !important;
+    }
+}
+
+
+/* THETREFOIL ACADEMIC LUXURY GOLD V3 */
+
+:is(
+    .section-kicker,
+    .ttv-kicker,
+    .tb-eyebrow,
+    .tb-heading-top > span:first-child,
+    .ttc-kicker,
+    .tt-philosophy-kicker,
+    .tad-kicker,
+    .tce-kicker,
+    .tt-gold-glitter
+) {
+    position: relative;
+    display: inline-block;
+    overflow: visible;
+    font-size: 15px !important;
+    font-weight: 750 !important;
+    letter-spacing: 2px !important;
+    line-height: 1.65 !important;
+    color: #F4CD91 !important;
+
+    background-image: linear-gradient(
+        105deg,
+        #B47B40 0%,
+        #E2AA64 19%,
+        #F4CA8C 35%,
+        #FFF6D6 48%,
+        #FFFFFF 51%,
+        #FFE3A5 56%,
+        #E0A866 76%,
+        #BD8447 100%
+    ) !important;
+
+    background-size: 300% 100% !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+
+    filter: drop-shadow(0 0 2px rgba(255,213,140,.32));
+
+    animation: tt-luxury-gold-shimmer 4s linear infinite !important;
+}
+
+:is(
+    .section-kicker,
+    .ttv-kicker,
+    .tb-eyebrow,
+    .ttc-kicker,
+    .tt-philosophy-kicker,
+    .tad-kicker,
+    .tce-kicker,
+    .tt-gold-glitter
+)::after {
+    content: "✦" !important;
+    display: inline-block !important;
+    margin-left: 10px !important;
+    font-size: 15px !important;
+    color: #FFE4A8 !important;
+    -webkit-text-fill-color: #FFE4A8 !important;
+    text-shadow:
+        0 0 5px rgba(255,248,215,.85),
+        0 0 12px rgba(245,187,100,.55);
+    animation: tt-luxury-gold-sparkle 4s ease-in-out infinite !important;
+}
+
+@keyframes tt-luxury-gold-shimmer {
+    0%   { background-position: 100% center; }
+    50%  { background-position: 0% center; }
+    100% { background-position: 100% center; }
+}
+
+@keyframes tt-luxury-gold-sparkle {
+    0%, 100% {
+        opacity: .15;
+        transform: scale(.6) rotate(0deg);
+    }
+    35% {
+        opacity: 1;
+        transform: scale(1.18) rotate(45deg);
+    }
+    65% {
+        opacity: .55;
+        transform: scale(.85) rotate(90deg);
+    }
+}
+
+@media (max-width: 600px) {
+    :is(
+        .section-kicker,
+        .ttv-kicker,
+        .tb-eyebrow,
+        .ttc-kicker,
+        .tt-philosophy-kicker,
+        .tad-kicker,
+        .tce-kicker,
+        .tt-gold-glitter
+    ) {
+        font-size: 13px !important;
+        letter-spacing: 1.4px !important;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    :is(
+        .section-kicker,
+        .ttv-kicker,
+        .tb-eyebrow,
+        .ttc-kicker,
+        .tt-philosophy-kicker,
+        .tad-kicker,
+        .tce-kicker,
+        .tt-gold-glitter
+    ),
+    :is(
+        .section-kicker,
+        .ttv-kicker,
+        .tb-eyebrow,
+        .ttc-kicker,
+        .tt-philosophy-kicker,
+        .tad-kicker,
+        .tce-kicker,
+        .tt-gold-glitter
+    )::after {
+        animation: none !important;
+    }
+}
+
+/* END THETREFOIL ACADEMIC LUXURY GOLD V3 */
+
+/* THETREFOIL — RESTORE ORIGINAL ACADEMIC PROFILE ICON COLOURS */
+
+/* ORCID */
+a[href*="orcid.org"] .fa-orcid,
+a[href*="orcid.org"] svg,
+a[href*="orcid.org"] i {
+    color: #A6CE39 !important;
+    fill: #A6CE39;
+}
+
+/* ResearchGate */
+a[href*="researchgate.net"] .fa-researchgate,
+a[href*="researchgate.net"] svg,
+a[href*="researchgate.net"] i {
+    color: #00CCBB !important;
+    fill: #00CCBB;
+}
+
+/* YouTube */
+a[href*="youtube.com"] .fa-youtube,
+a[href*="youtube.com"] svg,
+a[href*="youtube.com"] i,
+a[href*="youtu.be"] svg {
+    color: #FF0033 !important;
+    fill: #FF0033;
+}
+
+/* Google Scholar */
+a[href*="scholar.google"] svg,
+a[href*="scholar.google"] i {
+    color: #4285F4;
+}
+
+/* Preserve visibility on dark backgrounds */
+a[href*="orcid.org"],
+a[href*="researchgate.net"],
+a[href*="youtube.com"],
+a[href*="scholar.google"] {
+    opacity: 1 !important;
+}
+
+
+/* THETREFOIL ORIGINAL ACADEMIC BRAND ICONS */
+
+.about-profile-links img.orcid-icon,
+.about-profile-links img.researchgate-icon,
+.about-profile-links img.youtube-icon {
+    filter: none !important;
+    opacity: 1 !important;
+    mix-blend-mode: normal !important;
+    visibility: visible !important;
+}
+
+.about-profile-links .orcid-icon,
+.about-profile-links .researchgate-icon,
+.about-profile-links .youtube-icon {
+    opacity: 1 !important;
+}
+
+
+/* THETREFOIL SEAMLESS PHILOSOPHY V1 */
+
+/* Full-width section integrated into the About page */
+.tt-philosophy {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 70px 0 85px !important;
+    background: transparent !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+}
+
+/* Remove the floating outer panel */
+.tt-philosophy .tt-philosophy-panel {
+    width: 100% !important;
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    background: transparent !important;
+    background-image: none !important;
+    border: 0 !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    backdrop-filter: none !important;
+}
+
+/* Maintain spacious, well-aligned content */
+.tt-philosophy .container {
+    width: min(100% - 64px, 1320px);
+    max-width: 1320px;
+    margin-inline: auto;
+}
+
+/* Preserve the individual academic cards */
+.tt-philosophy .tt-philosophy-card {
+    border-radius: 14px;
+    transition: border-color .3s ease, transform .3s ease;
+}
+
+.tt-philosophy .tt-philosophy-card:hover {
+    transform: translateY(-3px);
+    border-color: rgba(226,170,100,.48);
+}
+
+/* Maintain a comfortable mobile layout */
+@media (max-width: 700px) {
+    .tt-philosophy {
+        padding: 48px 0 60px !important;
+    }
+
+    .tt-philosophy .container {
+        width: calc(100% - 36px);
+    }
+
+    .tt-philosophy .tt-philosophy-panel {
+        padding: 0 !important;
+    }
+}
+
+/* END THETREFOIL SEAMLESS PHILOSOPHY V1 */
+
+/* THE TREFOIL — JUSTIFIED PHILOSOPHY CARD TEXT */
+
+.tt-philosophy .tt-philosophy-card p {
+    text-align: justify !important;
+    text-justify: inter-word;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+}
+
+/* Keep card headings left-aligned */
+.tt-philosophy .tt-philosophy-card h3 {
+    text-align: left !important;
+}
+
+/* THETREFOIL — FULL JUSTIFICATION OF PHILOSOPHY TEXT */
+
+/* Target paragraphs throughout the three philosophy cards */
+.tt-philosophy .tt-philosophy-grid p,
+.tt-philosophy .tt-philosophy-card p,
+.tt-philosophy .tt-philosophy-cards p {
+    text-align: justify !important;
+    text-align-last: left !important;
+    text-justify: inter-word !important;
+    hyphens: auto;
+    -webkit-hyphens: auto;
+    overflow-wrap: break-word;
+}
+
+/* Keep card headings and numbers left aligned */
+.tt-philosophy h3,
+.tt-philosophy .tt-philosophy-card h3 {
+    text-align: left !important;
+}

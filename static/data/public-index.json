@@ -1,0 +1,366 @@
+[
+{
+"title": "Combinatorial Structures in Commutative Algebra",
+"type": "project",
+"category": "Combinatorial Algebra",
+"summary": "Exploring connections between combinatorial constructions and associated algebraic objects.",
+"href": "project/combinatorial-structures-in-commutative-algebra/"
+},
+{
+"title": "Algebraic and Homological Invariants",
+"type": "project",
+"category": "Commutative Algebra",
+"summary": "Studying regularity, projective dimension, depth, graded Betti numbers, and Hilbert series of graph-associated ideals.",
+"href": "project/algebraic-and-homological-invariants/"
+},
+{
+"title": "Binomial Edge Ideals and Graph Structures",
+"type": "project",
+"category": "Combinatorial Commutative Algebra",
+"summary": "Investigating how graph structures influence the algebraic properties of binomial edge ideals.",
+"href": "project/binomial-edge-ideals-and-graph-structures/"
+},
+{
+"title": "nLab",
+"type": "resource",
+"category": "Mathematical Encyclopedia",
+"summary": "Academic and mathematical resource: nLab.",
+"href": "resource/nlab/"
+},
+{
+"title": "LMFDB",
+"type": "resource",
+"category": "Research Database",
+"summary": "Academic and mathematical resource: LMFDB.",
+"href": "resource/lmfdb/"
+},
+{
+"title": "Mathematics Stack Exchange",
+"type": "resource",
+"category": "Mathematics Community",
+"summary": "Academic and mathematical resource: Mathematics Stack Exchange.",
+"href": "resource/mathematics-stack-exchange/"
+},
+{
+"title": "OEIS",
+"type": "resource",
+"category": "Mathematical Database",
+"summary": "Academic and mathematical resource: OEIS.",
+"href": "resource/oeis/"
+},
+{
+"title": "SciPy",
+"type": "resource",
+"category": "Scientific Computing",
+"summary": "Academic and mathematical resource: SciPy.",
+"href": "resource/scipy/"
+},
+{
+"title": "NumPy",
+"type": "resource",
+"category": "Numerical Computing",
+"summary": "Academic and mathematical resource: NumPy.",
+"href": "resource/numpy/"
+},
+{
+"title": "Jupyter",
+"type": "resource",
+"category": "Programming",
+"summary": "Academic and mathematical resource: Jupyter.",
+"href": "resource/jupyter/"
+},
+{
+"title": "GeoGebra",
+"type": "resource",
+"category": "Visualization",
+"summary": "Academic and mathematical resource: GeoGebra.",
+"href": "resource/geogebra/"
+},
+{
+"title": "Overleaf",
+"type": "resource",
+"category": "LaTeX",
+"summary": "Academic and mathematical resource: Overleaf.",
+"href": "resource/overleaf/"
+},
+{
+"title": "WolframAlpha",
+"type": "resource",
+"category": "Computation",
+"summary": "Academic and mathematical resource: WolframAlpha.",
+"href": "resource/wolframalpha/"
+},
+{
+"title": "MathOverflow",
+"type": "resource",
+"category": "Research Community",
+"summary": "Academic and mathematical resource: MathOverflow.",
+"href": "resource/mathoverflow/"
+},
+{
+"title": "GitHub",
+"type": "resource",
+"category": "Research Code",
+"summary": "Academic and mathematical resource: GitHub.",
+"href": "resource/github/"
+},
+{
+"title": "Algebraic Topology",
+"type": "course",
+"category": "",
+"summary": "",
+"href": "course/algebraic-topology/"
+},
+{
+"title": "Abstract Algebra",
+"type": "note",
+"category": "",
+"summary": "",
+"href": "note/abstract-algebra/"
+},
+{
+"title": "Graph Theory",
+"type": "video",
+"category": "Lecture Series",
+"summary": "",
+"href": "video/graph-theory/"
+},
+{
+"title": "Abstract Algebra",
+"type": "video",
+"category": "Lecture Series",
+"summary": "",
+"href": "video/abstract-algebra/"
+},
+{
+"title": "Algebraic Topology",
+"type": "video",
+"category": "Lecture Series",
+"summary": "",
+"href": "video/algebraic-topology/"
+},
+{
+"title": "Commutative Algebra",
+"type": "video",
+"category": "Lecture Series",
+"summary": "",
+"href": "video/commutative-algebra/"
+},
+{
+"title": "Category Theory",
+"type": "video",
+"category": "Lecture Series",
+"summary": "",
+"href": "video/category-theory/"
+},
+{
+"title": "Algebraic Geometry",
+"type": "video",
+"category": "Lecture Series",
+"summary": "",
+"href": "video/algebraic-geometry/"
+},
+{
+"title": "Binomial edge ideals of bipartite complements of even cycles",
+"type": "publication",
+"category": "Preprint",
+"summary": "Let $G_n$ be the bipartite complement of the even cycle $C_{2n}$, and let $J_{G_n}$ be its binomial edge ideal. For $n\\geq5$, we study the interaction between the combinatorial structure of $G_n$ and the algebraic invariants of $S_{G_n}/J_{G_n}$. Our main combinatorial ingredient is a classification of the subsets of $V(G_n)$ having the cut point property, obtained through an analysis of disconnected induced subgraphs of $G_n$. We use this classification to describe the minimal primes and to stu",
+"href": "publication/binomial-edge-ideals-of-bipartite-complements-of-even-cycles/"
+},
+{
+"title": "Homological invariants of Edge Ideals associated to powers of cycles",
+"type": "publication",
+"category": "Preprint",
+"summary": "Let $G_{n,m}=\\overline{\\C_n^{[m]}}$, where $\\C_n^{[m]}$ denotes the closed $m$th power of the $n$-cycle. We study the graded Betti numbers and homological invariants of the edge ring of $G_{n,m}$ in the range $n\\geq 3m+1$. These graphs form a natural family for the study of edge rings whose regularity can be compared explicitly with the induced matching number. In particular, for $n\\geq4m+1$, the graph $G_{n,m}$ has induced matching number one, whereas its edge ring has regularity two. Our appro",
+"href": "publication/homological-invariants-of-edge-ideals-associated-to-powers-of-cycles/"
+},
+{
+"title": "Google Scholar",
+"type": "resource",
+"category": "Academic search engines",
+"summary": "Search academic publications and citations.",
+"href": "resource/google-scholar/"
+},
+{
+"title": "SageMath",
+"type": "resource",
+"category": "Software & computational tools",
+"summary": "Open-source mathematics software system.",
+"href": "resource/sagemath/"
+},
+{
+"title": "Desmos",
+"type": "resource",
+"category": "Online mathematics resources",
+"summary": "Interactive graphs and mathematics visualizations.",
+"href": "resource/desmos/"
+},
+{
+"title": "Project Euclid",
+"type": "resource",
+"category": "Mathematical journals",
+"summary": "Mathematics and statistics scholarly publications.",
+"href": "resource/project-euclid/"
+},
+{
+"title": "American Mathematical Society",
+"type": "resource",
+"category": "Mathematical societies",
+"summary": "Professional mathematical society and publications.",
+"href": "resource/ams/"
+},
+{
+"title": "MathSciNet",
+"type": "resource",
+"category": "Research databases",
+"summary": "Mathematical Reviews research database.",
+"href": "resource/mathscinet/"
+},
+{
+"title": "zbMATH Open",
+"type": "resource",
+"category": "Research databases",
+"summary": "Open mathematics reviewing and indexing service.",
+"href": "resource/zbmath-open/"
+},
+{
+"title": "arXiv Mathematics",
+"type": "resource",
+"category": "Preprint servers",
+"summary": "Open access research preprints across mathematics.",
+"href": "resource/arxiv-mathematics/"
+},
+{
+"title": "Welcome to my academic website",
+"type": "post",
+"category": "Announcements",
+"summary": "New notes, recorded lectures and research updates will appear here.",
+"href": "post/welcome/"
+},
+{
+"title": "Lecture 03 — First Fundamental Form",
+"type": "note",
+"category": "Differential Geometry",
+"summary": "Metric coefficients and geometric invariance.",
+"href": "note/geometry-first-fundamental-form/"
+},
+{
+"title": "Lecture 02 — Vector Spaces",
+"type": "note",
+"category": "Linear Algebra",
+"summary": "Vector spaces, subspaces and elementary examples.",
+"href": "note/linear-algebra-vector-spaces/"
+},
+{
+"title": "Lecture 01 — Sequences of Real Numbers",
+"type": "note",
+"category": "Real Analysis",
+"summary": "Definitions and examples of convergent sequences.",
+"href": "note/real-analysis-sequences/"
+},
+{
+"title": "Differential Geometry",
+"type": "course",
+"category": "Geometry",
+"summary": "Curves, surfaces and the geometry of shape.",
+"href": "course/differential-geometry/"
+},
+{
+"title": "Linear Algebra",
+"type": "course",
+"category": "Algebra",
+"summary": "Vector spaces, linear maps, matrices and eigenvalues.",
+"href": "course/linear-algebra/"
+},
+{
+"title": "Real Analysis I",
+"type": "course",
+"category": "Analysis",
+"summary": "Foundations of sequences, continuity, differentiability and integration.",
+"href": "course/real-analysis-i/"
+},
+{
+"title": "On Graded Betti Numbers of Edge Rings of Certain Families of Graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "Graphs whose edge rings have regularity two are not completely characterized. We, therefore, study the minimal graded free resolution of edge rings of certain families of graphs, such as the general barbell graph [Formula: see text] (or [Formula: see text]-barbell graph) and the complete [Formula: see text]-sunlet graph [Formula: see text], and prove that the edge ring of a barbell graph is of regularity two. We give combinatorial formulas for the graded Betti numbers in the linear strand of Sta",
+"href": "publication/on-graded-betti-numbers-of-edge-rings-of-certain-families-of-graphs/"
+},
+{
+"title": "On homological invariants associated to graphs with induced matching number one",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-homological-invariants-associated-to-graphs-with-induced-matching-number-one/"
+},
+{
+"title": "Homological invariants of some complete split-like graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/homological-invariants-of-some-complete-split-like-graphs/"
+},
+{
+"title": "On Homological Invariants Associated to Multipartite Crown Graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-homological-invariants-associated-to-multipartite-crown-graphs/"
+},
+{
+"title": "On the linear strand of edge ideals of some zero-divisor graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-the-linear-strand-of-edge-ideals-of-some-zero-divisor-graphs/"
+},
+{
+"title": "Algebraic Properties of Edge Ideals and Cover Ideals of Unbalanced Crown Graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/algebraic-properties-of-edge-ideals-and-cover-ideals-of-unbalanced-crown-graphs/"
+},
+{
+"title": "On graded Betti numbers of edge rings of deficient complete bipartite graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-graded-betti-numbers-of-edge-rings-of-deficient-complete-bipartite-graphs/"
+},
+{
+"title": "On Betti numbers in the linear strand and regularity of triangular graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-betti-numbers-in-the-linear-strand-and-regularity-of-triangular-graphs/"
+},
+{
+"title": "On minimal free resolution of edge ideals of multipartite crown graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-minimal-free-resolution-of-edge-ideals-of-multipartite-crown-graphs-3/"
+},
+{
+"title": "On minimal free resolution of edge ideals of multipartite crown graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-minimal-free-resolution-of-edge-ideals-of-multipartite-crown-graphs-2/"
+},
+{
+"title": "Graded Betti numbers of crown edge ideals",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-minimal-free-resolution-of-edge-ideals-of-multipartite-crown-graphs/"
+},
+{
+"title": "On Betti numbers of edge ideals of crown graphs",
+"type": "publication",
+"category": "Published Paper",
+"summary": "",
+"href": "publication/on-betti-numbers-of-edge-ideals-of-crown-graphs/"
+}
+]

@@ -1,0 +1,246 @@
+/* THETREFOIL GOLD SHIMMER STUDIO V1 */
+/* Loaded after the site's core CSS. These effects target only small editorial labels. */
+html body .tt-shimmer-label {
+  --tt-gold-a:#bd8649; --tt-gold-b:#f0c68c; --tt-gold-c:#fff8d8;
+  position:relative!important; display:inline-block!important;
+  max-width:100%; width:fit-content;
+  overflow:visible!important; isolation:isolate;
+  font-size:clamp(12px,1.04vw,15px)!important;
+  font-weight:750!important; line-height:1.75!important;
+  letter-spacing:.12em!important;
+  background-image:linear-gradient(110deg,var(--tt-gold-a) 0%,var(--tt-gold-b) 36%,var(--tt-gold-c) 49%,var(--tt-gold-b) 63%,var(--tt-gold-a) 100%)!important;
+  background-size:340% 100%!important;
+  background-position:100% center;
+  -webkit-background-clip:text!important; background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  color:#f1c589!important;
+  filter:drop-shadow(0 0 2px rgba(244,194,112,.26));
+  animation:tt-gold-classic 4.5s linear infinite!important;
+}
+html body .tt-shimmer-label::after {
+  content:'✦'!important; display:inline-block!important;
+  position:relative!important; top:-.18em!important; right:auto!important;
+  margin-left:.65em!important; padding:0!important;
+  font-size:.95em!important; line-height:1!important;
+  color:#ffdda0!important; -webkit-text-fill-color:#ffdda0!important;
+  text-shadow:0 0 7px #ffeabd,0 0 13px rgba(231,164,83,.65)!important;
+  background:none!important; pointer-events:none;
+  animation:tt-gold-star 4.5s ease-in-out infinite!important;
+}
+/* Nine choices. Original keeps its signature star. */
+html[data-gold-effect='classic'] body .tt-shimmer-label {animation-name:tt-gold-classic!important}
+html[data-gold-effect='classic'] body .tt-shimmer-label::after {content:'✦'!important;animation-name:tt-gold-star!important}
+html[data-gold-effect='champagne'] body .tt-shimmer-label {--tt-gold-a:#b88954;--tt-gold-b:#f7dbad;--tt-gold-c:#fffdf0;animation-name:tt-gold-champagne!important;animation-duration:5.3s!important}
+html[data-gold-effect='champagne'] body .tt-shimmer-label::after {content:'✧'!important;animation-name:tt-gold-softstar!important;animation-duration:5.3s!important}
+html[data-gold-effect='diamond'] body .tt-shimmer-label {--tt-gold-a:#a87843;--tt-gold-b:#f8d99a;--tt-gold-c:#fff;animation-name:tt-gold-diamond!important;animation-duration:3.8s!important}
+html[data-gold-effect='diamond'] body .tt-shimmer-label::after {content:'✦ ✧'!important;animation-name:tt-gold-diamondstar!important;animation-duration:3.8s!important}
+html[data-gold-effect='liquid'] body .tt-shimmer-label {--tt-gold-a:#a46b33;--tt-gold-b:#e5ae54;--tt-gold-c:#ffdf9e;animation-name:tt-gold-liquid!important;animation-duration:5.8s!important}
+html[data-gold-effect='liquid'] body .tt-shimmer-label::after {content:'❖'!important;animation-name:tt-gold-float!important;animation-duration:5.8s!important}
+html[data-gold-effect='royal'] body .tt-shimmer-label {--tt-gold-a:#bd8644;--tt-gold-b:#f8d59e;--tt-gold-c:#fff0c5;animation-name:tt-gold-royal!important;animation-duration:4.8s!important}
+html[data-gold-effect='royal'] body .tt-shimmer-label::after {content:'✺'!important;animation-name:tt-gold-royalstar!important;animation-duration:4.8s!important}
+html[data-gold-effect='cinematic'] body .tt-shimmer-label {--tt-gold-a:#bd905a;--tt-gold-b:#f4d9a9;--tt-gold-c:#fff;animation-name:tt-gold-cinematic!important;animation-duration:5.5s!important}
+html[data-gold-effect='cinematic'] body .tt-shimmer-label::after {content:'✧'!important;animation-name:tt-gold-softstar!important;animation-duration:5.5s!important}
+html[data-gold-effect='starlight'] body .tt-shimmer-label {--tt-gold-a:#b77d42;--tt-gold-b:#eec17f;--tt-gold-c:#fff5d0;animation-name:tt-gold-starlight!important;animation-duration:4.2s!important}
+html[data-gold-effect='starlight'] body .tt-shimmer-label::after {content:'✶ ✧'!important;animation-name:tt-gold-diamondstar!important;animation-duration:4.2s!important}
+html[data-gold-effect='rose'] body .tt-shimmer-label {--tt-gold-a:#a56b60;--tt-gold-b:#e7a795;--tt-gold-c:#ffe7d2;animation-name:tt-gold-rose!important;animation-duration:5.1s!important}
+html[data-gold-effect='rose'] body .tt-shimmer-label::after {content:'❀'!important;animation-name:tt-gold-softstar!important;animation-duration:5.1s!important}
+html[data-gold-effect='antique'] body .tt-shimmer-label {--tt-gold-a:#94733f;--tt-gold-b:#d6b777;--tt-gold-c:#f5e6b6;animation-name:tt-gold-antique!important;animation-duration:6.2s!important}
+html[data-gold-effect='antique'] body .tt-shimmer-label::after {content:'✥'!important;animation-name:tt-gold-float!important;animation-duration:6.2s!important}
+@keyframes tt-gold-classic {0%,12%{background-position:100% center}50%,100%{background-position:0 center}}
+@keyframes tt-gold-champagne {0%,8%{background-position:100% center}48%,100%{background-position:0 center}}
+@keyframes tt-gold-diamond {0%{background-position:100% center}58%,100%{background-position:0 center}}
+@keyframes tt-gold-liquid {0%,100%{background-position:100% center}50%{background-position:0 center}}
+@keyframes tt-gold-royal {0%,100%{background-position:75% center;filter:brightness(1)}50%{background-position:20% center;filter:brightness(1.28)}}
+@keyframes tt-gold-cinematic {0%,12%{background-position:100% center}37%{background-position:0 center}55%,100%{background-position:0 center}}
+@keyframes tt-gold-starlight {0%,100%{background-position:80% center;filter:brightness(1)}45%{background-position:20% center;filter:brightness(1.2)}}
+@keyframes tt-gold-rose {0%,100%{background-position:100% center}60%{background-position:0 center}}
+@keyframes tt-gold-antique {0%,100%{background-position:85% center}50%{background-position:25% center}}
+@keyframes tt-gold-star {0%,14%,56%,100%{opacity:0;transform:scale(.5) rotate(0)}27%{opacity:1;transform:scale(1.15) rotate(35deg)}40%{opacity:.45;transform:scale(.8) rotate(65deg)}}
+@keyframes tt-gold-softstar {0%,18%,66%,100%{opacity:.08;transform:scale(.5)}42%{opacity:.95;transform:scale(1.15)}}
+@keyframes tt-gold-diamondstar {0%,13%,52%,100%{opacity:.12;transform:scale(.65) rotate(-12deg)}24%,39%{opacity:1;transform:scale(1.08) rotate(18deg)}68%{opacity:.8;transform:scale(.8) rotate(40deg)}}
+@keyframes tt-gold-float {0%,100%{opacity:.25;transform:translateY(2px) rotate(0)}50%{opacity:1;transform:translateY(-3px) rotate(25deg)}}
+@keyframes tt-gold-royalstar {0%,100%{opacity:.22;transform:scale(.7)}50%{opacity:1;transform:scale(1.18) rotate(50deg)}}
+.tt-gold-settings{margin:24px 0;padding:25px;border:1px solid var(--line,#65777a);border-radius:16px;background:var(--paper,#18383e);color:var(--ink,#f5f1e9)}
+.tt-gold-settings h3{margin:5px 0 7px;font-size:clamp(22px,2vw,29px)}
+.tt-gold-settings p,.tt-gold-settings small{display:block;max-width:65ch;color:var(--muted,#c0cbca)}
+.tt-gold-settings-kicker{font-size:12px;font-weight:800;letter-spacing:.16em;color:#e2b17b}
+.tt-gold-settings label{display:block;margin:18px 0 8px;font-size:13px;font-weight:700}
+.tt-gold-settings select{display:block;width:100%;max-width:520px;padding:12px;border-radius:9px;background:var(--bg,#132f34);color:var(--ink,#fff);border:1px solid var(--line,#65777a)}
+.tt-gold-demo{margin:20px 0 10px;padding:24px;background:#102a2b;border:1px solid #52645c;border-radius:12px}
+.tt-gold-demo-label{white-space:normal}
+@media(prefers-reduced-motion:reduce){html body .tt-shimmer-label,html body .tt-shimmer-label::after{animation:none!important;filter:none!important}html body .tt-shimmer-label::after{opacity:.85!important}}
+
+
+
+/* THETREFOIL GOLD SHIMMER STUDIO V2 */
+/* Four typography-only metallic effects. */
+
+html[data-gold-effect="molten"] body .tt-shimmer-label,
+html[data-gold-effect="platinum"] body .tt-shimmer-label,
+html[data-gold-effect="imperial"] body .tt-shimmer-label,
+html[data-gold-effect="prismatic"] body .tt-shimmer-label {
+    color: transparent !important;
+    -webkit-text-fill-color: transparent !important;
+    -webkit-background-clip: text !important;
+    background-clip: text !important;
+    background-repeat: repeat-x !important;
+    background-size: 350% 100% !important;
+    text-shadow: none !important;
+    will-change: background-position, filter;
+}
+
+/* No additional stars or decorative objects. */
+
+html[data-gold-effect="molten"] body .tt-shimmer-label::after,
+html[data-gold-effect="platinum"] body .tt-shimmer-label::after,
+html[data-gold-effect="imperial"] body .tt-shimmer-label::after,
+html[data-gold-effect="prismatic"] body .tt-shimmer-label::after {
+    content: none !important;
+    display: none !important;
+    animation: none !important;
+}
+
+/* 1. Molten Gold Flow */
+
+html[data-gold-effect="molten"] body .tt-shimmer-label {
+    background-image: linear-gradient(
+        105deg,
+        #754016 0%,
+        #c18435 12%,
+        #ffd079 23%,
+        #fff4c3 29%,
+        #e8a94b 38%,
+        #8a4c19 49%,
+        #dba052 61%,
+        #fff1b4 72%,
+        #b67b31 85%,
+        #754016 100%
+    ) !important;
+
+    animation: tt-molten-flow 3.6s linear infinite !important;
+}
+
+/* 2. Platinum-Gold Glint */
+
+html[data-gold-effect="platinum"] body .tt-shimmer-label {
+    background-image: linear-gradient(
+        105deg,
+        #956c3c 0%,
+        #d5ad70 27%,
+        #f3ddb1 38%,
+        #fffefa 46%,
+        #e3eef7 50%,
+        #fffefa 54%,
+        #f4d19c 62%,
+        #c08b48 78%,
+        #956c3c 100%
+    ) !important;
+
+    animation: tt-platinum-glint 4.4s ease-in-out infinite !important;
+}
+
+/* 3. Imperial Bronze Wave */
+
+html[data-gold-effect="imperial"] body .tt-shimmer-label {
+    background-image: linear-gradient(
+        115deg,
+        #70411e 0%,
+        #b97939 13%,
+        #e0ab63 24%,
+        #fff0bc 35%,
+        #9e5b25 48%,
+        #d79949 64%,
+        #ffe2a1 75%,
+        #855027 88%,
+        #70411e 100%
+    ) !important;
+
+    animation: tt-imperial-wave 5.2s ease-in-out infinite !important;
+}
+
+/* 4. Prismatic Champagne */
+
+html[data-gold-effect="prismatic"] body .tt-shimmer-label {
+    background-image: linear-gradient(
+        110deg,
+        #aa805d 0%,
+        #f4d0ac 18%,
+        #fff3df 29%,
+        #e8c8cd 42%,
+        #fff9e8 54%,
+        #ddd9e3 64%,
+        #f8d69e 78%,
+        #aa805d 100%
+    ) !important;
+
+    animation: tt-prismatic-sweep 4s linear infinite !important;
+}
+
+@keyframes tt-molten-flow {
+    0% {
+        background-position: 100% 50%;
+        filter: brightness(1.05);
+    }
+    50% {
+        filter: brightness(1.35);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: brightness(1.05);
+    }
+}
+
+@keyframes tt-platinum-glint {
+    0% {
+        background-position: 100% 50%;
+        filter: brightness(1);
+    }
+    55% {
+        filter: brightness(1.55);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: brightness(1);
+    }
+}
+
+@keyframes tt-imperial-wave {
+    0% {
+        background-position: 100% 50%;
+        filter: brightness(.95);
+    }
+    50% {
+        background-position: 50% 50%;
+        filter: brightness(1.4);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: brightness(.95);
+    }
+}
+
+@keyframes tt-prismatic-sweep {
+    0% {
+        background-position: 100% 50%;
+        filter: brightness(1.05);
+    }
+    50% {
+        filter: brightness(1.3);
+    }
+    100% {
+        background-position: 0% 50%;
+        filter: brightness(1.05);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html[data-gold-effect="molten"] body .tt-shimmer-label,
+    html[data-gold-effect="platinum"] body .tt-shimmer-label,
+    html[data-gold-effect="imperial"] body .tt-shimmer-label,
+    html[data-gold-effect="prismatic"] body .tt-shimmer-label {
+        animation: none !important;
+        filter: none !important;
+    }
+}
+
+/* END THETREFOIL GOLD SHIMMER STUDIO V2 */

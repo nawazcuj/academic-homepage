@@ -1,0 +1,235 @@
+
+/* TheTrefoil configurable header text animations */
+.tt-brand-title .tt-wordmark,
+.tt-animation-preview .tt-wordmark {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: Georgia, "Times New Roman", serif;
+}
+
+.tt-wordmark .tt-letter {
+    display: inline-block;
+    white-space: pre;
+    transform-origin: 50% 75%;
+}
+
+.tt-brand-title,
+.tt-animation-preview {
+    --tt-cycles: 1;
+}
+
+.tt-brand-title[data-tt-repeat="loop"],
+.tt-animation-preview[data-tt-repeat="loop"] {
+    --tt-cycles: infinite;
+}
+
+.tt-brand-title[data-tt-animation="shimmer"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="shimmer"] .tt-wordmark {
+    animation: ttWordShimmer 3.5s ease-in-out both;
+    animation-iteration-count: var(--tt-cycles);
+}
+
+.tt-brand-title[data-tt-animation="typewriter"] .tt-letter,
+.tt-animation-preview[data-tt-animation="typewriter"] .tt-letter {
+    animation: ttWordType 2.8s ease both;
+    animation-delay: calc(var(--tt-index) * 85ms);
+    animation-iteration-count: var(--tt-cycles);
+}
+
+.tt-brand-title[data-tt-animation="rise"] .tt-letter,
+.tt-animation-preview[data-tt-animation="rise"] .tt-letter {
+    animation: ttWordRise 2.8s ease both;
+    animation-delay: calc(var(--tt-index) * 75ms);
+    animation-iteration-count: var(--tt-cycles);
+}
+
+.tt-brand-title[data-tt-animation="wave"] .tt-letter,
+.tt-animation-preview[data-tt-animation="wave"] .tt-letter {
+    animation: ttWordWave 2.8s ease-in-out both;
+    animation-delay: calc(var(--tt-index) * 80ms);
+    animation-iteration-count: var(--tt-cycles);
+}
+
+.tt-brand-title[data-tt-animation="blue-bronze"] .tt-letter,
+.tt-animation-preview[data-tt-animation="blue-bronze"] .tt-letter {
+    animation: ttWordBlue 3.2s ease-in-out both;
+    animation-delay: calc(var(--tt-index) * 75ms);
+    animation-iteration-count: var(--tt-cycles);
+}
+
+.tt-brand-title[data-tt-animation="blue-bronze"] .tt-letter.tt-bronze,
+.tt-animation-preview[data-tt-animation="blue-bronze"] .tt-letter.tt-bronze {
+    animation-name: ttWordBronze;
+}
+
+.tt-brand-title[data-tt-animation="flip"] .tt-letter,
+.tt-animation-preview[data-tt-animation="flip"] .tt-letter {
+    animation: ttWordFlip 2.8s ease both;
+    animation-delay: calc(var(--tt-index) * 75ms);
+    animation-iteration-count: var(--tt-cycles);
+}
+
+.tt-brand-title[data-tt-animation="glow"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="glow"] .tt-wordmark {
+    animation: ttWordGlow 3.2s ease-in-out both;
+    animation-iteration-count: var(--tt-cycles);
+}
+
+.tt-brand-title[data-tt-animation="focus"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="focus"] .tt-wordmark {
+    animation: ttWordFocus 3s ease both;
+    animation-iteration-count: var(--tt-cycles);
+}
+
+@keyframes ttWordShimmer {
+    0%, 100% { text-shadow: none; }
+    45% { color: #d9a579; text-shadow: 0 0 11px rgba(217,165,121,.32); }
+    75% { color: inherit; }
+}
+
+@keyframes ttWordType {
+    0%, 9% { opacity: 0; transform: translateY(2px); }
+    18%, 100% { opacity: 1; transform: none; }
+}
+
+@keyframes ttWordRise {
+    0%, 9% { opacity: 0; transform: translateY(12px); }
+    25%, 100% { opacity: 1; transform: none; }
+}
+
+@keyframes ttWordWave {
+    0%, 12%, 100% { transform: none; }
+    30% { transform: translateY(-6px); color: #d9a579; }
+    55% { transform: none; }
+}
+
+@keyframes ttWordBlue {
+    0%, 12%, 100% { color: inherit; }
+    30%, 60% { color: #69b9ec; }
+}
+
+@keyframes ttWordBronze {
+    0%, 12%, 100% { color: inherit; }
+    30%, 60% { color: #d9a579; }
+}
+
+@keyframes ttWordFlip {
+    0%, 10% { opacity: 0; transform: perspective(200px) rotateX(-80deg); }
+    28%, 100% { opacity: 1; transform: perspective(200px) rotateX(0); }
+}
+
+@keyframes ttWordGlow {
+    0%, 100% { text-shadow: none; }
+    50% { text-shadow: 0 0 9px rgba(92,182,239,.8), 0 0 24px rgba(92,182,239,.4); }
+}
+
+@keyframes ttWordFocus {
+    0% { opacity: .2; filter: blur(5px); transform: scale(.98); }
+    36%, 100% { opacity: 1; filter: blur(0); transform: scale(1); }
+}
+
+/* Admin settings preview */
+.tt-animation-admin {
+    display: grid;
+    gap: 12px;
+    padding: 22px;
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    background: var(--paper);
+}
+
+.tt-animation-admin h3 { margin: 0; }
+
+.tt-animation-admin select {
+    width: 100%;
+    max-width: 460px;
+}
+
+.tt-animation-preview {
+    display: flex;
+    align-items: center;
+    min-height: 92px;
+    padding: 16px 24px;
+    overflow: hidden;
+    border: 1px solid #40565b;
+    border-radius: 12px;
+    background: #101d22;
+    color: #f4f1e9;
+}
+
+.tt-animation-preview .tt-wordmark {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 700;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .tt-brand-title .tt-wordmark,
+    .tt-brand-title .tt-letter,
+    .tt-animation-preview .tt-wordmark,
+    .tt-animation-preview .tt-letter {
+        animation: none !important;
+        transform: none !important;
+        filter: none !important;
+        opacity: 1 !important;
+        text-shadow: none !important;
+        color: inherit !important;
+    }
+}
+
+
+/* TheTrefoil extra wordmark animations v3 */
+/* The animations affect only the header name and Admin Settings preview. */
+.tt-brand-title[data-tt-animation="float"] .tt-letter,
+.tt-animation-preview[data-tt-animation="float"] .tt-letter {animation:ttNewFloat 2.8s ease-out both;animation-delay:calc(var(--tt-index)*75ms);animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="zoom"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="zoom"] .tt-wordmark {animation:ttNewZoom 2.8s cubic-bezier(.2,.8,.2,1) both;animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="fly"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="fly"] .tt-wordmark {animation:ttNewFly 3s ease-out both;animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="split"] .tt-letter,
+.tt-animation-preview[data-tt-animation="split"] .tt-letter {animation:ttNewSplit 3s ease-out both;animation-delay:calc(var(--tt-index)*45ms);animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="wipe"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="wipe"] .tt-wordmark {animation:ttNewWipe 3s ease-in-out both;animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="swivel"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="swivel"] .tt-wordmark {animation:ttNewSwivel 3s ease-out both;transform-origin:center;animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="bounce"] .tt-letter,
+.tt-animation-preview[data-tt-animation="bounce"] .tt-letter {animation:ttNewBounce 3.1s both;animation-delay:calc(var(--tt-index)*65ms);animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="stretch"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="stretch"] .tt-wordmark {animation:ttNewStretch 2.8s ease both;animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="pulse"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="pulse"] .tt-wordmark {animation:ttNewPulse 3s ease-in-out both;animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="color-wave"] .tt-letter,
+.tt-animation-preview[data-tt-animation="color-wave"] .tt-letter {animation:ttNewColorWave 3.5s ease-in-out both;animation-delay:calc(var(--tt-index)*115ms);animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="color-wave"] .tt-letter.tt-bronze,
+.tt-animation-preview[data-tt-animation="color-wave"] .tt-letter.tt-bronze {animation-name:ttNewColorWaveBronze}
+.tt-brand-title[data-tt-animation="rise-rotate"] .tt-letter,
+.tt-animation-preview[data-tt-animation="rise-rotate"] .tt-letter {animation:ttNewRiseRotate 3.1s ease-out both;animation-delay:calc(var(--tt-index)*65ms);animation-iteration-count:var(--tt-cycles)}
+.tt-brand-title[data-tt-animation="elegant"] .tt-wordmark,
+.tt-animation-preview[data-tt-animation="elegant"] .tt-wordmark {animation:ttNewElegant 3.6s ease-in-out both;animation-iteration-count:var(--tt-cycles)}
+
+@keyframes ttNewFloat {0%,8%{opacity:0;transform:translateY(14px)}30%,100%{opacity:1;transform:translateY(0)}}
+@keyframes ttNewZoom {0%,10%{opacity:0;transform:scale(.68)}38%,100%{opacity:1;transform:scale(1)}}
+@keyframes ttNewFly {0%,10%{opacity:0;transform:translateX(-38px)}42%,100%{opacity:1;transform:translateX(0)}}
+@keyframes ttNewSplit {0%,8%{opacity:0;transform:translateX(-17px)}30%,100%{opacity:1;transform:translateX(0)}}
+@keyframes ttNewWipe {0%,10%{clip-path:inset(0 100% 0 0)}48%,100%{clip-path:inset(0 0 0 0)}}
+@keyframes ttNewSwivel {0%,10%{opacity:0;transform:perspective(350px) rotateY(-65deg)}40%,100%{opacity:1;transform:perspective(350px) rotateY(0deg)}}
+@keyframes ttNewBounce {0%,10%{opacity:0;transform:translateY(-15px)}25%{opacity:1;transform:translateY(4px)}35%,100%{opacity:1;transform:translateY(0)}}
+@keyframes ttNewStretch {0%,10%{opacity:0;transform:scaleX(.55)}40%,100%{opacity:1;transform:scaleX(1)}}
+@keyframes ttNewPulse {0%,10%,100%{transform:scale(1)}45%{transform:scale(1.065)}70%{transform:scale(1)}}
+@keyframes ttNewColorWave {0%,12%,100%{color:inherit}30%,62%{color:#69b9ec}}
+@keyframes ttNewColorWaveBronze {0%,12%,100%{color:inherit}30%,62%{color:#d9a579}}
+@keyframes ttNewRiseRotate {0%,8%{opacity:0;transform:translateY(12px) rotate(-12deg)}33%,100%{opacity:1;transform:translateY(0) rotate(0)}}
+@keyframes ttNewElegant {0%,8%{opacity:0;transform:translateY(8px);filter:blur(3px);text-shadow:none}38%{opacity:1;transform:none;filter:blur(0);text-shadow:0 0 11px rgba(217,165,121,.55)}78%,100%{opacity:1;transform:none;filter:none;text-shadow:none}}
+
+.tt-animation-admin .tt-wordmark-replay {justify-self:start;border:1px solid var(--line);background:var(--tint);color:var(--ink);padding:8px 14px;border-radius:8px;font-size:13px;font-weight:700;cursor:pointer}
+.tt-animation-admin .tt-wordmark-replay:hover {border-color:var(--accent);color:var(--accent)}
+@media (prefers-reduced-motion: reduce) {
+  .tt-brand-title[data-tt-animation] .tt-wordmark,
+  .tt-brand-title[data-tt-animation] .tt-letter,
+  .tt-animation-preview[data-tt-animation] .tt-wordmark,
+  .tt-animation-preview[data-tt-animation] .tt-letter {animation:none!important;opacity:1!important;transform:none!important;clip-path:none!important;filter:none!important;color:inherit!important;text-shadow:none!important}
+}
+
+/* THETREFOIL_SHUFFLE_V1 - Admin preferences */
+.tt-animation-admin .tt-wordmark-mode-fields {display:grid;gap:9px;padding:14px;border:1px solid var(--line);border-radius:10px}
+.tt-animation-admin .tt-wordmark-mode-fields select {width:100%;max-width:460px}
+.tt-animation-admin .tt-wordmark-mode-fields .form-note {font-weight:400;margin:3px 0 0}

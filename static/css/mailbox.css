@@ -1,0 +1,36 @@
+/* TheTrefoil private academic mailbox */
+.ttmail {background:var(--bg);color:var(--ink);min-height:70vh;padding-bottom:85px}
+.ttmail-hero{padding-top:clamp(40px,6vw,75px);padding-bottom:30px}
+.ttmail-title-row{display:flex;justify-content:space-between;align-items:end;gap:18px;flex-wrap:wrap}
+.ttmail-hero h1{font-size:clamp(32px,4.2vw,55px);margin:12px 0 9px}
+.ttmail-hero h1 em{font-weight:400;color:var(--accent)}
+.ttmail-hero p{margin:0;color:var(--muted)}
+.ttmail-return{font-size:13px;color:var(--accent);font-weight:700}
+.ttmail-body{padding-top:25px}
+.ttmail-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:25px}
+.ttmail-stats a{display:grid;gap:7px;padding:18px 20px;border:1px solid var(--line);background:var(--paper);border-radius:13px}
+.ttmail-stats span{color:var(--muted);font-size:12px}.ttmail-stats strong{font-size:28px;line-height:1.2}
+.ttmail-layout{display:grid;grid-template-columns:230px minmax(0,1fr);gap:22px;align-items:start}
+.ttmail-sidebar,.ttmail-main{border:1px solid var(--line);background:var(--paper);border-radius:16px}
+.ttmail-sidebar{padding:23px 15px}.ttmail-side-heading,.ttmail-eyebrow{font-size:10px;letter-spacing:.16em;color:var(--accent);font-weight:750}
+.ttmail-side-heading{padding:0 12px 15px}.ttmail-folder{display:flex;justify-content:space-between;align-items:center;gap:10px;padding:12px;border-radius:9px;font-size:14px;font-weight:650}
+.ttmail-folder.is-active{background:var(--tint);color:var(--accent)}
+.ttmail-sidebar p{border-top:1px solid var(--line);padding:18px 12px 0;margin:20px 0 0;color:var(--muted);font-size:12px;line-height:1.7}
+.ttmail-main{padding:clamp(18px,3vw,30px);min-width:0}
+.ttmail-toolbar{display:flex;align-items:end;justify-content:space-between;gap:16px;flex-wrap:wrap;border-bottom:1px solid var(--line);padding-bottom:20px}
+.ttmail-toolbar h2{font-size:27px;margin:4px 0}.ttmail-toolbar small{color:var(--muted)}
+.ttmail-search{display:flex;gap:8px;flex-wrap:wrap}.ttmail-search input{min-width:200px;max-width:330px;border-radius:9px}.ttmail-search button{background:var(--accent);color:#152831;border:0;border-radius:9px;padding:9px 15px;font-weight:700}
+.ttmail-item{padding:24px 0;border-bottom:1px solid var(--line)}.ttmail-item:last-of-type{border-bottom:0}
+.ttmail-item.is-unread{border-left:3px solid var(--accent);padding-left:17px}
+.ttmail-item-top,.ttmail-sender{display:flex;align-items:center;gap:10px;flex-wrap:wrap}.ttmail-item-top{justify-content:space-between}
+.ttmail-item-top h3{font-family:'DM Sans',sans-serif;font-size:16px;letter-spacing:0;margin:0}
+.ttmail-item-top time{font-size:11px;color:var(--muted)}.ttmail-unread-dot{width:7px;height:7px;border-radius:50%;background:var(--accent)}.ttmail-starred{color:var(--accent)}
+.ttmail-email{font-size:13px;color:var(--accent);overflow-wrap:anywhere}
+.ttmail-message{margin:12px 0 17px;white-space:pre-wrap;overflow-wrap:anywhere;line-height:1.8;font-size:14px}
+.ttmail-actions{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.ttmail-actions form{display:inline}
+.ttmail-actions button,.ttmail-actions a{font-size:12px;padding:7px 12px;border-radius:8px;border:1px solid var(--line);background:var(--tint);color:var(--ink);cursor:pointer;text-decoration:none}
+.ttmail-actions button:hover,.ttmail-actions a:hover{border-color:var(--accent);color:var(--accent)}
+.ttmail-empty{padding:45px 12px;text-align:center}.ttmail-empty h3{margin:0 0 5px}.ttmail-empty p{color:var(--muted);font-size:13px}
+.ttmail-pagination{display:flex;gap:18px;align-items:center;justify-content:center;padding-top:22px;font-size:13px}.ttmail-pagination a{color:var(--accent);font-weight:700}
+@media(max-width:850px){.ttmail-layout{grid-template-columns:1fr}.ttmail-sidebar{display:flex;gap:4px;flex-wrap:wrap;align-items:center}.ttmail-sidebar p,.ttmail-side-heading{display:none}.ttmail-folder{padding:10px}.ttmail-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.ttmail-stats{gap:8px}.ttmail-stats a{padding:13px}.ttmail-search input{min-width:0;width:100%}.ttmail-search{width:100%}.ttmail-search button{width:100%}}

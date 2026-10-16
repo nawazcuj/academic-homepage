@@ -1,0 +1,13 @@
+/* Academic affiliation / research network, preserve native brand icons. */
+.tt-ap-grid {display:grid!important;grid-template-columns:minmax(0,1fr) minmax(0,1fr)!important;gap:clamp(28px,4vw,76px)!important;align-items:stretch!important;width:100%!important;max-width:none!important}
+.tt-ap-affiliation,.tt-ap-network {min-width:0!important;max-width:none!important;width:100%!important}
+.tt-ap-affiliation {position:relative;padding:clamp(24px,3vw,42px)!important;background:linear-gradient(145deg,color-mix(in srgb,var(--paper,#1b3935) 72%,transparent),color-mix(in srgb,var(--bg,#102b27) 78%,transparent))!important;border:1px solid color-mix(in srgb,var(--accent,#d9a579) 27%,transparent)!important;border-radius:18px!important;box-shadow:none!important}
+.tt-ap-affiliation::before{content:"";position:absolute;left:clamp(24px,3vw,42px);top:0;width:56px;height:2px;background:linear-gradient(90deg,var(--accent,#d9a579),transparent)}
+.tt-ap-network {padding:clamp(12px,1.5vw,22px) 0!important}
+.tt-ap-affiliation :is(h2,h3),.tt-ap-network :is(h2,h3){font-family:Georgia,serif!important;letter-spacing:-.025em!important;line-height:1.16!important;margin-bottom:clamp(16px,2vw,30px)!important}
+.tt-ap-network a.tt-ap-profile-link{display:flex!important;align-items:center!important;gap:16px!important;min-height:75px!important;padding:16px 20px!important;border:1px solid color-mix(in srgb,var(--ink,#f2f0eb) 24%,transparent)!important;border-radius:16px!important;background:color-mix(in srgb,var(--paper,#25443c) 88%,transparent)!important;color:var(--ink,#f5f0e7)!important;text-decoration:none!important;box-shadow:none!important;transition:background .25s ease,border-color .25s ease,transform .25s ease,box-shadow .25s ease!important}
+.tt-ap-network a.tt-ap-profile-link:hover,.tt-ap-network a.tt-ap-profile-link:focus-visible{border-color:var(--accent,#e3af78)!important;background:color-mix(in srgb,var(--paper,#25443c) 75%,var(--accent,#d9a579) 25%)!important;transform:translateY(-2px);box-shadow:0 10px 25px rgba(0,0,0,.14)!important}
+.tt-ap-network a.tt-ap-profile-link :is(img,svg){flex-shrink:0!important;object-fit:contain!important;filter:none!important;opacity:1!important}
+.tt-ap-network a.tt-ap-profile-link :is(i,[class*="icon"],[class*="logo"]){flex-shrink:0}
+@media(max-width:780px){.tt-ap-grid{grid-template-columns:minmax(0,1fr)!important;gap:18px!important}.tt-ap-affiliation{padding:25px!important}.tt-ap-network{padding:10px 0!important}}
+@media(prefers-reduced-motion:reduce){.tt-ap-network a.tt-ap-profile-link{transition:none!important}.tt-ap-network a.tt-ap-profile-link:hover{transform:none!important}}

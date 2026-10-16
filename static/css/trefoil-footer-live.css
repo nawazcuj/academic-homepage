@@ -1,0 +1,10 @@
+/* TheTrefoil compact live footer strip: scoped to footer only */
+.tt-editorial-footer .tt-live-strip{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:12px 20px;padding:13px 0;margin-top:3px;border-top:1px solid currentColor;border-bottom:1px solid currentColor;border-color:rgba(120,140,140,.3);font-size:13px;line-height:1.45}
+.tt-editorial-footer .tt-live-clock,.tt-editorial-footer .tt-live-math{display:inline-flex;align-items:center;gap:9px;min-width:0}
+.tt-editorial-footer .tt-live-kicker{font-size:10px;letter-spacing:.1em;text-transform:uppercase;font-weight:700;opacity:.8}
+.tt-editorial-footer .tt-live-clock-value{font-variant-numeric:tabular-nums;font-weight:600;white-space:nowrap}
+.tt-editorial-footer .tt-live-math-value{font-family:Georgia,serif;font-size:15px;font-weight:600;white-space:nowrap}
+.tt-editorial-footer .tt-live-control{border:1px solid currentColor;border-radius:999px;background:transparent;color:inherit;padding:5px 10px;font-size:12px;line-height:1.3;cursor:pointer;white-space:nowrap}
+.tt-editorial-footer .tt-live-control:hover,.tt-editorial-footer .tt-live-control:focus-visible{background:rgba(130,150,150,.14)}
+.tt-editorial-footer .tt-live-actions{display:flex;align-items:center;gap:9px}
+@media(max-width:680px){.tt-editorial-footer .tt-live-strip{gap:9px 12px;padding:10px 0}.tt-editorial-footer .tt-live-clock{width:100%;justify-content:space-between}.tt-editorial-footer .tt-live-math{flex:1}.tt-editorial-footer .tt-live-math-value{font-size:14px}.tt-editorial-footer .tt-live-kicker{font-size:9px}.tt-editorial-footer .tt-live-actions{margin-left:auto}.tt-editorial-footer .tt-live-control{padding:5px 8px}}

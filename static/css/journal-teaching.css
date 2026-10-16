@@ -1,0 +1,53 @@
+/* TheTrefoil Journal Cards — applies ONLY inside .tt-journal-grid on Teaching */
+.tt-journal-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;align-items:stretch}
+.tt-journal-grid .tt-journal-card{min-width:0;border:1px solid var(--line);background:var(--paper);border-radius:8px;overflow:hidden;box-shadow:0 8px 24px rgba(18,40,46,.035);transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease}
+.tt-journal-grid .tt-journal-card:hover{transform:translateY(-3px);box-shadow:0 15px 34px rgba(18,40,46,.09);border-color:var(--accent)}
+.tt-journal-grid .tt-journal-link{display:grid;grid-template-columns:minmax(145px,37%) minmax(0,1fr);height:100%;min-height:248px;color:inherit;text-decoration:none}
+.tt-journal-grid .tt-journal-link:hover{color:inherit}
+.tt-journal-grid .tt-journal-link:focus-visible{outline:3px solid var(--accent);outline-offset:-3px}
+.tt-journal-grid .tt-journal-art{display:flex;flex-direction:column;justify-content:space-between;align-items:center;background:#f3f0e9;color:#917c58;padding:18px 15px;gap:9px;position:relative}
+.tt-journal-grid .tt-journal-art:before{content:'';position:absolute;inset:9px;border:1px solid rgba(145,124,88,.18);pointer-events:none}
+.tt-journal-grid .tt-journal-art svg{width:100%;height:auto;max-height:145px;flex:1;min-height:85px}
+.tt-journal-grid .tt-journal-art-top{display:flex;flex-wrap:wrap;justify-content:space-between;gap:7px;width:100%;font:700 9px/1.5 'DM Sans',sans-serif;letter-spacing:.11em}
+.tt-journal-grid .tt-journal-art-bottom{font:600 9px/1.4 'DM Sans',sans-serif;letter-spacing:.13em;text-align:center}
+.tt-journal-grid .tt-journal-body{display:flex;flex-direction:column;min-width:0;padding:25px 24px 20px}
+.tt-journal-grid .tt-journal-meta{display:flex;align-items:center;justify-content:space-between;gap:8px;flex-wrap:wrap;font-size:10px;line-height:1.5;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.tt-journal-grid .tt-journal-body h3{margin:14px 0 10px;line-height:1.35;font-size:clamp(1.08rem,1.55vw,1.36rem);overflow-wrap:anywhere}
+.tt-journal-grid .tt-journal-body p{margin:0 0 20px;color:var(--muted);font-size:13px;line-height:1.75;overflow-wrap:anywhere;display:-webkit-box;-webkit-box-orient:vertical;-webkit-line-clamp:4;overflow:hidden}
+.tt-journal-grid .tt-journal-foot{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line);font-size:10px;letter-spacing:.035em;color:var(--muted)}
+.tt-journal-grid .tt-journal-action{color:var(--accent);font-size:12px;font-weight:700;white-space:nowrap}
+.tt-journal-grid .tt-journal-action span{display:inline-block;transition:transform .2s}
+.tt-journal-grid .tt-journal-card:hover .tt-journal-action span{transform:translate(2px,-2px)}
+@media(max-width:980px){.tt-journal-grid{grid-template-columns:1fr}}
+@media(max-width:540px){.tt-journal-grid .tt-journal-link{grid-template-columns:1fr}.tt-journal-grid .tt-journal-art{min-height:165px}.tt-journal-grid .tt-journal-art svg{max-height:92px}.tt-journal-grid .tt-journal-body{padding:22px 21px}}
+@media(prefers-reduced-motion:reduce){.tt-journal-grid .tt-journal-card,.tt-journal-grid .tt-journal-action span{transition:none}}
+
+
+/* THE TREFOIL: final artwork containment */
+.tt-journal-grid .tt-journal-link {
+    min-width: 0;
+    overflow: hidden;
+}
+
+.tt-journal-grid .tt-journal-art {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+}
+
+.tt-journal-grid .tt-journal-art img {
+    display: block !important;
+    position: static !important;
+    width: 170px !important;
+    height: 150px !important;
+    max-width: 100% !important;
+    max-height: 150px !important;
+    min-width: 0 !important;
+    min-height: 0 !important;
+    object-fit: contain !important;
+    object-position: center !important;
+    flex: 0 0 auto !important;
+    margin: auto !important;
+    transform: none !important;
+}

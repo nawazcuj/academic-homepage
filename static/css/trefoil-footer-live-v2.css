@@ -1,0 +1,11 @@
+/* Live footer refinement v2: footer-only, no gradient changes. */
+.tt-editorial-footer .tt-live-clock{min-width:0}
+.tt-editorial-footer .tt-live-clock-value{display:inline-flex;align-items:baseline;font-family:Georgia,'Times New Roman',serif;font-weight:800!important;font-size:clamp(20px,2vw,28px);letter-spacing:.035em;font-variant-numeric:tabular-nums;font-feature-settings:'tnum' 1;line-height:1.15;white-space:nowrap}
+.tt-editorial-footer .tt-live-colon{display:inline-block;min-width:.27em;text-align:center;animation:tt-footer-colon-blink 1s steps(1,end) infinite;color:inherit}
+@keyframes tt-footer-colon-blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+.tt-editorial-footer .tt-live-clock-suffix{font-family:'DM Sans',sans-serif;font-size:.42em;font-weight:750;letter-spacing:.09em;margin-left:.33em;vertical-align:baseline}
+.tt-editorial-footer .tt-live-math{flex:1 1 260px;min-width:0}
+.tt-editorial-footer .tt-live-math-value{display:inline-block;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%;font-size:clamp(13px,1.15vw,17px)}
+.tt-editorial-footer .tt-live-actions{flex-shrink:0}
+@media(max-width:700px){.tt-editorial-footer .tt-live-clock{width:auto;justify-content:flex-start}.tt-editorial-footer .tt-live-clock-value{font-size:23px}.tt-editorial-footer .tt-live-math{flex-basis:100%;order:2}.tt-editorial-footer .tt-live-actions{order:3;margin-left:0}.tt-editorial-footer .tt-live-strip{justify-content:space-between;gap:8px 12px;padding:9px 0}.tt-editorial-footer .tt-live-math-value{font-size:14px}}
+@media(prefers-reduced-motion:reduce){.tt-editorial-footer .tt-live-colon{animation:none}}

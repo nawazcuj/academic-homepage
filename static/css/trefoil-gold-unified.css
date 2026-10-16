@@ -1,0 +1,31 @@
+/* TheTrefoil single authoritative gold effect controller.
+   Only heading decorations are affected; knot GIF and emblem graphics are untouched. */
+html[data-tt-unified-gold] body :is(.tt-shimmer-label,.section-kicker,.ttv-kicker,.tb-eyebrow,.ttc-kicker,.tt-philosophy-kicker,.tad-kicker,.tce-kicker,.tt-gold-glitter,.tb-heading-top > span:first-child,[class*="-kicker"],[class*="eyebrow"],[class*="overline"])::before,
+html[data-tt-unified-gold] body :is(.tt-shimmer-label,.section-kicker,.ttv-kicker,.tb-eyebrow,.ttc-kicker,.tt-philosophy-kicker,.tad-kicker,.tce-kicker,.tt-gold-glitter,.tb-heading-top > span:first-child,[class*="-kicker"],[class*="eyebrow"],[class*="overline"])::after {
+  content: none !important;
+  display:none!important;
+  animation:none!important;
+}
+html[data-tt-unified-gold="classic"] body .tt-shimmer-label::after,
+html[data-tt-unified-gold="champagne"] body .tt-shimmer-label::after,
+html[data-tt-unified-gold="diamond"] body .tt-shimmer-label::after,
+html[data-tt-unified-gold="starlight"] body .tt-shimmer-label::after {
+  display: inline-block!important;
+  content: '✦'!important;
+  position:relative!important;
+  margin-left:.4em!important;
+  color:#f6cd86!important;
+  -webkit-text-fill-color:#f6cd86!important;
+  animation:tt-uni-star 4s ease-in-out infinite!important;
+}
+html[data-tt-unified-gold="diamond"] body .tt-shimmer-label::after {content:'✦ ✧'!important;}
+html[data-tt-unified-gold="starlight"] body .tt-shimmer-label::after {content:'✶ ✧'!important;}
+html[data-tt-unified-gold="champagne"] body .tt-shimmer-label::after {content:'✧'!important;}
+@keyframes tt-uni-star{0%,100%{opacity:.15;transform:scale(.7)}50%{opacity:1;transform:scale(1.15)}}
+/* Do not show redundant old controls or preview but retain the surrounding settings card. */
+.tt-typography-setting{display:none!important}
+.tt-gold-settings > label[for="gold_shimmer_effect"],.tt-gold-settings > .tt-gold-demo {display:none!important}
+@media(prefers-reduced-motion:reduce){html[data-tt-unified-gold] body .tt-shimmer-label{animation:none!important}}
+
+
+

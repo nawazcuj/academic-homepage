@@ -1,0 +1,100 @@
+/* TheTrefoil: Palette-aware Website Settings Studio */
+.tt-settings-studio {
+  --ts-paper:var(--paper); --ts-bg:var(--bg); --ts-ink:var(--ink);
+  --ts-muted:var(--muted); --ts-line:var(--line); --ts-accent:var(--accent);
+  color:var(--ts-ink); padding-bottom:clamp(44px,6vw,90px);
+}
+.tt-settings-studio .page-hero {
+  padding-top:clamp(26px,3vw,44px) !important;
+  padding-bottom:clamp(16px,2.5vw,32px) !important;
+  margin-bottom:clamp(14px,2vw,24px);
+}
+.tt-settings-studio .page-hero h1 {
+  font-size:clamp(32px,4vw,54px) !important; line-height:1.15 !important;
+  letter-spacing:-.035em; margin:14px 0 !important;
+}
+.tt-settings-studio .section { padding-top:clamp(12px,2vw,25px) !important; }
+.tt-settings-studio form:not(.inline-form) {
+  width:min(100%,1040px); max-width:1040px !important;
+  margin:0 auto 20px; padding:clamp(20px,3vw,40px);
+  border:1px solid var(--ts-line); border-radius:20px;
+  background:var(--ts-paper); box-shadow:var(--shadow);
+}
+.tt-settings-studio form:not(.inline-form) label {
+  color:var(--ts-ink); font-weight:650; font-size:13px;
+  letter-spacing:.01em;
+}
+.tt-settings-studio form:not(.inline-form) input:not([type=hidden]):not([type=checkbox]):not([type=radio]),
+.tt-settings-studio form:not(.inline-form) textarea,
+.tt-settings-studio form:not(.inline-form) select {
+  background:var(--ts-bg) !important; color:var(--ts-ink) !important;
+  border:1px solid var(--ts-line) !important;
+  border-radius:10px !important; min-height:44px;
+  padding:11px 13px; max-width:100%; box-sizing:border-box;
+  transition:border-color .18s, box-shadow .18s;
+}
+.tt-settings-studio form:not(.inline-form) input:focus,
+.tt-settings-studio form:not(.inline-form) textarea:focus,
+.tt-settings-studio form:not(.inline-form) select:focus {
+  outline:2px solid var(--ts-accent); outline-offset:1px;
+}
+.tt-settings-studio .tt-palette-setting {
+  background:var(--ts-bg); border:1px solid var(--ts-line);
+  padding:22px; border-radius:15px; margin:24px 0 20px;
+}
+.tt-settings-studio .tt-palette-setting label {
+  display:block; font-size:17px !important; margin-bottom:8px;
+}
+.tt-settings-studio .tt-palette-setting p,
+.tt-settings-studio .tt-palette-setting small {color:var(--ts-muted);}
+.tt-settings-studio .tt-palette-setting select {width:100%;max-width:540px;}
+.tt-settings-studio .tts-swatches {display:flex;gap:9px;align-items:center;margin:14px 0 4px;flex-wrap:wrap;}
+.tt-settings-studio .tts-swatch {height:38px;width:62px;border:1px solid var(--ts-line);border-radius:9px;}
+.tt-settings-studio .tts-swatch-label {color:var(--ts-muted);font-size:12px;}
+.tt-settings-studio .tts-save-btn {padding:12px 24px !important;border-radius:10px !important;font-weight:700;}
+.tt-settings-studio .tts-form-footer {display:flex;justify-content:flex-end;border-top:1px solid var(--ts-line);padding-top:20px;margin-top:20px;}
+@media(max-width:700px){
+  .tt-settings-studio form:not(.inline-form){padding:18px 15px;border-radius:13px;}
+  .tt-settings-studio .tt-palette-setting{padding:15px;}
+}
+@media(prefers-reduced-motion:reduce){.tt-settings-studio *{transition:none!important}}
+
+
+/* THETREFOIL SETTINGS TABS V2 */
+.tts-studio { background: var(--bg); color: var(--ink); padding: 0 0 80px; }
+.tts-studio, .tts-studio * { box-sizing:border-box; }
+.tts-intro { padding-top:32px; padding-bottom:22px; }
+.tts-title-row { display:flex; align-items:center; justify-content:space-between; gap:20px; margin-top:16px; }
+.tts-eyebrow, .tts-kicker { display:block; color:var(--accent); font-size:11px; font-weight:750; letter-spacing:.15em; }
+.tts-title-row h1 { font-family:'Libre Baskerville',Georgia,serif; font-size:clamp(30px,3.6vw,52px); letter-spacing:-.04em; line-height:1.2; margin:7px 0; color:var(--ink); }
+.tts-title-row h1 em { font-style:normal; color:var(--accent); }
+.tts-title-row p { font-size:14px; color:var(--muted); margin:0; }
+.tts-title-mark { font-size:36px; color:var(--accent); }
+.tts-layout { display:grid; grid-template-columns: minmax(210px,265px) minmax(0,1fr); gap:25px; align-items:start; }
+.tts-tabs { display:flex; flex-direction:column; gap:8px; position:sticky; top:20px; }
+.tts-studio .tts-tab { display:flex; width:100%; align-items:center; gap:15px; padding:15px 17px; border:1px solid var(--line); background:var(--paper); color:var(--muted); text-align:left; border-radius:12px; font-size:12px; cursor:pointer; font-weight:650; }
+.tts-studio .tts-tab span { font-size:14px; color:var(--ink); }
+.tts-studio .tts-tab.is-active { border-color:var(--accent); box-shadow:inset 3px 0 var(--accent); color:var(--accent); }
+.tts-studio .tts-tab:hover { border-color:var(--accent); }
+.tts-form { min-width:0; margin:0; padding:0; background:transparent!important; border:0!important; box-shadow:none!important; max-width:none!important; width:100%!important; }
+.tts-studio .tts-panel { background:var(--paper); border:1px solid var(--line); border-radius:18px; padding:clamp(20px,3vw,34px); box-shadow:var(--shadow); color:var(--ink); }
+.tts-studio .tts-panel[hidden] { display:none!important; }
+.tts-panel-head { margin-bottom:25px; padding-bottom:19px; border-bottom:1px solid var(--line); }
+.tts-panel-head h2 { font:700 clamp(22px,2.5vw,30px)/1.3 'Libre Baskerville',Georgia,serif; margin:8px 0 6px; color:var(--ink); }
+.tts-panel-head p { color:var(--muted); margin:0; font-size:13px; }
+.tts-field-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+.tts-studio .tts-field { display:flex; flex-direction:column; gap:7px; min-width:0; font-size:13px; font-weight:650; color:var(--ink); margin:0; }
+.tts-wide { grid-column:1/-1; }
+.tts-studio .tts-field input, .tts-studio .tts-field textarea, .tts-studio .tts-panel select { width:100%; min-width:0; background:var(--bg); color:var(--ink); border:1px solid var(--line); border-radius:10px; padding:12px 14px; font:400 14px/1.5 'DM Sans',sans-serif; }
+.tts-studio .tts-field textarea { min-height:110px; resize:vertical; }
+.tts-studio input:focus, .tts-studio textarea:focus, .tts-studio select:focus { outline:2px solid var(--accent); outline-offset:1px; }
+.tts-studio .tt-nav-style-setting, .tts-studio .tt-palette-setting, .tts-studio .tt-animation-admin { margin:0 0 22px; background:transparent; border:1px solid var(--line); border-radius:12px; padding:20px; color:var(--ink); max-width:none; }
+.tts-studio .tt-nav-style-setting label, .tts-studio .tt-palette-setting label, .tts-studio .tt-animation-admin label { color:var(--ink); }
+.tts-studio .tt-palette-setting p, .tts-studio .tt-palette-setting small, .tts-note { color:var(--muted); font-size:12px; line-height:1.6; }
+.tts-studio .tt-animation-admin .tt-wordmark { color:var(--ink); }
+.tts-save-bar { margin-top:17px; padding:16px 20px; background:var(--paper); border:1px solid var(--line); border-radius:14px; display:flex; align-items:center; justify-content:space-between; gap:15px; }
+.tts-save-bar>span { color:var(--muted); font-size:12px; }
+.tts-studio .tts-save { display:inline-flex; align-items:center; gap:16px; border:0; border-radius:9px; background:var(--accent); color:var(--bg); padding:12px 18px; font-size:13px; font-weight:750; }
+.tts-studio .tts-save:hover { filter:brightness(1.1); }
+@media(max-width:800px){ .tts-layout{grid-template-columns:1fr} .tts-tabs{position:static;display:grid;grid-template-columns:repeat(2,minmax(0,1fr))} }
+@media(max-width:540px){ .tts-field-grid{grid-template-columns:1fr} .tts-tabs{gap:7px} .tts-studio .tts-tab{padding:11px 9px;gap:6px;font-size:11px} .tts-studio .tts-tab span{font-size:12px} .tts-save-bar{align-items:stretch; flex-direction:column} .tts-studio .tts-save{justify-content:center} }

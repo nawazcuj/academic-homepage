@@ -1,0 +1,109 @@
+
+/* THETREFOIL — THREE MOVING METALLIC REFLECTIONS */
+
+html body img.tt-corner-metal-layer {
+    position: fixed !important;
+    pointer-events: none !important;
+    user-select: none !important;
+    border: 0 !important;
+    background: transparent !important;
+    opacity: 0;
+    object-fit: contain !important;
+    transform: none !important;
+    border-radius: 0 !important;
+    animation: none;
+}
+
+/* Silver reflection */
+html body img.tt-corner-metal-layer.sheen-silver {
+    filter: brightness(2.5) saturate(.30)
+            drop-shadow(0 0 7px rgba(220,245,255,.6)) !important;
+    -webkit-mask-image: linear-gradient(
+        110deg, transparent 30%, #000 50%, transparent 70%
+    );
+    mask-image: linear-gradient(
+        110deg, transparent 30%, #000 50%, transparent 70%
+    );
+    -webkit-mask-size: 350% 100%;
+    mask-size: 350% 100%;
+    animation: tt-silver-move 6s linear infinite !important;
+}
+
+/* Sapphire-blue reflection */
+html body img.tt-corner-metal-layer.sheen-sapphire {
+    filter: brightness(1.9) saturate(1.8)
+            drop-shadow(0 0 10px rgba(93,190,255,.8)) !important;
+    -webkit-mask-image: linear-gradient(
+        75deg, transparent 37%, #000 50%, transparent 63%
+    );
+    mask-image: linear-gradient(
+        75deg, transparent 37%, #000 50%, transparent 63%
+    );
+    -webkit-mask-size: 350% 100%;
+    mask-size: 350% 100%;
+    animation: tt-sapphire-move 6s linear infinite !important;
+}
+
+/* Warm champagne reflection */
+html body img.tt-corner-metal-layer.sheen-champagne {
+    filter: sepia(.65) brightness(2.2) saturate(1.3)
+            drop-shadow(0 0 7px rgba(238,188,125,.65)) !important;
+    -webkit-mask-image: linear-gradient(
+        125deg, transparent 43%, #000 50%, transparent 57%
+    );
+    mask-image: linear-gradient(
+        125deg, transparent 43%, #000 50%, transparent 57%
+    );
+    -webkit-mask-size: 350% 100%;
+    mask-size: 350% 100%;
+    animation: tt-champagne-move 6s linear infinite !important;
+}
+
+@keyframes tt-silver-move {
+    0%, 5% {
+        opacity: 0;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+    9% { opacity: .86; }
+    29% { opacity: .86; }
+    34%, 100% {
+        opacity: 0;
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
+
+@keyframes tt-sapphire-move {
+    0%, 35% {
+        opacity: 0;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+    42%, 53% { opacity: .9; }
+    65%, 100% {
+        opacity: 0;
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
+
+@keyframes tt-champagne-move {
+    0%, 67% {
+        opacity: 0;
+        -webkit-mask-position: 100% 0;
+        mask-position: 100% 0;
+    }
+    75%, 84% { opacity: .85; }
+    96%, 100% {
+        opacity: 0;
+        -webkit-mask-position: 0 0;
+        mask-position: 0 0;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html body img.tt-corner-metal-layer {
+        display: none !important;
+    }
+}
