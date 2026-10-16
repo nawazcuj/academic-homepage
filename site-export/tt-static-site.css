@@ -1,0 +1,19 @@
+/* GitHub Pages fixes only; original TheTrefoil styles remain untouched. */
+.tt-static-result{display:flex;flex-direction:column;gap:4px;padding:18px 20px;border:1px solid rgba(156,132,102,.32);border-radius:10px;text-decoration:none;background:rgba(150,150,150,.07)}
+.tt-static-result:hover{border-color:#b79568}.tt-static-result strong{font-family:Georgia,serif;font-size:18px}.tt-static-result small{color:#ae885c}.tt-static-result span{font-size:13px;color:inherit}
+[hidden]{display:none!important}
+html,body{max-width:100%;overflow-x:clip}
+@media(max-width:600px){
+ .site-header .nav-wrap{display:flex;flex-wrap:nowrap;justify-content:space-between;gap:5px;padding-left:10px;padding-right:8px}
+ .site-header .brand{min-width:0;max-width:65%;gap:6px}
+ .site-header .brand-logo{width:43px;height:43px;object-fit:contain}
+ .site-header .brand-mark{flex:0 0 auto;margin-right:0}
+ .site-header .tt-brand-title{min-width:0;overflow:hidden}
+ .site-header .tt-brand-title .tt-wordmark{font-size:15px;white-space:nowrap}
+ .site-header .tt-brand-title small{font-size:8px;letter-spacing:.09em;white-space:nowrap}
+ .site-header .nav-actions{display:flex;flex:0 0 auto;gap:4px}
+ .site-header .icon-button,.site-header .menu-toggle{min-width:29px;width:29px;height:33px;padding:4px;flex:0 0 29px}
+ .ttv-hero-visual,.ttv-visual-frame,.ttv-knot-video{max-width:100%}
+ .ttv-hero-copy .ttv-eyebrow{font-size:10px;letter-spacing:.1em}
+}
+@media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important}}
