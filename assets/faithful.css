@@ -1,0 +1,33 @@
+/* Static GitHub Pages adaptation of the original TheTrefoil homepage.
+   Existing original style.css and homepage-editorial.css are loaded first. */
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{margin:0}
+.site-header{position:sticky;top:0;z-index:50;background:#f7f5f0ee;backdrop-filter:blur(14px)}
+.site-nav{display:flex}
+.site-nav a{white-space:nowrap}
+.brand-logo{object-fit:contain}
+.tt-home-v3 .ttv-hero{min-height:unset}
+.ttv-knot-video{max-width:100%;object-fit:contain}
+.ttv-visual-frame{overflow:hidden}
+.tt-home-v3 .ttv-credentials-inner{flex-wrap:wrap}
+.tt-data{border-top:1px solid #d9d9d2}
+.tt-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.tt-item{display:block;padding:32px;border:1px solid #d9d5ca;background:rgba(255,255,255,.55);color:#20343d;transition:transform .2s,box-shadow .2s}
+.tt-item:hover{transform:translateY(-3px);box-shadow:0 8px 28px #0001}
+.tt-item>span{display:block;font-size:10px;letter-spacing:.14em;color:#ac8453;font-weight:700}
+.tt-item h3{font-size:21px;line-height:1.4;margin:15px 0}
+.tt-item small{color:#967042;font-size:12px}
+.tt-data .ttv-paper-list{margin-bottom:0}
+.tt-data .ttv-paper-main h3 a{overflow-wrap:anywhere}
+.tt-footer-brand-copy img.footer-wordmark{max-width:245px;width:100%;height:auto;object-fit:contain}
+.tt-footer-main .tt-footer-navigation{display:flex;gap:45px}
+.tt-footer-navigation .tt-footer-column{display:flex;flex-direction:column;gap:12px}
+.tt-footer-video video{width:112px;height:112px}
+.nav-wrap .nav-actions{display:flex}
+@media(max-width:1120px){.site-header .nav-wrap{flex-wrap:wrap}.site-nav{gap:12px;flex-wrap:wrap}.site-nav a{font-size:12px}}
+@media(max-width:780px){.tt-grid{grid-template-columns:1fr}.site-nav{display:none;position:absolute;top:100%;left:0;right:0;background:#f8f5ee;padding:22px;flex-direction:column;box-shadow:0 16px 25px #0002}.site-nav.tt-open{display:flex}.tt-home-v3 .ttv-hero-layout{grid-template-columns:1fr}.ttv-knot-video{max-height:420px}.site-header .menu-toggle{display:inline-flex}.tt-home-v3 .ttv-credentials-inner{gap:16px}}
+html[data-tt-theme=dark] body{background:#0b1c28;color:#e6e8e6}
+html[data-tt-theme=dark] .site-header{background:#0d2732ed}
+html[data-tt-theme=dark] .tt-data{background:#102c39}
+html[data-tt-theme=dark] .tt-item{background:#173746;color:#f2ece0;border-color:#42606c}
+html[data-tt-theme=dark] .site-nav.tt-open{background:#102936}
