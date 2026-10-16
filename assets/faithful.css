@@ -31,3 +31,13 @@ html[data-tt-theme=dark] .site-header{background:#0d2732ed}
 html[data-tt-theme=dark] .tt-data{background:#102c39}
 html[data-tt-theme=dark] .tt-item{background:#173746;color:#f2ece0;border-color:#42606c}
 html[data-tt-theme=dark] .site-nav.tt-open{background:#102936}
+
+/* Local asset fallback for the trefoil artwork */
+.ttv-visual-frame{position:relative;isolation:isolate}
+.ttv-visual-frame .tt-knot-fallback{position:absolute;z-index:0;top:18%;left:20%;width:60%;height:62%;object-fit:contain;opacity:.85;animation:ttKnotBreathe 9s ease-in-out infinite}
+.ttv-visual-frame .ttv-knot-video{position:relative;z-index:1;background:transparent}
+.ttv-visual-frame .ttv-visual-top,.ttv-visual-frame .ttv-visual-bottom{position:relative;z-index:2}
+.ttv-visual-frame.tt-video-error .ttv-knot-video{display:none}
+.ttv-visual-frame.tt-video-error{min-height:435px}
+@keyframes ttKnotBreathe{50%{transform:rotate(12deg) scale(1.07)}}
+@media(prefers-reduced-motion:reduce){.ttv-visual-frame .tt-knot-fallback{animation:none}}
